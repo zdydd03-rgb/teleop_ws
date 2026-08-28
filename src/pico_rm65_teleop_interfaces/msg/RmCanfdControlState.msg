@@ -1,0 +1,53 @@
+std_msgs/Header header
+
+uint32 source_seq
+
+bool input_active
+bool ik_initialized
+bool motion_permitted
+bool motion_active
+bool ik_attempted
+bool ik_success
+bool ik_output_valid
+bool command_attempted
+bool command_sent
+bool stop_command_sent
+bool fault_latched
+
+string state
+string reason
+
+int32 ik_return_code
+int32 ik_joint_position_limit_result
+int32 ik_joint_velocity_limit_result
+int32 ik_collision_result
+int32 command_joint_position_limit_result
+int32 command_joint_velocity_limit_result
+int32 command_collision_result
+int32 movej_canfd_return_code
+int32 stop_return_code
+
+float64 target_age_sec
+float64 feedback_age_sec
+float64 ik_duration_ms
+float64 command_duration_ms
+float64 command_interval_sec
+
+float64[6] q_actual_deg
+float64[6] q_ik_deg
+float64[6] q_command_deg
+float64[6] command_step_deg
+float64[6] tracking_error_deg
+
+float64 max_ik_step_deg
+float64 max_command_step_deg
+float64 max_tracking_error_deg
+float64 j3_actual_deg
+float64 j3_ik_deg
+float64 j3_command_deg
+
+float64 ik_fk_position_error_m
+float64 ik_fk_orientation_error_deg
+
+geometry_msgs/Pose target_pose
+geometry_msgs/Pose ik_solved_fk_pose

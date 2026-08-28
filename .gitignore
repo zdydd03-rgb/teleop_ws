@@ -1,0 +1,21 @@
+# ROS 2 / colcon generated artifacts
+/build/
+/install/
+/log/
+
+# Python caches and test tooling
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+
+# Runtime and hardware-test artifacts (large and reproducible)
+/canfd_logs/
+/ik_logs/
+/test_results/
+
+# Local delivery archive and agent/editor state
+/src.zip
+/.agents/
+/.codex/
+/.teleop_git/

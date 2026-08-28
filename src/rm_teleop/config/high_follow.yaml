@@ -1,0 +1,107 @@
+pico_receiver_node:
+  ros__parameters:
+    host: "0.0.0.0"
+    port: 5005
+    allowed_source_ip: ""
+
+    frame_id: "pico_tracking"
+    state_topic: "/pico/teleop_state"
+    status_topic: "/pico/status"
+
+    poll_hz: 200.0
+    diagnostics_hz: 2.0
+
+    # PICO实测约24Hz，偶发100~155ms间隔。
+    receiver_timeout_sec: 0.30
+    safe_state_repeat_sec: 0.10
+
+    sequence_reset_after_sec: 1.0
+    source_restart_rollback_sec: 0.5
+    quaternion_norm_min: 0.5
+    quaternion_norm_max: 1.5
+    max_abs_position_m: 10.0
+    socket_receive_buffer_bytes: 2097152
+    max_packets_per_poll: 100
+    log_first_packets: 3
+
+target_generator_node:
+  ros__parameters:
+    pico_topic: "/pico/teleop_state"
+    flange_pose_topic: "/rm65/current_flange_pose"
+    target_topic: "/rm_teleop/flange_target"
+    flange_frame_id: "rm65_base"
+    require_flange_frame_id_match: true
+
+    # 唯一目标生成链路，与CANFD控制同频。
+    control_hz: 200.0
+    pico_freshness_timeout_sec: 0.25
+    flange_freshness_timeout_sec: 0.05
+
+    # 启动文件可以覆盖这三个参数。
+    position_scale: 0.25
+    max_translation_speed_mps: 0.05
+    max_rotation_speed_deg_s: 12.0
+
+    # 第二轮输入稳定：轻量滤波 + STILL/MOVING/SETTLING 状态机。
+    # 停手后锁存最终目标，完成限速追赶后才进入 STILL，避免丢失未完成动作。
+    motion_gate_enabled: true
+    input_filter_time_constant_sec: 0.060
+    motion_detection_window_sec: 0.40
+    motion_start_translation_m: 0.004
+    motion_start_rotation_deg: 2.0
+    motion_stop_translation_m: 0.0035
+    motion_stop_rotation_deg: 1.5
+    motion_stop_hold_sec: 0.30
+
+    workspace_limit_enabled: false
+    workspace_min_xyz: [-10.0, -10.0, -10.0]
+    workspace_max_xyz: [10.0, 10.0, 10.0]
+
+rm65_canfd_high_follow_node:
+  ros__parameters:
+    api2_python_path: ""
+    robot_ip: "192.168.125.19"
+    tcp_port: 8080
+
+    udp_target_ip: "192.168.125.100"
+    udp_port: 8089
+    udp_period_ms: 5
+    force_coordinate: 0
+    enable_joint_speed: true
+    enable_arm_current_status: true
+    restore_udp_config_on_shutdown: true
+
+    # 高跟随固定200Hz，Remote IK步长必须与控制周期一致。
+    publish_hz: 200.0
+    ik_dt_sec: 0.005
+
+    feedback_freshness_timeout_sec: 0.05
+    feedback_disconnect_timeout_sec: 0.20
+    target_freshness_timeout_sec: 0.25
+    reconnect_period_sec: 2.0
+
+    flange_frame_id: "rm65_base"
+    configuration_topic: "/rm65/configuration"
+    control_state_topic: "/rm65/canfd_control_state"
+    ik_target_topic: "/rm_teleop/flange_target"
+    joint_names: ["joint1", "joint2", "joint3", "joint4", "joint5", "joint6"]
+
+    # 1表示Remote IK目标按算法工作坐标系解释；算法工作坐标设为Base单位帧。
+    ik_tool_or_work: 1
+    ik_error_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    ik_dq_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+
+    j3_hard_min_deg: 10.0
+    j3_activation_min_deg: 15.0
+    allowed_arm_current_statuses: [0, 5]
+
+    # 默认锁定；只能通过launch参数显式解锁。
+    allow_motion: false
+    motion_confirmation: ""
+
+    # 唯一运动输出模式：CANFD高跟随、直接发送Remote IK关节解。
+    canfd_trajectory_mode: 0
+    canfd_radio: 0
+
+    stop_on_shutdown: true
+    canfd_csv_log_directory: "~/teleop_ws/canfd_logs"
