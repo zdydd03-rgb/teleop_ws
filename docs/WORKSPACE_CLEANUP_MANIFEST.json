@@ -1,0 +1,2677 @@
+{
+  "created_time": "2026-11-03T17:41:41.856879+08:00",
+  "workspace": "/home/ai/teleop_ws",
+  "archive_root": "/home/ai/teleop_ws_legacy_archive/20261103_174140",
+  "selected_tests": [
+    "o7_auto_10hz_20261103_172402",
+    "o7_write_only_1hz_20261103_165032"
+  ],
+  "rows": [
+    {
+      "path": ".gitignore",
+      "type": "text/config",
+      "size_bytes": 336,
+      "git_tracked": true,
+      "modified_time": "2026-08-28T15:18:39.752537+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留"
+    },
+    {
+      "path": "README.md",
+      "type": ".md",
+      "size_bytes": 48,
+      "git_tracked": true,
+      "modified_time": "2026-08-28T15:20:04.649995+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260716_173756.csv",
+      "type": ".csv",
+      "size_bytes": 16439128,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T17:39:45.571073+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "f1cc80032f52bb59869e46a541c5c867007b51be6e80311354fc06b6bb8a07c3"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260716_182303.csv",
+      "type": ".csv",
+      "size_bytes": 15479682,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:24:13.281299+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "690b48c0bf3d3da24dfb649b02b49b25e61f3148e384098b64b681477aad7ed8"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260716_183812.csv",
+      "type": ".csv",
+      "size_bytes": 200176,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:38:13.701560+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "1f13397f9cd675b4e4852f49e8ef59579c1329fae81f70bfa0f5e930ba750104"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260716_183819.csv",
+      "type": ".csv",
+      "size_bytes": 24586679,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:40:11.464776+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "2391bb67d11a5713021a3a775d8fef01055930b2a8981ca6ce564d5cb9235c36"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260716_184025.csv",
+      "type": ".csv",
+      "size_bytes": 31916577,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:42:44.860164+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "749d01bcdc9cda69ff8e70df47fd260a965c30447908ff0f0dcfe3088b2b8980"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260716_184427.csv",
+      "type": ".csv",
+      "size_bytes": 18658965,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:45:51.499730+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "c5665e60fd9b91a10a67b30f4c612e64f54401d6a8fd8fe76e60a509122d97c8"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260716_184652.csv",
+      "type": ".csv",
+      "size_bytes": 19238505,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:48:17.664215+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "9741ba3a3f2e996b7b58fde8d6f241bb125c202713996460f5cfa8b552c7874b"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260722_172334.csv",
+      "type": ".csv",
+      "size_bytes": 256559,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:23:35.648510+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "7f71364f9bd9dccbc74b35dec9bd12232a23ef82360dabea94db5b90abca20a2"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260722_172449.csv",
+      "type": ".csv",
+      "size_bytes": 34727305,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:27:27.469118+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "bf77c0d8c76d83c1ace7869cb82dfd1fc4a58253760f2fd0a4332b1631931cd5"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260722_172757.csv",
+      "type": ".csv",
+      "size_bytes": 25145570,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:29:47.852268+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "3402016db928c23a97ad22015dfbb3841c47d71d5ba44e20074af665582ccbdd"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260722_173357.csv",
+      "type": ".csv",
+      "size_bytes": 19980033,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:35:26.585871+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "cdc100356786bf16242aa69fa1f36f488ae28f367d0760118a11ef0138e46c8e"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260722_173710.csv",
+      "type": ".csv",
+      "size_bytes": 13225753,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:38:13.593620+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "e350687a430f4f608ed58f14f7fe39903469fb1fdebacbb7aa2508e25f027d99"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260722_173836.csv",
+      "type": ".csv",
+      "size_bytes": 5908660,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:39:04.407760+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "f661a6bab249e2570968457a69a054944640288aca61fd25ad4f86d9f3957ceb"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260722_173921.csv",
+      "type": ".csv",
+      "size_bytes": 23801144,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:41:05.190471+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "38a8dcf6cdc4fbc80870925453076f546af32f6888985043e75393d8c7da5b4d"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260722_174346.csv",
+      "type": ".csv",
+      "size_bytes": 22122848,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:45:23.238263+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "8339e945b21c3618ae6e4ce25af00d79b3b011a8683b504af2a22f635e876e8a"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260722_174640.csv",
+      "type": ".csv",
+      "size_bytes": 41785268,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:49:47.663198+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "792ef027239fb81821722c0cb11630381354214dfd4721135af4d23393de2e17"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_154628.csv",
+      "type": ".csv",
+      "size_bytes": 19937984,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T15:48:03.548496+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "5672b75682c0e1c279822d66b934f032cbe9d1c0418ff5f9ff2aca628c67e3e2"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_155136.csv",
+      "type": ".csv",
+      "size_bytes": 21581932,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T15:53:14.634113+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "66d58aa5f412e35a5b4d4ce6d9531e2708eb5dd71cc5c4a719e517329bad7459"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_155933.csv",
+      "type": ".csv",
+      "size_bytes": 33775383,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T16:02:05.511812+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "913888691aa76126cc72fb5108b0e646010fd55a2c9359dbd3045a9c6e35defc"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_160817.csv",
+      "type": ".csv",
+      "size_bytes": 33079419,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T16:10:52.499920+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "f9cc774e71de9fd23d61d37cced1e4c1aa3e5af4d1d8e98f5673c869e9e7c622"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_161308.csv",
+      "type": ".csv",
+      "size_bytes": 15009275,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T16:14:18.962435+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "2b5eab043dd3f3d301ac46d940d693f173dcecf604de055cb775a70f8c084044"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_161438.csv",
+      "type": ".csv",
+      "size_bytes": 14105324,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T16:15:44.339123+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "390919361ee309dadde8b5b95f14c306f7f4cf1cd65ca437e400e49f69db7e38"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_161546.csv",
+      "type": ".csv",
+      "size_bytes": 49817053,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T16:19:36.756253+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "21a2473806426cf424dedd002392f7bd526a66270b6ee9888f1a546ef7e6b700"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_162519.csv",
+      "type": ".csv",
+      "size_bytes": 37287625,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T16:28:04.857436+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "96204ebf3044e38b55628e39a1ab075bd812a73474c54b52a48c697ead9fc9f3"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_162933.csv",
+      "type": ".csv",
+      "size_bytes": 36773383,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T16:32:21.525902+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "f49f069751f97ce927df293435900ff148d92cd37b444ef4ccdd24ea9a41b990"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_170449.csv",
+      "type": ".csv",
+      "size_bytes": 85072207,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T17:11:31.435946+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "a3760e6acaed9317733575ebc078e262bad3a62de41862470abc0ad75a50e9e2"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_171230.csv",
+      "type": ".csv",
+      "size_bytes": 15466603,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T17:13:43.623398+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "42ace8b6266983b3e471560334c1b988c63735607872c3ad2a9d68198eab8358"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_171348.csv",
+      "type": ".csv",
+      "size_bytes": 33075665,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T17:16:21.689743+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "21af3db6765abe1208efb9cac681b18b44c17f78965ae9db4bb93fdf94e8d33b"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20260918_172616.csv",
+      "type": ".csv",
+      "size_bytes": 26789025,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T17:28:17.409772+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "6cacc1a96bf348cf929528076aded5576961f3ae1a8347824bb8840068ec3067"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_151030.csv",
+      "type": ".csv",
+      "size_bytes": 45063557,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:14:04.953700+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "33e9ecfa2ef52559b4592fdb42dcc9b236fa919715a9edee399a6404773c5a83"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_152104.csv",
+      "type": ".csv",
+      "size_bytes": 86072014,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:27:49.977144+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "15cfd413845336b0fc31a5a077f77bbb7b06d6019692b8f2a263772f7d90745c"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_152759.csv",
+      "type": ".csv",
+      "size_bytes": 33180069,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:30:37.404705+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "e370a7763d6d847067ac7a8f1c4ed286d614406f35435c965d2dca65fc4c3131"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_153757.csv",
+      "type": ".csv",
+      "size_bytes": 30587981,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:40:20.857720+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "0250da7d9e6e649638011e4088594cceacf5b8c3b24caa6a3718c9aad5c4730f"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_154024.csv",
+      "type": ".csv",
+      "size_bytes": 282668244,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:02:42.694723+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "a646b8440d792455a15182d7fb6de6c2f4c2fd600599d2c94034dabbaee8f009"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_161945.csv",
+      "type": ".csv",
+      "size_bytes": 40908867,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:22:56.121008+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "30962c582163cd50b28c103b3c3a911e729e1557f13347a4a82aa4f3763c32ed"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_162259.csv",
+      "type": ".csv",
+      "size_bytes": 10995970,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:23:49.554489+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "a2560380000725f6e6438c81a09e5a263f88b2c4840a45c0831d012ddfc93e14"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_164203.csv",
+      "type": ".csv",
+      "size_bytes": 84869860,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:48:40.665871+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "29a985e65069bdbb1108cb96c09207ef050468a5f66aa323d7b10b36fac2b0f1"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_164947.csv",
+      "type": ".csv",
+      "size_bytes": 2873300,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:50:01.101042+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "e05cdb8abb6a9e9b2493171c09060b2e94dde52ddb76728eb12c1f0391d02875"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_165029.csv",
+      "type": ".csv",
+      "size_bytes": 14245278,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:51:33.025042+08:00",
+      "owner": "o7_write_only_1hz_20261103_165032",
+      "classification": "KEEP",
+      "action": "RELOCATE_KEEP",
+      "reason": "由保留测试 diagnostics_json.csv_log_path 精确定位；集中保留其原始机械臂 CSV",
+      "sha256": "6f1befcc3dffebdcdf1885c301d9c13114d8892f6e1810d95ca85b033e7e2820"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261103_172406.csv",
+      "type": ".csv",
+      "size_bytes": 19012734,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:25:30.486228+08:00",
+      "owner": "o7_auto_10hz_20261103_172402",
+      "classification": "KEEP",
+      "action": "RELOCATE_KEEP",
+      "reason": "由保留测试 diagnostics_json.csv_log_path 精确定位；集中保留其原始机械臂 CSV",
+      "sha256": "16199ab85155cff14a4535d7b0fb0dd42fe381b336bc9cddf09ebef405870b85"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/events.csv",
+      "type": ".csv",
+      "size_bytes": 256884,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:25:02.265433+08:00",
+      "owner": "o7_auto_10hz_20261103_172402",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "0aebd3944f9585eb0af30b95219b8b8fc45ec01c31774afbf40c862fe8a1f856"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/monitor_console.log",
+      "type": ".log",
+      "size_bytes": 198999,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:25:02.487432+08:00",
+      "owner": "o7_auto_10hz_20261103_172402",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "a9265ce131e2ab3a63032f1e8ccb3506b4f955e64652b0bcf3dc8a1df379d792"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/samples.csv",
+      "type": ".csv",
+      "size_bytes": 26000785,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:25:02.260433+08:00",
+      "owner": "o7_auto_10hz_20261103_172402",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "628565219ffe5d7e83f167462eabe075e1711acf8b0c415c0fdf9e6468b4b0c1"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/summary.csv",
+      "type": ".csv",
+      "size_bytes": 2941,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:25:02.279433+08:00",
+      "owner": "o7_auto_10hz_20261103_172402",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "69b6a67fc46f7ea7467b38562a9c283191e3e2401f581ba8cfffe50d43d6ed68"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/summary.json",
+      "type": ".json",
+      "size_bytes": 241149,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:25:02.283433+08:00",
+      "owner": "o7_auto_10hz_20261103_172402",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "67992050862ebbbff4b8e9bdb8d662a3734c91a8f43c9a034bb86431930f83fd"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/teleop_console.log",
+      "type": ".log",
+      "size_bytes": 223653,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:25:28.036245+08:00",
+      "owner": "o7_auto_10hz_20261103_172402",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "031b218bf167acfda85799016c8becd182031b7ba4e72346c832772920275278"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402.tar.gz",
+      "type": ".gz",
+      "size_bytes": 1259567,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:25:47.883100+08:00",
+      "owner": "o7_auto_10hz_20261103_172402.tar.gz",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "5b8b1494778bc6c3210afd46df9bd4c6c05ba9a782b429e22fd90381243c8f55"
+    },
+    {
+      "path": "concurrency_logs/o7_stream_1hz_20261103_162055/events.csv",
+      "type": ".csv",
+      "size_bytes": 3365,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:21:17.409247+08:00",
+      "owner": "o7_stream_1hz_20261103_162055",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "a6d574aad2480a6f4031b3f08a46db38b65231ba7b98c5b4771172aebf60b2c8"
+    },
+    {
+      "path": "concurrency_logs/o7_stream_1hz_20261103_162055/samples.csv",
+      "type": ".csv",
+      "size_bytes": 9730034,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:21:17.409247+08:00",
+      "owner": "o7_stream_1hz_20261103_162055",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "f4710baebdf83208e534e5afc7b5220fed2274c3ac501ebe224a76ec14c49471"
+    },
+    {
+      "path": "concurrency_logs/o7_stream_1hz_20261103_162055/summary.csv",
+      "type": ".csv",
+      "size_bytes": 1832,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:21:17.415247+08:00",
+      "owner": "o7_stream_1hz_20261103_162055",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "9cf455806e03631661bfb0fe1acfcda056f0bc1cc3bb398da5a95de5cc5b6fdb"
+    },
+    {
+      "path": "concurrency_logs/o7_stream_1hz_20261103_162055/summary.json",
+      "type": ".json",
+      "size_bytes": 7757,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:21:17.415247+08:00",
+      "owner": "o7_stream_1hz_20261103_162055",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "a0c8c4a4f2ff7a4e718b54afb45474d1577397b1e640207886e79f224fda0994"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_164300/events.csv",
+      "type": ".csv",
+      "size_bytes": 20087,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:43:30.672496+08:00",
+      "owner": "o7_write_only_1hz_20261103_164300",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "1da21869a0fe5aa5033e68670909b147d7fc7a09fedfd681aa64124ca8ab80cb"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_164300/samples.csv",
+      "type": ".csv",
+      "size_bytes": 13937336,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:43:30.671496+08:00",
+      "owner": "o7_write_only_1hz_20261103_164300",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "419bc1d5ff6f77315fd42c43735ff9668fc5745ad132f843c50a60ead39425b7"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_164300/summary.csv",
+      "type": ".csv",
+      "size_bytes": 2294,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:43:30.684496+08:00",
+      "owner": "o7_write_only_1hz_20261103_164300",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "58df2a2bd975bec780097ab9589528aa060dbae47dc643f07acd76a9512db55a"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_164300/summary.json",
+      "type": ".json",
+      "size_bytes": 24525,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:43:30.684496+08:00",
+      "owner": "o7_write_only_1hz_20261103_164300",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "a2132c97b98ff7ca9df7ebc0adb4c4c4279a7f5801896e2421ff620e7c41bb8c"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_165032/events.csv",
+      "type": ".csv",
+      "size_bytes": 20083,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:51:20.259184+08:00",
+      "owner": "o7_write_only_1hz_20261103_165032",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "7a35cc26a574762c9eda4fccf8736e19a074cd874ea7a1e3938b97633c3a53e6"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_165032/samples.csv",
+      "type": ".csv",
+      "size_bytes": 21891848,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:51:20.259184+08:00",
+      "owner": "o7_write_only_1hz_20261103_165032",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "5817c3618227acc890af0166a5bf3dee05f6dc75539169c7a0470df397b93347"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_165032/summary.csv",
+      "type": ".csv",
+      "size_bytes": 2275,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:51:20.270184+08:00",
+      "owner": "o7_write_only_1hz_20261103_165032",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "2ef2452aae190afbcba4d558d65e6967f274a6ef04faca476d3b16e0c935a364"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_165032/summary.json",
+      "type": ".json",
+      "size_bytes": 24501,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:51:20.271184+08:00",
+      "owner": "o7_write_only_1hz_20261103_165032",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "最近两轮关键 HIL 原始数据，内容已核对",
+      "sha256": "8480ff9ce60883d3838950b09f63b273ac7420b905b749b779ef7785708495ce"
+    },
+    {
+      "path": "concurrency_logs/rm65_o7_concurrency_20260918_170533.csv",
+      "type": ".csv",
+      "size_bytes": 5028,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T17:05:33.202426+08:00",
+      "owner": "rm65_o7_concurrency_20260918_170533.csv",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "b83d8dc6a9e18152aecf66d958340f0d9fc0dd526a93364f8b8a50767c02998c"
+    },
+    {
+      "path": "concurrency_logs/rm65_o7_concurrency_20260918_171436.csv",
+      "type": ".csv",
+      "size_bytes": 4267351,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T17:15:01.296076+08:00",
+      "owner": "rm65_o7_concurrency_20260918_171436.csv",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "04fce99ff0266486d2c3556281112cc16faf434f7e18deb3851b2201c7976a5d"
+    },
+    {
+      "path": "concurrency_logs/single_session_20261103_153842/events.csv",
+      "type": ".csv",
+      "size_bytes": 220,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:38:52.804875+08:00",
+      "owner": "single_session_20261103_153842",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "c60e5780169edbdef41073ac41811b3eaadc354e63919b83418045f24f49adaf"
+    },
+    {
+      "path": "concurrency_logs/single_session_20261103_153842/samples.csv",
+      "type": ".csv",
+      "size_bytes": 4562975,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:38:52.804875+08:00",
+      "owner": "single_session_20261103_153842",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "44b1a1d125b8bb89a358e1a2a7720ffe83085447071c330877cb2038f38bc9f1"
+    },
+    {
+      "path": "concurrency_logs/single_session_20261103_153842/summary.csv",
+      "type": ".csv",
+      "size_bytes": 1217,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:38:52.807875+08:00",
+      "owner": "single_session_20261103_153842",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "7bf830c870c5f31fdb7a9536ffad0ffac7feb0bd99543dfdbe7af482c4d91185"
+    },
+    {
+      "path": "concurrency_logs/single_session_20261103_153842/summary.json",
+      "type": ".json",
+      "size_bytes": 4124,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:38:52.807875+08:00",
+      "owner": "single_session_20261103_153842",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "af330178ae314e7d514b8238361a3d7578fe84605714a3c7982e826df8ca7ce6"
+    },
+    {
+      "path": "concurrency_logs/single_session_20261103_154058/events.csv",
+      "type": ".csv",
+      "size_bytes": 827,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:41:19.586133+08:00",
+      "owner": "single_session_20261103_154058",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "e5be1966cfc9b8ca7d56a1afe1d416a81b825e9223d5c8e5913fcdb30848edd9"
+    },
+    {
+      "path": "concurrency_logs/single_session_20261103_154058/samples.csv",
+      "type": ".csv",
+      "size_bytes": 9220960,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:41:19.586133+08:00",
+      "owner": "single_session_20261103_154058",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "ffad80f32d2f7fdff32d3f232918579c1017e2d1effc408e37e2e7294ebfc0b4"
+    },
+    {
+      "path": "concurrency_logs/single_session_20261103_154058/summary.csv",
+      "type": ".csv",
+      "size_bytes": 1826,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:41:19.593133+08:00",
+      "owner": "single_session_20261103_154058",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "586076f5475e9b2aabc9a630ff3d16b146b782c3ecec4a6a73229112a6e732d2"
+    },
+    {
+      "path": "concurrency_logs/single_session_20261103_154058/summary.json",
+      "type": ".json",
+      "size_bytes": 5216,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:41:19.594133+08:00",
+      "owner": "single_session_20261103_154058",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已识别历史实验产物；最新自动 HIL tar 的六个文件已逐一与保留目录 SHA-256 一致",
+      "sha256": "b1aba652f20939acad834d0ac9082f5a258c1d980c2ca6b296af76b727466154"
+    },
+    {
+      "path": "docs/O7_AUTO_STREAM_HIL.md",
+      "type": ".md",
+      "size_bytes": 12839,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:13:37.646250+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留"
+    },
+    {
+      "path": "docs/O7_SINGLE_SESSION_HIL.md",
+      "type": ".md",
+      "size_bytes": 12818,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:10:32.487842+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留"
+    },
+    {
+      "path": "docs/O7_STREAM_HIL.md",
+      "type": ".md",
+      "size_bytes": 11327,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:14:07.625155+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留"
+    },
+    {
+      "path": "ik_logs/rm65_ik_dry_run_20260712_175026.csv",
+      "type": ".csv",
+      "size_bytes": 106837546,
+      "git_tracked": false,
+      "modified_time": "2026-07-12T18:20:09.155729+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "2038a269ae193c837daa8b62cab6eed6427317f906d2534c8de2061efe7dd6e1"
+    },
+    {
+      "path": "ik_logs/rm65_ik_dry_run_20260712_182025.csv",
+      "type": ".csv",
+      "size_bytes": 39304032,
+      "git_tracked": false,
+      "modified_time": "2026-07-12T18:31:15.492729+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "205bca8f20a57863df9c1abe4c5a673e81c073ea9f03fe365fdc540fae908ceb"
+    },
+    {
+      "path": "ik_logs/rm65_ik_dry_run_20260712_183122.csv",
+      "type": ".csv",
+      "size_bytes": 32228918,
+      "git_tracked": false,
+      "modified_time": "2026-07-12T18:40:14.968019+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "a4eb7fde168d375a76cd98126ca3a98740f96cab55e4afebe285a9e2cb02a435"
+    },
+    {
+      "path": "ik_logs/rm65_ik_dry_run_20260712_184205.csv",
+      "type": ".csv",
+      "size_bytes": 4426827,
+      "git_tracked": false,
+      "modified_time": "2026-07-12T18:43:17.839196+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "edfde8cc75409eeeae9d78543083ed19cbd937e7dd9e81f2c1d2022404b33842"
+    },
+    {
+      "path": "ik_logs/rm65_ik_dry_run_20260712_184325.csv",
+      "type": ".csv",
+      "size_bytes": 33159857,
+      "git_tracked": false,
+      "modified_time": "2026-07-12T18:52:33.048590+08:00",
+      "owner": "历史机械臂控制/IK实验",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "已核对 CSV 表头；非最近两轮关联数据，保留到外部历史归档",
+      "sha256": "ca17b572c90af9b6c41a1b2b44847c7e5cdbc0ba730db675023ebba900742687"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/CMakeLists.txt",
+      "type": ".txt",
+      "size_bytes": 592,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:28+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "d3178ee2bd49be450c4bb80a768846ccb57ea5df9de01bdabacb14ee5dc8781e"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/msg/PicoTeleopState.msg",
+      "type": ".msg",
+      "size_bytes": 449,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "abed8ce6580918927e810908fd5646d5d94ac56ad90a796f95c2568d32bb05b9"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/msg/RmCanfdControlState.msg",
+      "type": ".msg",
+      "size_bytes": 1120,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "08a998d6a0562066f7d559907d7f1e553419902e276c629606e518427ec03552"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/msg/RmTeleopTarget.msg",
+      "type": ".msg",
+      "size_bytes": 577,
+      "git_tracked": true,
+      "modified_time": "2026-07-16T19:04:39+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "435bce1602014d3936a46a8b02526bc9948baee787d2795947dd4532c996d3ae"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/package.xml",
+      "type": ".xml",
+      "size_bytes": 785,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:28+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "1a131a9f80aae4ad72fd494598231c85cc5c2d703929b4b82c06ec153d2b8a30"
+    },
+    {
+      "path": "src/rm_teleop/README.md",
+      "type": ".md",
+      "size_bytes": 3183,
+      "git_tracked": true,
+      "modified_time": "2026-11-03T15:26:58.836135+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "99680708139b4451add59179a14113b2ba598b7e98571eeeb228b241c2ddb272"
+    },
+    {
+      "path": "src/rm_teleop/config/high_follow.yaml",
+      "type": ".yaml",
+      "size_bytes": 3659,
+      "git_tracked": true,
+      "modified_time": "2026-11-03T17:02:17.323981+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "8a8d6e117faca936a21193fe997843b0046941384a35277507b5ac153b6e0cc5"
+    },
+    {
+      "path": "src/rm_teleop/launch/teleop_high_follow.launch.py",
+      "type": ".py",
+      "size_bytes": 7620,
+      "git_tracked": true,
+      "modified_time": "2026-11-03T17:02:17.323981+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "3e071ea5f6a05aae32f70dcdf10e8c4aa7046ea92f938fcd4f4f9a6eb50a77aa"
+    },
+    {
+      "path": "src/rm_teleop/package.xml",
+      "type": ".xml",
+      "size_bytes": 833,
+      "git_tracked": true,
+      "modified_time": "2026-11-03T15:07:21.977933+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "6740fc8166c4e501b4482b61c2dbc73eebc851b765c434bb40a0596e9c027e18"
+    },
+    {
+      "path": "src/rm_teleop/resource/rm_teleop",
+      "type": "text/config",
+      "size_bytes": 0,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__init__.py",
+      "type": ".py",
+      "size_bytes": 0,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/canfd_control_core.py",
+      "type": ".py",
+      "size_bytes": 4786,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "8bb5e01d616956a076c28a44bb2a81e7d0b6e16d2ccbcaa1435e1e5aa6e09afa"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/canfd_csv_logger.py",
+      "type": ".py",
+      "size_bytes": 3265,
+      "git_tracked": true,
+      "modified_time": "2026-07-16T19:04:39+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "d7c5c907a0d845c1859b2bf88e3ed191da76ab250b4c8d6a7cbbdffcea7fa7c3"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/hil_monitor_data.py",
+      "type": ".py",
+      "size_bytes": 10511,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:03:28.303809+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "efa3e906a84f15e5acb486a32bed9dec9ac2c3a564433c487f47feb3dd4af08b"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/o7_auto_stream_hil.py",
+      "type": ".py",
+      "size_bytes": 12051,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:09:15.092566+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "28338d544e926ea9779c9d157dbf75c92e0e7b74baa7f302f316b9d577762c76"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/o7_single_session_hil.py",
+      "type": ".py",
+      "size_bytes": 11433,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:09:15.091566+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "f95c2f4aa8263d41ba328aaf12482ee0a2686156b69dbe312364ad5591526050"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/pico_receiver_node.py",
+      "type": ".py",
+      "size_bytes": 17675,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "2270888d10cb6c972f820de077e6d7e62d57da91b556b107f315442485c7823a"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/protocol.py",
+      "type": ".py",
+      "size_bytes": 10098,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "a9398471cd3cad822eddd3d61e5a04488cafe32044153428e038dab67a32053b"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/receiver_core.py",
+      "type": ".py",
+      "size_bytes": 6729,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "c233b0ff525260813040820711fe63df5745e822af750d877c3b3f2028961735"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/rm65_canfd_high_follow_node.py",
+      "type": ".py",
+      "size_bytes": 65659,
+      "git_tracked": true,
+      "modified_time": "2026-11-03T17:02:17.322981+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "e81e9371598244c089b3c3a268fb8d309ae62b432ecbd79584f54144754a4f79"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/rm_api2_adapter.py",
+      "type": ".py",
+      "size_bytes": 17285,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "2414e1199704f4851d2a6422f7705407db72c93a91a2833f99ed8364f7a5b50a"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/rm_api2_motion_adapter.py",
+      "type": ".py",
+      "size_bytes": 4313,
+      "git_tracked": true,
+      "modified_time": "2026-11-03T16:31:47.539107+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "8bab0da2444de0b55b0deee278dda336f1f23d732c01a05011800d53ca000d9c"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/rm_feedback_core.py",
+      "type": ".py",
+      "size_bytes": 7236,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "3ed24d3a44b957b76477625bde6f5917969adae14f888d1767690024f2422d7d"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/single_session_hil_monitor.py",
+      "type": ".py",
+      "size_bytes": 7765,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:03:28.303809+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "9f6472152c9d9dd9996c265c08a4b6f766096a8af515b39dd38655e3d9026282"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/target_generator_core.py",
+      "type": ".py",
+      "size_bytes": 29711,
+      "git_tracked": true,
+      "modified_time": "2026-07-16T19:06:56+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "2a264fb0f92fbccccda32678e0ce2468f2184f57f9a4c1d9ed4102ec7f2b8f28"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/target_generator_node.py",
+      "type": ".py",
+      "size_bytes": 12980,
+      "git_tracked": true,
+      "modified_time": "2026-07-16T19:04:39+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "6a473db306ce87f9a8dfbf357c60e14c093b766d8644889f440eb2770b2c545f"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/target_math.py",
+      "type": ".py",
+      "size_bytes": 13664,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:58:51+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "59a07f6ee9166779161b57fca2ad6a98efd91ecf9bf3ca87a81d062292e46c22"
+    },
+    {
+      "path": "src/rm_teleop/setup.cfg",
+      "type": ".cfg",
+      "size_bytes": 88,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "807c31134c5fa176f771fe5586c149ae284e9551f8796e4e45931f194087bc69"
+    },
+    {
+      "path": "src/rm_teleop/setup.py",
+      "type": ".py",
+      "size_bytes": 1202,
+      "git_tracked": true,
+      "modified_time": "2026-11-03T15:07:21.978934+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "6fad299a6d7b96a02b3f1c379953d75af9d117b7d2e6450feef730a2c135abb4"
+    },
+    {
+      "path": "src/rm_teleop/test/test_canfd_control_core.py",
+      "type": ".py",
+      "size_bytes": 2792,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "f80cafa7dffc850b33a6ad7ceaa20adcd66506271d28bc9c4a064ef1b72ecc0c"
+    },
+    {
+      "path": "src/rm_teleop/test/test_canfd_static_safety.py",
+      "type": ".py",
+      "size_bytes": 1393,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:47:17+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "23dfa22427367603e0dc98f165ebe43e527cefd4134b9223925cbb514213e437"
+    },
+    {
+      "path": "src/rm_teleop/test/test_o7_auto_stream_hil.py",
+      "type": ".py",
+      "size_bytes": 17923,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:09:15.095566+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "f1deca83434462ccbb70c70a35f91f3a576e2822628df936dcf60b9950da5b60"
+    },
+    {
+      "path": "src/rm_teleop/test/test_o7_single_session_hil.py",
+      "type": ".py",
+      "size_bytes": 10812,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:10:28.306704+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "08a848f8c7159b545cb4849c550eccdcdfc283f941c6fb4a529f32152961fb7c"
+    },
+    {
+      "path": "src/rm_teleop/test/test_o7_stream_hil.py",
+      "type": ".py",
+      "size_bytes": 18237,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T16:47:43.789426+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "4194aedbb9ae125b9bc4581005e26d6ad2f6c4635d3e0a275df3d22d424f6bc3"
+    },
+    {
+      "path": "src/rm_teleop/test/test_protocol.py",
+      "type": ".py",
+      "size_bytes": 3476,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "e479574d5677a398f5c7cb7dce1b689ef6777085813b5d3304664c4efaeced90"
+    },
+    {
+      "path": "src/rm_teleop/test/test_receiver_core.py",
+      "type": ".py",
+      "size_bytes": 3302,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "0f7dacd583b578a4afe8a014ffb35117d2778e05213a140c66c7f78c9448b4ae"
+    },
+    {
+      "path": "src/rm_teleop/test/test_remote_ik_matrix.py",
+      "type": ".py",
+      "size_bytes": 936,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "2b4f1df7a66101297d038738032c72ad7924b1be4c39285d5cc4f59fa29525ef"
+    },
+    {
+      "path": "src/rm_teleop/test/test_rm_feedback_core.py",
+      "type": ".py",
+      "size_bytes": 3545,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "7949b07c16f5bebcd28f02e7d48aea2e1f7d34219115744f801c470b6be39c7c"
+    },
+    {
+      "path": "src/rm_teleop/test/test_sequence.py",
+      "type": ".py",
+      "size_bytes": 1402,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:46:04+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "cf9d69f0b5d5b4063764e6fed4b060383c692084603438cf04de2a5df5555e78"
+    },
+    {
+      "path": "src/rm_teleop/test/test_single_high_follow_profile.py",
+      "type": ".py",
+      "size_bytes": 3789,
+      "git_tracked": true,
+      "modified_time": "2026-11-03T15:26:58.802131+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "f7b9f9bddf1129282c809a059a0b4ca54889c0314959284a72681b87d3b02eca"
+    },
+    {
+      "path": "src/rm_teleop/test/test_target_generator_core.py",
+      "type": ".py",
+      "size_bytes": 11992,
+      "git_tracked": true,
+      "modified_time": "2026-07-16T19:05:57+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "7f6410f33149d8a6dfd8deedfbe2de244365fe0485e9c240d83ed0b3e4c86ca7"
+    },
+    {
+      "path": "src/rm_teleop/test/test_target_math.py",
+      "type": ".py",
+      "size_bytes": 5619,
+      "git_tracked": true,
+      "modified_time": "2026-07-13T14:58:51+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留",
+      "sha256": "e28abaecaaff38913d961f163a75254b36af8f3ee8ca876817b7b5f9c545a5bb"
+    },
+    {
+      "path": "test_results/R1/T01_static.csv",
+      "type": ".csv",
+      "size_bytes": 10766517,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T15:48:38.974885+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "577d7f6b48c37a4a9a7c974325530887cf92fbfdee52e92e1f008c03d62999f2"
+    },
+    {
+      "path": "test_results/R1/T01_static_launch.log",
+      "type": ".log",
+      "size_bytes": 7088,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T15:48:29.404631+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "84c975dcf2154055847e9df0cba6caf1acc7f66fe8fa9e5420b987f3f5ed9c43"
+    },
+    {
+      "path": "test_results/R1/T02_translation.csv",
+      "type": ".csv",
+      "size_bytes": 14912078,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T15:52:44.955824+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "c863b2eaa383ae2a3478a1e5608d342730cc1b7bb6fa45e7041063b03e498e91"
+    },
+    {
+      "path": "test_results/R1/T02_translation_launch.log",
+      "type": ".log",
+      "size_bytes": 9282,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T15:52:32.715941+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "1398bddd1692c66ecc060187aa141a2b2fac424ac649b834f270b0efd41adb8c"
+    },
+    {
+      "path": "test_results/R1/T03_wrist_roll.csv",
+      "type": ".csv",
+      "size_bytes": 19903167,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T15:56:13.487942+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "1f5f7461078f48e7fdee49b71bc6f80f0af2c12653facfd272aa183b8c99d4ae"
+    },
+    {
+      "path": "test_results/R1/T03_wrist_roll_launch.log",
+      "type": ".log",
+      "size_bytes": 6600,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T15:55:56.398917+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "05d80e4bce1a457ab5d2e45044e58050b6c36bd00470f38968ff4f544d7b2fa4"
+    },
+    {
+      "path": "test_results/R1/T04_pitch_yaw.csv",
+      "type": ".csv",
+      "size_bytes": 18138815,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T15:59:10.560650+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "1ae4557ed63d2fca80f5ca4a1cea8e1b5a042df8a539bb270ea0e1fcad6656c1"
+    },
+    {
+      "path": "test_results/R1/T04_pitch_yaw_launch.log",
+      "type": ".log",
+      "size_bytes": 6586,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T15:58:51.042053+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "fb19fe598528c872e9c690a72777ae21931b03f99b64957c735aaf03d6dc33df"
+    },
+    {
+      "path": "test_results/R1.zip",
+      "type": ".zip",
+      "size_bytes": 11954629,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T16:05:58.913976+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "cce667abc94f4d4018d07a3031034fe0c1226e0655b5dec6e95d2b5921dc4f33"
+    },
+    {
+      "path": "test_results/R2/T05_raw_static/T05_raw_static_0.db3",
+      "type": ".db3",
+      "size_bytes": 5390336,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T16:54:10.485748+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "884baade04bdde4acd43087f89f05bb380141c2326133a4d9d5034723b8ed63f"
+    },
+    {
+      "path": "test_results/R2/T05_raw_static/metadata.yaml",
+      "type": ".yaml",
+      "size_bytes": 2566,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T16:54:10.487748+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "094e0660204c5368735d2c50d9a8c6b096d785c9689eb5a2dace5fd2464467f4"
+    },
+    {
+      "path": "test_results/R2(靠住).zip",
+      "type": ".zip",
+      "size_bytes": 955366,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T16:55:03.664619+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "8b9a8e081f8f8e122b64b54c030232f92921d93628ce1edbbcf68b0b77ab48f0"
+    },
+    {
+      "path": "test_results/R2（悬空）.zip",
+      "type": ".zip",
+      "size_bytes": 1359183,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T16:53:20.262970+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "740b636fb5b24b3b408e88551af2fc321a6c1e049a885d7f7e4f586b211eeb18"
+    },
+    {
+      "path": "test_results/R3/T07_dynamic/T07_dynamic_0.db3",
+      "type": ".db3",
+      "size_bytes": 22077440,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T17:39:42.981954+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "4db562cef2192e59bdbdc8cf9ed524a983725dd0c3a40f88079bea8d445d5493"
+    },
+    {
+      "path": "test_results/R3/T07_dynamic/metadata.yaml",
+      "type": ".yaml",
+      "size_bytes": 2566,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T17:39:42.982954+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "357a792462d34f86158f071e091035acf1a44b2fb4ff0e360ef2c802809e4c5e"
+    },
+    {
+      "path": "test_results/R3/T07_dynamic_launch.log",
+      "type": ".log",
+      "size_bytes": 5657,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T17:39:38.658755+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "eb4c528847da2f6bba631262480e4141c16e6599e4175c1088ed1520f5655f62"
+    },
+    {
+      "path": "test_results/R3.zip",
+      "type": ".zip",
+      "size_bytes": 4087819,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T17:40:15.738483+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "279de69104afda25f88c286cfa225aa85bd7ad835b7b7985ecdcc89a96db2f4b"
+    },
+    {
+      "path": "test_results/R4/T02_rotation.csv",
+      "type": ".csv",
+      "size_bytes": 18658965,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:45:57.863924+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "c5665e60fd9b91a10a67b30f4c612e64f54401d6a8fd8fe76e60a509122d97c8"
+    },
+    {
+      "path": "test_results/R4/T02_rotation_launch.log",
+      "type": ".log",
+      "size_bytes": 10748,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:45:46.640583+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "c5e6c09ce41c95ed494266247a0aa53d305daaed876d48d6f32abd9d48fa3dd5"
+    },
+    {
+      "path": "test_results/R4/T03_translation.csv",
+      "type": ".csv",
+      "size_bytes": 19238505,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:48:36.301794+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "9741ba3a3f2e996b7b58fde8d6f241bb125c202713996460f5cfa8b552c7874b"
+    },
+    {
+      "path": "test_results/R4/T03_translation_launch.log",
+      "type": ".log",
+      "size_bytes": 6407,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:48:08.348927+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "9a29b1185ce77ab8a02da82ef4b1a1e1890689c6f3607e4332762256d2230143"
+    },
+    {
+      "path": "test_results/R4.zip",
+      "type": ".zip",
+      "size_bytes": 5092691,
+      "git_tracked": false,
+      "modified_time": "2026-07-16T18:48:45.904092+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "4ff253df9e61154f5c55ee5d8531a9244c6f00893b16ed1824a13ca79950b445"
+    },
+    {
+      "path": "test_results/R5/T01_after_motion_static.csv",
+      "type": ".csv",
+      "size_bytes": 19980033,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:35:51.547431+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "cdc100356786bf16242aa69fa1f36f488ae28f367d0760118a11ef0138e46c8e"
+    },
+    {
+      "path": "test_results/R5/T01_after_motion_static_launch.log",
+      "type": ".log",
+      "size_bytes": 11929,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:35:18.370687+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "91196d4d8c06423b81371dded17de3171f3e7d82e180eca117fedaed5267c3e0"
+    },
+    {
+      "path": "test_results/R5/T01_after_motion_static_state.log",
+      "type": ".log",
+      "size_bytes": 2922306,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:35:25.529847+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "1c6f3068ca684150de058e1c9c973b4690361f5aa2602a277b2f2b865b267e6d"
+    },
+    {
+      "path": "test_results/R5/T02_rotation.csv",
+      "type": ".csv",
+      "size_bytes": 23801144,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:41:26.696954+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "38a8dcf6cdc4fbc80870925453076f546af32f6888985043e75393d8c7da5b4d"
+    },
+    {
+      "path": "test_results/R5/T02_rotation_launch.log",
+      "type": ".log",
+      "size_bytes": 10868,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:40:58.906330+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "3e2660603f31f6cef4c5da67931068275a0f5b6f960368b0d4cc86fa8dbf2e05"
+    },
+    {
+      "path": "test_results/R5/T02_rotation_state.log",
+      "type": ".log",
+      "size_bytes": 3531463,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:41:05.192471+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "da9f3f6d810bcde804af31749be9f672a23afa36877c2ee29d39b1ce1f1fad0c"
+    },
+    {
+      "path": "test_results/R5/T03_interrupt_settling.csv",
+      "type": ".csv",
+      "size_bytes": 22122848,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:45:56.418007+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "8339e945b21c3618ae6e4ce25af00d79b3b011a8683b504af2a22f635e876e8a"
+    },
+    {
+      "path": "test_results/R5/T03_interrupt_settling_launch.log",
+      "type": ".log",
+      "size_bytes": 11729,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:45:17.503134+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "16d048f334c7af3f571e6386504135044986bb2c73dcdb8bbf3268ff1e106413"
+    },
+    {
+      "path": "test_results/R5/T03_interrupt_settling_state.log",
+      "type": ".log",
+      "size_bytes": 3264520,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:45:23.238263+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "89a5cd390804b80d26320f6408f3079160560e029591e80c7fa1e94033a36ad2"
+    },
+    {
+      "path": "test_results/R5/T04_translation.csv",
+      "type": ".csv",
+      "size_bytes": 28958065,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:48:47.086838+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "ce72c175199da3476b492d3d19f7009e3a29225aff924dc724a0f1cc0edef9d8"
+    },
+    {
+      "path": "test_results/R5/T04_translation_launch.log",
+      "type": ".log",
+      "size_bytes": 20644,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:48:29.668447+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "3251a368a813cf09f3de255d16d4420acbb11aae833215539dc4664d8753c1b2"
+    },
+    {
+      "path": "test_results/R5.zip",
+      "type": ".zip",
+      "size_bytes": 11226209,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:50:21.504957+08:00",
+      "owner": "历史 R1-R5 机械臂调试",
+      "classification": "ARCHIVE",
+      "action": "ARCHIVE_MOVE",
+      "reason": "既有历史实验目录及记录/压缩包，外部完整保留，不永久销毁",
+      "sha256": "6420be393d8c6bf65b03cc0a8ec37be69f413d0b94a74e2d45908368ee996564"
+    },
+    {
+      "path": "一、参数生效关系.md",
+      "type": ".md",
+      "size_bytes": 13410,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T15:02:18.561766+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留"
+    },
+    {
+      "path": "开发交接.md",
+      "type": ".md",
+      "size_bytes": 11788,
+      "git_tracked": true,
+      "modified_time": "2026-08-28T14:27:47.723676+08:00",
+      "owner": "工程",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "工程源码/接口/测试/配置/技术文档，保留"
+    },
+    {
+      "path": "build/",
+      "type": "directory",
+      "size_bytes": 4096,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:16:02.143777+08:00",
+      "owner": "构建/工具/本地环境",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "构建/工具/凭证状态不属于本轮历史实验清理；不读取受保护目录内容、不删除"
+    },
+    {
+      "path": "install/",
+      "type": "directory",
+      "size_bytes": 4096,
+      "git_tracked": false,
+      "modified_time": "2026-07-22T17:16:02.699790+08:00",
+      "owner": "构建/工具/本地环境",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "构建/工具/凭证状态不属于本轮历史实验清理；不读取受保护目录内容、不删除"
+    },
+    {
+      "path": "log/",
+      "type": "directory",
+      "size_bytes": 4096,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:38:27.810447+08:00",
+      "owner": "构建/工具/本地环境",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "构建/工具/凭证状态不属于本轮历史实验清理；不读取受保护目录内容、不删除"
+    },
+    {
+      "path": "__pycache__/",
+      "type": "directory",
+      "size_bytes": 4096,
+      "git_tracked": false,
+      "modified_time": "2026-08-28T14:56:35.107137+08:00",
+      "owner": "构建/工具/本地环境",
+      "classification": "UNKNOWN",
+      "action": "KEEP",
+      "reason": "构建/工具/凭证状态不属于本轮历史实验清理；不读取受保护目录内容、不删除"
+    },
+    {
+      "path": ".git/",
+      "type": "directory",
+      "size_bytes": 4096,
+      "git_tracked": false,
+      "modified_time": "2026-09-18T13:52:51.207764+08:00",
+      "owner": "构建/工具/本地环境",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "构建/工具/凭证状态不属于本轮历史实验清理；不读取受保护目录内容、不删除"
+    },
+    {
+      "path": ".aws/",
+      "type": "directory",
+      "size_bytes": 40,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:41:40.199550+08:00",
+      "owner": "构建/工具/本地环境",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "构建/工具/凭证状态不属于本轮历史实验清理；不读取受保护目录内容、不删除"
+    },
+    {
+      "path": ".agents/",
+      "type": "directory",
+      "size_bytes": 40,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:41:40.199550+08:00",
+      "owner": "构建/工具/本地环境",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "构建/工具/凭证状态不属于本轮历史实验清理；不读取受保护目录内容、不删除"
+    },
+    {
+      "path": ".codex/",
+      "type": "directory",
+      "size_bytes": 40,
+      "git_tracked": false,
+      "modified_time": "2026-11-03T17:41:40.199550+08:00",
+      "owner": "构建/工具/本地环境",
+      "classification": "KEEP",
+      "action": "KEEP",
+      "reason": "构建/工具/凭证状态不属于本轮历史实验清理；不读取受保护目录内容、不删除"
+    },
+    {
+      "path": "__pycache__/ik_acceptance_test.cpython-310.pyc",
+      "type": ".pyc",
+      "size_bytes": 14964,
+      "git_tracked": false,
+      "modified_time": "2026-08-28T14:56:35.107137+08:00",
+      "owner": "旧IK缓存，缺少对应源码",
+      "classification": "UNKNOWN",
+      "action": "KEEP",
+      "reason": "仅能识别为历史字节码，未确认可删除；保留待确认"
+    }
+  ],
+  "operations": [
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260716_173756.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260716_173756.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 16439128,
+      "sha256": "f1cc80032f52bb59869e46a541c5c867007b51be6e80311354fc06b6bb8a07c3"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260716_182303.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260716_182303.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 15479682,
+      "sha256": "690b48c0bf3d3da24dfb649b02b49b25e61f3148e384098b64b681477aad7ed8"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260716_183812.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260716_183812.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 200176,
+      "sha256": "1f13397f9cd675b4e4852f49e8ef59579c1329fae81f70bfa0f5e930ba750104"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260716_183819.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260716_183819.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 24586679,
+      "sha256": "2391bb67d11a5713021a3a775d8fef01055930b2a8981ca6ce564d5cb9235c36"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260716_184025.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260716_184025.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 31916577,
+      "sha256": "749d01bcdc9cda69ff8e70df47fd260a965c30447908ff0f0dcfe3088b2b8980"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260716_184427.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260716_184427.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 18658965,
+      "sha256": "c5665e60fd9b91a10a67b30f4c612e64f54401d6a8fd8fe76e60a509122d97c8"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260716_184652.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260716_184652.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 19238505,
+      "sha256": "9741ba3a3f2e996b7b58fde8d6f241bb125c202713996460f5cfa8b552c7874b"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260722_172334.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260722_172334.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 256559,
+      "sha256": "7f71364f9bd9dccbc74b35dec9bd12232a23ef82360dabea94db5b90abca20a2"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260722_172449.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260722_172449.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 34727305,
+      "sha256": "bf77c0d8c76d83c1ace7869cb82dfd1fc4a58253760f2fd0a4332b1631931cd5"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260722_172757.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260722_172757.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 25145570,
+      "sha256": "3402016db928c23a97ad22015dfbb3841c47d71d5ba44e20074af665582ccbdd"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260722_173357.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260722_173357.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 19980033,
+      "sha256": "cdc100356786bf16242aa69fa1f36f488ae28f367d0760118a11ef0138e46c8e"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260722_173710.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260722_173710.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 13225753,
+      "sha256": "e350687a430f4f608ed58f14f7fe39903469fb1fdebacbb7aa2508e25f027d99"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260722_173836.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260722_173836.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 5908660,
+      "sha256": "f661a6bab249e2570968457a69a054944640288aca61fd25ad4f86d9f3957ceb"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260722_173921.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260722_173921.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 23801144,
+      "sha256": "38a8dcf6cdc4fbc80870925453076f546af32f6888985043e75393d8c7da5b4d"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260722_174346.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260722_174346.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 22122848,
+      "sha256": "8339e945b21c3618ae6e4ce25af00d79b3b011a8683b504af2a22f635e876e8a"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260722_174640.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260722_174640.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 41785268,
+      "sha256": "792ef027239fb81821722c0cb11630381354214dfd4721135af4d23393de2e17"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_154628.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_154628.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 19937984,
+      "sha256": "5672b75682c0e1c279822d66b934f032cbe9d1c0418ff5f9ff2aca628c67e3e2"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_155136.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_155136.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 21581932,
+      "sha256": "66d58aa5f412e35a5b4d4ce6d9531e2708eb5dd71cc5c4a719e517329bad7459"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_155933.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_155933.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 33775383,
+      "sha256": "913888691aa76126cc72fb5108b0e646010fd55a2c9359dbd3045a9c6e35defc"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_160817.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_160817.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 33079419,
+      "sha256": "f9cc774e71de9fd23d61d37cced1e4c1aa3e5af4d1d8e98f5673c869e9e7c622"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_161308.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_161308.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 15009275,
+      "sha256": "2b5eab043dd3f3d301ac46d940d693f173dcecf604de055cb775a70f8c084044"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_161438.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_161438.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 14105324,
+      "sha256": "390919361ee309dadde8b5b95f14c306f7f4cf1cd65ca437e400e49f69db7e38"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_161546.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_161546.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 49817053,
+      "sha256": "21a2473806426cf424dedd002392f7bd526a66270b6ee9888f1a546ef7e6b700"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_162519.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_162519.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 37287625,
+      "sha256": "96204ebf3044e38b55628e39a1ab075bd812a73474c54b52a48c697ead9fc9f3"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_162933.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_162933.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 36773383,
+      "sha256": "f49f069751f97ce927df293435900ff148d92cd37b444ef4ccdd24ea9a41b990"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_170449.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_170449.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 85072207,
+      "sha256": "a3760e6acaed9317733575ebc078e262bad3a62de41862470abc0ad75a50e9e2"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_171230.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_171230.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 15466603,
+      "sha256": "42ace8b6266983b3e471560334c1b988c63735607872c3ad2a9d68198eab8358"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_171348.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_171348.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 33075665,
+      "sha256": "21af3db6765abe1208efb9cac681b18b44c17f78965ae9db4bb93fdf94e8d33b"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20260918_172616.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20260918_172616.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 26789025,
+      "sha256": "6cacc1a96bf348cf929528076aded5576961f3ae1a8347824bb8840068ec3067"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_151030.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20261103_151030.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 45063557,
+      "sha256": "33e9ecfa2ef52559b4592fdb42dcc9b236fa919715a9edee399a6404773c5a83"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_152104.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20261103_152104.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 86072014,
+      "sha256": "15cfd413845336b0fc31a5a077f77bbb7b06d6019692b8f2a263772f7d90745c"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_152759.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20261103_152759.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 33180069,
+      "sha256": "e370a7763d6d847067ac7a8f1c4ed286d614406f35435c965d2dca65fc4c3131"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_153757.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20261103_153757.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 30587981,
+      "sha256": "0250da7d9e6e649638011e4088594cceacf5b8c3b24caa6a3718c9aad5c4730f"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_154024.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20261103_154024.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 282668244,
+      "sha256": "a646b8440d792455a15182d7fb6de6c2f4c2fd600599d2c94034dabbaee8f009"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_161945.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20261103_161945.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 40908867,
+      "sha256": "30962c582163cd50b28c103b3c3a911e729e1557f13347a4a82aa4f3763c32ed"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_162259.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20261103_162259.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 10995970,
+      "sha256": "a2560380000725f6e6438c81a09e5a263f88b2c4840a45c0831d012ddfc93e14"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_164203.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20261103_164203.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 84869860,
+      "sha256": "29a985e65069bdbb1108cb96c09207ef050468a5f66aa323d7b10b36fac2b0f1"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_164947.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/canfd_logs/rm65_canfd_high_follow_20261103_164947.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 2873300,
+      "sha256": "e05cdb8abb6a9e9b2493171c09060b2e94dde52ddb76728eb12c1f0391d02875"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_165029.csv",
+      "destination": "/home/ai/teleop_ws/concurrency_logs/o7_write_only_1hz_20261103_165032/arm_control/rm65_canfd_high_follow_20261103_165029.csv",
+      "action": "RELOCATE_KEEP",
+      "size_bytes": 14245278,
+      "sha256": "6f1befcc3dffebdcdf1885c301d9c13114d8892f6e1810d95ca85b033e7e2820"
+    },
+    {
+      "source": "/home/ai/teleop_ws/canfd_logs/rm65_canfd_high_follow_20261103_172406.csv",
+      "destination": "/home/ai/teleop_ws/concurrency_logs/o7_auto_10hz_20261103_172402/arm_control/rm65_canfd_high_follow_20261103_172406.csv",
+      "action": "RELOCATE_KEEP",
+      "size_bytes": 19012734,
+      "sha256": "16199ab85155cff14a4535d7b0fb0dd42fe381b336bc9cddf09ebef405870b85"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/o7_auto_10hz_20261103_172402.tar.gz",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_auto_10hz_20261103_172402.tar.gz",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 1259567,
+      "sha256": "5b8b1494778bc6c3210afd46df9bd4c6c05ba9a782b429e22fd90381243c8f55"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/o7_stream_1hz_20261103_162055/events.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_stream_1hz_20261103_162055/events.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 3365,
+      "sha256": "a6d574aad2480a6f4031b3f08a46db38b65231ba7b98c5b4771172aebf60b2c8"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/o7_stream_1hz_20261103_162055/samples.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_stream_1hz_20261103_162055/samples.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 9730034,
+      "sha256": "f4710baebdf83208e534e5afc7b5220fed2274c3ac501ebe224a76ec14c49471"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/o7_stream_1hz_20261103_162055/summary.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_stream_1hz_20261103_162055/summary.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 1832,
+      "sha256": "9cf455806e03631661bfb0fe1acfcda056f0bc1cc3bb398da5a95de5cc5b6fdb"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/o7_stream_1hz_20261103_162055/summary.json",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_stream_1hz_20261103_162055/summary.json",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 7757,
+      "sha256": "a0c8c4a4f2ff7a4e718b54afb45474d1577397b1e640207886e79f224fda0994"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/o7_write_only_1hz_20261103_164300/events.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_write_only_1hz_20261103_164300/events.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 20087,
+      "sha256": "1da21869a0fe5aa5033e68670909b147d7fc7a09fedfd681aa64124ca8ab80cb"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/o7_write_only_1hz_20261103_164300/samples.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_write_only_1hz_20261103_164300/samples.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 13937336,
+      "sha256": "419bc1d5ff6f77315fd42c43735ff9668fc5745ad132f843c50a60ead39425b7"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/o7_write_only_1hz_20261103_164300/summary.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_write_only_1hz_20261103_164300/summary.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 2294,
+      "sha256": "58df2a2bd975bec780097ab9589528aa060dbae47dc643f07acd76a9512db55a"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/o7_write_only_1hz_20261103_164300/summary.json",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_write_only_1hz_20261103_164300/summary.json",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 24525,
+      "sha256": "a2132c97b98ff7ca9df7ebc0adb4c4c4279a7f5801896e2421ff620e7c41bb8c"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/rm65_o7_concurrency_20260918_170533.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/rm65_o7_concurrency_20260918_170533.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 5028,
+      "sha256": "b83d8dc6a9e18152aecf66d958340f0d9fc0dd526a93364f8b8a50767c02998c"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/rm65_o7_concurrency_20260918_171436.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/rm65_o7_concurrency_20260918_171436.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 4267351,
+      "sha256": "04fce99ff0266486d2c3556281112cc16faf434f7e18deb3851b2201c7976a5d"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/single_session_20261103_153842/events.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_153842/events.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 220,
+      "sha256": "c60e5780169edbdef41073ac41811b3eaadc354e63919b83418045f24f49adaf"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/single_session_20261103_153842/samples.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_153842/samples.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 4562975,
+      "sha256": "44b1a1d125b8bb89a358e1a2a7720ffe83085447071c330877cb2038f38bc9f1"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/single_session_20261103_153842/summary.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_153842/summary.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 1217,
+      "sha256": "7bf830c870c5f31fdb7a9536ffad0ffac7feb0bd99543dfdbe7af482c4d91185"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/single_session_20261103_153842/summary.json",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_153842/summary.json",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 4124,
+      "sha256": "af330178ae314e7d514b8238361a3d7578fe84605714a3c7982e826df8ca7ce6"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/single_session_20261103_154058/events.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_154058/events.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 827,
+      "sha256": "e5be1966cfc9b8ca7d56a1afe1d416a81b825e9223d5c8e5913fcdb30848edd9"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/single_session_20261103_154058/samples.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_154058/samples.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 9220960,
+      "sha256": "ffad80f32d2f7fdff32d3f232918579c1017e2d1effc408e37e2e7294ebfc0b4"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/single_session_20261103_154058/summary.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_154058/summary.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 1826,
+      "sha256": "586076f5475e9b2aabc9a630ff3d16b146b782c3ecec4a6a73229112a6e732d2"
+    },
+    {
+      "source": "/home/ai/teleop_ws/concurrency_logs/single_session_20261103_154058/summary.json",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_154058/summary.json",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 5216,
+      "sha256": "b1aba652f20939acad834d0ac9082f5a258c1d980c2ca6b296af76b727466154"
+    },
+    {
+      "source": "/home/ai/teleop_ws/ik_logs/rm65_ik_dry_run_20260712_175026.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/ik_logs/rm65_ik_dry_run_20260712_175026.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 106837546,
+      "sha256": "2038a269ae193c837daa8b62cab6eed6427317f906d2534c8de2061efe7dd6e1"
+    },
+    {
+      "source": "/home/ai/teleop_ws/ik_logs/rm65_ik_dry_run_20260712_182025.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/ik_logs/rm65_ik_dry_run_20260712_182025.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 39304032,
+      "sha256": "205bca8f20a57863df9c1abe4c5a673e81c073ea9f03fe365fdc540fae908ceb"
+    },
+    {
+      "source": "/home/ai/teleop_ws/ik_logs/rm65_ik_dry_run_20260712_183122.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/ik_logs/rm65_ik_dry_run_20260712_183122.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 32228918,
+      "sha256": "a4eb7fde168d375a76cd98126ca3a98740f96cab55e4afebe285a9e2cb02a435"
+    },
+    {
+      "source": "/home/ai/teleop_ws/ik_logs/rm65_ik_dry_run_20260712_184205.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/ik_logs/rm65_ik_dry_run_20260712_184205.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 4426827,
+      "sha256": "edfde8cc75409eeeae9d78543083ed19cbd937e7dd9e81f2c1d2022404b33842"
+    },
+    {
+      "source": "/home/ai/teleop_ws/ik_logs/rm65_ik_dry_run_20260712_184325.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/ik_logs/rm65_ik_dry_run_20260712_184325.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 33159857,
+      "sha256": "ca17b572c90af9b6c41a1b2b44847c7e5cdbc0ba730db675023ebba900742687"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R1/T01_static.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R1/T01_static.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 10766517,
+      "sha256": "577d7f6b48c37a4a9a7c974325530887cf92fbfdee52e92e1f008c03d62999f2"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R1/T01_static_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R1/T01_static_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 7088,
+      "sha256": "84c975dcf2154055847e9df0cba6caf1acc7f66fe8fa9e5420b987f3f5ed9c43"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R1/T02_translation.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R1/T02_translation.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 14912078,
+      "sha256": "c863b2eaa383ae2a3478a1e5608d342730cc1b7bb6fa45e7041063b03e498e91"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R1/T02_translation_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R1/T02_translation_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 9282,
+      "sha256": "1398bddd1692c66ecc060187aa141a2b2fac424ac649b834f270b0efd41adb8c"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R1/T03_wrist_roll.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R1/T03_wrist_roll.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 19903167,
+      "sha256": "1f5f7461078f48e7fdee49b71bc6f80f0af2c12653facfd272aa183b8c99d4ae"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R1/T03_wrist_roll_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R1/T03_wrist_roll_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 6600,
+      "sha256": "05d80e4bce1a457ab5d2e45044e58050b6c36bd00470f38968ff4f544d7b2fa4"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R1/T04_pitch_yaw.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R1/T04_pitch_yaw.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 18138815,
+      "sha256": "1ae4557ed63d2fca80f5ca4a1cea8e1b5a042df8a539bb270ea0e1fcad6656c1"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R1/T04_pitch_yaw_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R1/T04_pitch_yaw_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 6586,
+      "sha256": "fb19fe598528c872e9c690a72777ae21931b03f99b64957c735aaf03d6dc33df"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R1.zip",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R1.zip",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 11954629,
+      "sha256": "cce667abc94f4d4018d07a3031034fe0c1226e0655b5dec6e95d2b5921dc4f33"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R2/T05_raw_static/T05_raw_static_0.db3",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R2/T05_raw_static/T05_raw_static_0.db3",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 5390336,
+      "sha256": "884baade04bdde4acd43087f89f05bb380141c2326133a4d9d5034723b8ed63f"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R2/T05_raw_static/metadata.yaml",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R2/T05_raw_static/metadata.yaml",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 2566,
+      "sha256": "094e0660204c5368735d2c50d9a8c6b096d785c9689eb5a2dace5fd2464467f4"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R2(靠住).zip",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R2(靠住).zip",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 955366,
+      "sha256": "8b9a8e081f8f8e122b64b54c030232f92921d93628ce1edbbcf68b0b77ab48f0"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R2（悬空）.zip",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R2（悬空）.zip",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 1359183,
+      "sha256": "740b636fb5b24b3b408e88551af2fc321a6c1e049a885d7f7e4f586b211eeb18"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R3/T07_dynamic/T07_dynamic_0.db3",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R3/T07_dynamic/T07_dynamic_0.db3",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 22077440,
+      "sha256": "4db562cef2192e59bdbdc8cf9ed524a983725dd0c3a40f88079bea8d445d5493"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R3/T07_dynamic/metadata.yaml",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R3/T07_dynamic/metadata.yaml",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 2566,
+      "sha256": "357a792462d34f86158f071e091035acf1a44b2fb4ff0e360ef2c802809e4c5e"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R3/T07_dynamic_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R3/T07_dynamic_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 5657,
+      "sha256": "eb4c528847da2f6bba631262480e4141c16e6599e4175c1088ed1520f5655f62"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R3.zip",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R3.zip",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 4087819,
+      "sha256": "279de69104afda25f88c286cfa225aa85bd7ad835b7b7985ecdcc89a96db2f4b"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R4/T02_rotation.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R4/T02_rotation.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 18658965,
+      "sha256": "c5665e60fd9b91a10a67b30f4c612e64f54401d6a8fd8fe76e60a509122d97c8"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R4/T02_rotation_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R4/T02_rotation_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 10748,
+      "sha256": "c5e6c09ce41c95ed494266247a0aa53d305daaed876d48d6f32abd9d48fa3dd5"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R4/T03_translation.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R4/T03_translation.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 19238505,
+      "sha256": "9741ba3a3f2e996b7b58fde8d6f241bb125c202713996460f5cfa8b552c7874b"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R4/T03_translation_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R4/T03_translation_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 6407,
+      "sha256": "9a29b1185ce77ab8a02da82ef4b1a1e1890689c6f3607e4332762256d2230143"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R4.zip",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R4.zip",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 5092691,
+      "sha256": "4ff253df9e61154f5c55ee5d8531a9244c6f00893b16ed1824a13ca79950b445"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T01_after_motion_static.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T01_after_motion_static.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 19980033,
+      "sha256": "cdc100356786bf16242aa69fa1f36f488ae28f367d0760118a11ef0138e46c8e"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T01_after_motion_static_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T01_after_motion_static_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 11929,
+      "sha256": "91196d4d8c06423b81371dded17de3171f3e7d82e180eca117fedaed5267c3e0"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T01_after_motion_static_state.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T01_after_motion_static_state.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 2922306,
+      "sha256": "1c6f3068ca684150de058e1c9c973b4690361f5aa2602a277b2f2b865b267e6d"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T02_rotation.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T02_rotation.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 23801144,
+      "sha256": "38a8dcf6cdc4fbc80870925453076f546af32f6888985043e75393d8c7da5b4d"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T02_rotation_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T02_rotation_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 10868,
+      "sha256": "3e2660603f31f6cef4c5da67931068275a0f5b6f960368b0d4cc86fa8dbf2e05"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T02_rotation_state.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T02_rotation_state.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 3531463,
+      "sha256": "da9f3f6d810bcde804af31749be9f672a23afa36877c2ee29d39b1ce1f1fad0c"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T03_interrupt_settling.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T03_interrupt_settling.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 22122848,
+      "sha256": "8339e945b21c3618ae6e4ce25af00d79b3b011a8683b504af2a22f635e876e8a"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T03_interrupt_settling_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T03_interrupt_settling_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 11729,
+      "sha256": "16d048f334c7af3f571e6386504135044986bb2c73dcdb8bbf3268ff1e106413"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T03_interrupt_settling_state.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T03_interrupt_settling_state.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 3264520,
+      "sha256": "89a5cd390804b80d26320f6408f3079160560e029591e80c7fa1e94033a36ad2"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T04_translation.csv",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T04_translation.csv",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 28958065,
+      "sha256": "ce72c175199da3476b492d3d19f7009e3a29225aff924dc724a0f1cc0edef9d8"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5/T04_translation_launch.log",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5/T04_translation_launch.log",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 20644,
+      "sha256": "3251a368a813cf09f3de255d16d4420acbb11aae833215539dc4664d8753c1b2"
+    },
+    {
+      "source": "/home/ai/teleop_ws/test_results/R5.zip",
+      "destination": "/home/ai/teleop_ws_legacy_archive/20261103_174140/test_results/R5.zip",
+      "action": "ARCHIVE_MOVE",
+      "size_bytes": 11226209,
+      "sha256": "6420be393d8c6bf65b03cc0a8ec37be69f413d0b94a74e2d45908368ee996564"
+    }
+  ],
+  "status": "PLANNED_BEFORE_CLEANUP",
+  "supplement_note": "未处理UNKNOWN缓存的补充元数据；计划清理前清点/哈希不变。"
+}

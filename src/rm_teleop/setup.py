@@ -25,6 +25,7 @@ setup(
     tests_require=["pytest"],
     entry_points={
         "console_scripts": [
+            "single_session_hil_monitor = rm_teleop.single_session_hil_monitor:main",
             "pico_receiver_node = rm_teleop.pico_receiver_node:main",
             "target_generator_node = rm_teleop.target_generator_node:main",
             "rm65_canfd_high_follow_node = rm_teleop.rm65_canfd_high_follow_node:main",

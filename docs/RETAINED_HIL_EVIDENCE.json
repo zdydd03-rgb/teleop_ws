@@ -1,0 +1,288 @@
+{
+  "o7_write_only_1hz_20261103_165032": {
+    "source_files": [
+      "concurrency_logs/o7_write_only_1hz_20261103_165032/summary.json",
+      "concurrency_logs/o7_write_only_1hz_20261103_165032/events.csv",
+      "concurrency_logs/o7_write_only_1hz_20261103_165032/samples.csv"
+    ],
+    "start_local": "2026-11-03T16:50:59.911517+08:00",
+    "finish_local": "2026-11-03T16:51:09.912172+08:00",
+    "configuration": {
+      "event": "STREAM_START",
+      "timestamp_ns": 1793695859911517319,
+      "elapsed_time": 1.0685000233934261e-05,
+      "command_sequence": 0,
+      "sequence": 0,
+      "joint_index": 2,
+      "consecutive_failures": 0,
+      "unconfirmed_writes": 0,
+      "session": "existing_rm65_api2_handle",
+      "stream_hz": 1.0,
+      "duration_sec": 10.0,
+      "position_A": [
+        255,
+        255,
+        220,
+        255,
+        255,
+        255,
+        255
+      ],
+      "position_B": [
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "open_pose_confirmed": true,
+      "actual_motion": "NOT AUTOMATICALLY VERIFIED"
+    },
+    "completion": {
+      "event": "STREAM_FINISH",
+      "timestamp_ns": 1793695869912172056,
+      "elapsed_time": 10.0006654230001,
+      "command_sequence": 10,
+      "sequence": 10,
+      "joint_index": 2,
+      "consecutive_failures": 10,
+      "unconfirmed_writes": 10,
+      "session": "existing_rm65_api2_handle",
+      "reason": "duration_complete",
+      "schedule_completed": true,
+      "position_write_count": 10,
+      "last_target_positions": [
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "last_return_code": 1,
+      "sdk_acknowledged_success_count": 0,
+      "sdk_unconfirmed_command_count": 10,
+      "sdk_exception_count": 0,
+      "actual_motion": "NOT AUTOMATICALLY VERIFIED"
+    },
+    "raw_control_recomputed": {
+      "BASELINE": {
+        "samples": 2000,
+        "sent": 2000,
+        "send_failures": 0,
+        "fault_latched_samples": 0,
+        "feedback_invalid_samples": 0,
+        "intervals_over_10ms": 0,
+        "canfd_interval_sec": {
+          "count": 2000,
+          "avg": 0.004999990477499978,
+          "p95": 0.005010421000406495,
+          "p99": 0.005032981000113068,
+          "max": 0.008238699999310484
+        },
+        "feedback_age_sec": {
+          "count": 2000,
+          "avg": 0.000655150015496929,
+          "p95": 0.0011611829996127198,
+          "p99": 0.0012182204898726922,
+          "max": 0.005405794000580499
+        }
+      },
+      "INJECTION": {
+        "samples": 2000,
+        "sent": 2000,
+        "send_failures": 0,
+        "fault_latched_samples": 0,
+        "feedback_invalid_samples": 0,
+        "intervals_over_10ms": 0,
+        "canfd_interval_sec": {
+          "count": 2000,
+          "avg": 0.0050000014540000845,
+          "p95": 0.005012795049833585,
+          "p99": 0.005031792009503988,
+          "max": 0.005219386000135273
+        },
+        "feedback_age_sec": {
+          "count": 2000,
+          "avg": 0.0024392861509941214,
+          "p95": 0.0047717730503791245,
+          "p99": 0.005062661999545526,
+          "max": 0.005334555000445107
+        }
+      },
+      "POST": {
+        "samples": 2000,
+        "sent": 2000,
+        "send_failures": 0,
+        "fault_latched_samples": 0,
+        "feedback_invalid_samples": 0,
+        "intervals_over_10ms": 0,
+        "canfd_interval_sec": {
+          "count": 2000,
+          "avg": 0.0050000023435,
+          "p95": 0.005017545000555401,
+          "p99": 0.005035354010024093,
+          "max": 0.005065037000349548
+        },
+        "feedback_age_sec": {
+          "count": 2000,
+          "avg": 0.004230319749489354,
+          "p95": 0.004762274049426196,
+          "p99": 0.005057925860637624,
+          "max": 0.005117278999932751
+        }
+      }
+    },
+    "modbus_duration_ms": {
+      "count": 10,
+      "avg": 220.21632470032273,
+      "p95": 259.443414400539,
+      "p99": 282.4630484805857,
+      "max": 288.2179570005974
+    },
+    "operator_observation": "Observed by operator per task history; not encoded as verified by monitor",
+    "missing_console_logs": [
+      "teleop_console.log",
+      "monitor_console.log"
+    ]
+  },
+  "o7_auto_10hz_20261103_172402": {
+    "source_files": [
+      "concurrency_logs/o7_auto_10hz_20261103_172402/summary.json",
+      "concurrency_logs/o7_auto_10hz_20261103_172402/events.csv",
+      "concurrency_logs/o7_auto_10hz_20261103_172402/samples.csv"
+    ],
+    "start_local": "2026-11-03T17:24:36.563190+08:00",
+    "finish_local": "2026-11-03T17:24:51.885066+08:00",
+    "configuration": {
+      "event": "AUTO_STREAM_START",
+      "timestamp_ns": 1793697876563189773,
+      "mode": "auto_stream",
+      "elapsed_time": 1.6623000192339532e-05,
+      "joint_index": 2,
+      "session": "existing_rm65_api2_handle",
+      "configured_target_generation_hz": 10.0,
+      "timeout_sec": 15.0,
+      "triangle_period_sec": 2.0,
+      "start_monotonic": 9115.178116131,
+      "deadline_monotonic": 9130.178116131,
+      "position_min": 220,
+      "position_max": 255,
+      "open_pose_confirmed": true,
+      "actual_motion": "NOT AUTOMATICALLY VERIFIED"
+    },
+    "completion": {
+      "event": "AUTO_STREAM_FINISH",
+      "timestamp_ns": 1793697891885066306,
+      "mode": "auto_stream",
+      "elapsed_time": 15.321891969000717,
+      "joint_index": 2,
+      "session": "existing_rm65_api2_handle",
+      "reason": "timeout_limit",
+      "schedule_completed": true,
+      "sdk_acknowledged_success_count": 0,
+      "sdk_unconfirmed_command_count": 61,
+      "sdk_exception_count": 0,
+      "last_return_code": 1,
+      "actual_motion": "NOT AUTOMATICALLY VERIFIED",
+      "configured_target_generation_hz": 10.0,
+      "target_generation_count": 150,
+      "position_write_count": 61,
+      "target_generation_hz": 10.001457757441676,
+      "actual_modbus_write_hz": 4.031874359325067,
+      "overwritten_target_count": 88,
+      "skipped_generation_slots": 0,
+      "discarded_pending_target_count": 1,
+      "cancelled_selected_target_count": 0,
+      "last_target_positions": [
+        255,
+        255,
+        227,
+        255,
+        255,
+        255,
+        255
+      ]
+    },
+    "raw_control_recomputed": {
+      "BASELINE": {
+        "samples": 2000,
+        "sent": 209,
+        "send_failures": 0,
+        "fault_latched_samples": 0,
+        "feedback_invalid_samples": 0,
+        "intervals_over_10ms": 0,
+        "canfd_interval_sec": {
+          "count": 208,
+          "avg": 0.005000045759621012,
+          "p95": 0.005025459549869993,
+          "p99": 0.005040729160282353,
+          "max": 0.005056744999819784
+        },
+        "feedback_age_sec": {
+          "count": 2000,
+          "avg": 0.003923671778006792,
+          "p95": 0.004294553351337526,
+          "p99": 0.004580646869017073,
+          "max": 0.004636439000023529
+        }
+      },
+      "INJECTION": {
+        "samples": 3064,
+        "sent": 3064,
+        "send_failures": 0,
+        "fault_latched_samples": 0,
+        "feedback_invalid_samples": 0,
+        "intervals_over_10ms": 0,
+        "canfd_interval_sec": {
+          "count": 3064,
+          "avg": 0.004999989341383937,
+          "p95": 0.005017564000809216,
+          "p99": 0.005033438560894865,
+          "max": 0.005155291999471956
+        },
+        "feedback_age_sec": {
+          "count": 3064,
+          "avg": 0.002149679109332677,
+          "p95": 0.003992916999777663,
+          "p99": 0.004217318999508279,
+          "max": 0.00434436000068672
+        }
+      },
+      "POST": {
+        "samples": 2000,
+        "sent": 2000,
+        "send_failures": 0,
+        "fault_latched_samples": 0,
+        "feedback_invalid_samples": 0,
+        "intervals_over_10ms": 0,
+        "canfd_interval_sec": {
+          "count": 2000,
+          "avg": 0.005000014342999748,
+          "p95": 0.0050175639989902265,
+          "p99": 0.005024688000048627,
+          "max": 0.005053183000200079
+        },
+        "feedback_age_sec": {
+          "count": 2000,
+          "avg": 0.0010109322719945339,
+          "p95": 0.004297105449131777,
+          "p99": 0.004698177999671316,
+          "max": 0.005766754999058321
+        }
+      }
+    },
+    "modbus_duration_ms": {
+      "count": 61,
+      "avg": 250.16541318046754,
+      "p95": 342.02073300002667,
+      "p99": 397.1177626004645,
+      "max": 436.5909970001667
+    },
+    "operator_observation": "Observed by operator per task history; not encoded as verified by monitor",
+    "missing_console_logs": []
+  }
+}

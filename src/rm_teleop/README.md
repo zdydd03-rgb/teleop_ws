@@ -1,5 +1,9 @@
 # PICO → RM65 CANFD 高跟随（单链路版）
 
+工作空间总入口及最新 O7 证据见 [根 README](../../README.md)，下一阶段见 [PICO-O7 交接](../../docs/PICO_O7_TELEOP_HANDOFF.md)。本页保留机械臂坐标映射和运行说明，不代表 PICO 手指映射已经实现。
+
+O7 使用高跟随节点内的同一 Adapter/handle。三种 HIL 默认关闭、共用进程一次接受机会；自动模式 10 Hz 是目标生成，最新共享 Session 实际写入约 4.032 Hz。位置非零返回表示 SDK 未确认，不能等同于未执行或成功。不要另开 O7 API2 Client。
+
 本包只保留一条真机控制链路：
 
 ```text
@@ -35,16 +39,17 @@ PICO +Rz → RM65 Base +Rx
 
 ## 唯一启动文件
 
-```bash
-ros2 launch rm_teleop teleop_high_follow.launch.py
-```
-
-默认运动输出锁定。真机解锁：
+使用已验证的参数启动真机：
 
 ```bash
 ros2 launch rm_teleop teleop_high_follow.launch.py \
-  allow_motion:=true \
   motion_confirmation:=RM65_CANFD_HIGH_FOLLOW_CONFIRMED
+```
+
+launch 默认允许运动，但仍需要上述确认字符串；不提供确认字符串时，控制节点会拒绝启动。需要保持运动输出锁定时，显式运行：
+
+```bash
+ros2 launch rm_teleop teleop_high_follow.launch.py allow_motion:=false
 ```
 
 ## 速度参数
@@ -52,8 +57,8 @@ ros2 launch rm_teleop teleop_high_follow.launch.py \
 高跟随控制频率固定为200Hz。以下参数只控制目标变化速度和手部位移比例：
 
 ```text
-position_scale             手位移到机械臂位移的比例，默认0.25
-translation_speed_mps      法兰最大平移速度，默认0.05 m/s
+position_scale             手位移到机械臂位移的比例，默认0.75
+translation_speed_mps      法兰最大平移速度，默认0.08 m/s
 rotation_speed_deg_s       法兰最大旋转速度，默认12 deg/s
 ```
 
@@ -61,7 +66,6 @@ rotation_speed_deg_s       法兰最大旋转速度，默认12 deg/s
 
 ```bash
 ros2 launch rm_teleop teleop_high_follow.launch.py \
-  allow_motion:=true \
   motion_confirmation:=RM65_CANFD_HIGH_FOLLOW_CONFIRMED \
   translation_speed_mps:=0.03 \
   rotation_speed_deg_s:=0.0
@@ -71,7 +75,6 @@ ros2 launch rm_teleop teleop_high_follow.launch.py \
 
 ```bash
 ros2 launch rm_teleop teleop_high_follow.launch.py \
-  allow_motion:=true \
   motion_confirmation:=RM65_CANFD_HIGH_FOLLOW_CONFIRMED \
   translation_speed_mps:=0.0 \
   rotation_speed_deg_s:=3.0
@@ -81,14 +84,10 @@ ros2 launch rm_teleop teleop_high_follow.launch.py \
 
 ```bash
 ros2 launch rm_teleop teleop_high_follow.launch.py \
-  allow_motion:=true \
   motion_confirmation:=RM65_CANFD_HIGH_FOLLOW_CONFIRMED \
   position_scale:=0.25 \
   translation_speed_mps:=0.05 \
   rotation_speed_deg_s:=5.0
-
-ros2 launch rm_teleop teleop_high_follow.launch.py   allow_motion:=true   motion_confirmation:=RM65_CANFD_HIGH_FOLLOW_CONFIRMED   position_scale:=0.75   translation_speed_mps:=0.08   rotation_speed_deg_s:=10.0
-
 ```
 
 ## 主要话题
@@ -105,25 +104,14 @@ ros2 launch rm_teleop teleop_high_follow.launch.py   allow_motion:=true   motion
 
 ## 构建
 
-完整替换源码后清理旧构建结果：
+例行增量构建不需要删除 build/install：
 
 ```bash
-source /opt/ros/humble/setup.bash
 cd ~/teleop_ws
-
-rm -rf \
-  build/rm_teleop \
-  build/pico_rm65_teleop_interfaces \
-  install/rm_teleop \
-  install/pico_rm65_teleop_interfaces
-
-colcon build \
-  --symlink-install \
-  --packages-select \
-  pico_rm65_teleop_interfaces \
-  rm_teleop
-
-source ~/teleop_ws/install/setup.bash
+source /opt/ros/humble/setup.bash
+colcon build --symlink-install --packages-select pico_rm65_teleop_interfaces rm_teleop
+source install/setup.bash
+python3 -m pytest src/rm_teleop/test -q
 ```
 
 ## 启动前检查

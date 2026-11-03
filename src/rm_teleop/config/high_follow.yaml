@@ -38,8 +38,8 @@ target_generator_node:
     flange_freshness_timeout_sec: 0.05
 
     # 启动文件可以覆盖这三个参数。
-    position_scale: 0.25
-    max_translation_speed_mps: 0.05
+    position_scale: 0.75
+    max_translation_speed_mps: 0.08
     max_rotation_speed_deg_s: 12.0
 
     # 第二轮输入稳定：轻量滤波 + STILL/MOVING/SETTLING 状态机。
@@ -51,7 +51,7 @@ target_generator_node:
     motion_start_rotation_deg: 2.0
     motion_stop_translation_m: 0.0035
     motion_stop_rotation_deg: 1.5
-    motion_stop_hold_sec: 0.30
+    motion_stop_hold_sec: 0.50
 
     workspace_limit_enabled: false
     workspace_min_xyz: [-10.0, -10.0, -10.0]
@@ -95,7 +95,17 @@ rm65_canfd_high_follow_node:
     j3_activation_min_deg: 15.0
     allowed_arm_current_statuses: [0, 5]
 
-    # 默认锁定；只能通过launch参数显式解锁。
+    # 直接运行节点时默认锁定；launch 默认允许运动，仍要求确认字符串。
+    enable_o7_single_session_hil: false
+    enable_o7_stream_hil: false
+    enable_o7_auto_stream_hil: false
+    o7_auto_stream_hz: 10.0
+    o7_auto_stream_timeout_sec: 60.0
+    o7_auto_stream_open_pose_confirmed: false
+    o7_stream_hz: 1.0
+    o7_stream_duration_sec: 10.0
+    o7_stream_joint: 2
+    o7_stream_open_pose_confirmed: false
     allow_motion: false
     motion_confirmation: ""
 

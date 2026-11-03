@@ -54,6 +54,43 @@ class RmApi2MotionAdapter(RmApi2ReadOnlyAdapter):
             duration_ms=(time.perf_counter() - started) * 1000.0,
         )
 
+    def write_o7_hil_speed_once(self, emit) -> None:
+        """Real persistent speed configuration write; caller owns the lifetime lease."""
+        start_ns = time.time_ns()
+        emit({"event": "MODBUS_START", "timestamp_ns": start_ns,
+              "session": "existing_rm65_api2_handle", "operation": "write_o7_speed",
+              "slave_id": 39, "address": 14, "num_registers": 7, "port": 1})
+        started = time.perf_counter()
+        try:
+            arm = self._require_arm()
+            params = self.module.rm_peripheral_read_write_params_t(
+                port=1, address=14, device=39, num=7,
+            )
+            code = int(arm.rm_write_registers(params, [0, 25] * 7))
+        except Exception as exc:
+            ended = time.perf_counter()
+            emit({"event": "MODBUS_EXCEPTION", "timestamp_ns": time.time_ns(),
+                  "error": repr(exc), "modbus_start_timestamp": started,
+                  "modbus_end_timestamp": ended, "duration_ms": (ended - started) * 1000,
+                  "modbus_duration_ms": (ended - started) * 1000,
+                  "return_code": None, "modbus_return_code": None})
+        else:
+            ended = time.perf_counter()
+            emit({"event": "MODBUS_FINISH", "timestamp_ns": time.time_ns(),
+                  "modbus_start_timestamp": started, "modbus_end_timestamp": ended,
+                  "duration_ms": (ended - started) * 1000,
+                  "modbus_duration_ms": (ended - started) * 1000,
+                  "return_code": code, "modbus_return_code": code})
+
+    def write_o7_hil_positions(self, positions) -> int:
+        if (len(positions) != 7
+                or any(type(v) is not int or not 0 <= v <= 255 for v in positions)):
+            raise ValueError("O7 positions require seven integers in [0,255]")
+        arm = self._require_arm()
+        params = self.module.rm_peripheral_read_write_params_t(port=1, address=0, device=39, num=7)
+        data = [byte for value in positions for byte in (value >> 8, value & 255)]
+        return int(arm.rm_write_registers(params, data))
+
     def slow_stop(self) -> MotionApiResult:
         arm = self._require_arm()
         started = time.perf_counter()

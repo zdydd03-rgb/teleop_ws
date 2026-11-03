@@ -21,14 +21,15 @@ def test_only_high_follow_console_path_is_installed():
     assert "rm65_state_node" not in setup_text
 
 
-def test_launch_exposes_speed_controls_and_defaults_locked():
+def test_launch_exposes_tested_speed_controls_and_requires_confirmation():
     launch_text = (
         root() / "launch" / "teleop_high_follow.launch.py"
     ).read_text(encoding="utf-8")
 
-    assert 'DeclareLaunchArgument("allow_motion", default_value="false")' in launch_text
-    assert 'DeclareLaunchArgument("position_scale", default_value="0.25")' in launch_text
-    assert 'DeclareLaunchArgument("translation_speed_mps", default_value="0.05")' in launch_text
+    assert 'DeclareLaunchArgument("allow_motion", default_value="true")' in launch_text
+    assert 'DeclareLaunchArgument("motion_confirmation", default_value="")' in launch_text
+    assert 'DeclareLaunchArgument("position_scale", default_value="0.75")' in launch_text
+    assert 'DeclareLaunchArgument("translation_speed_mps", default_value="0.08")' in launch_text
     assert 'DeclareLaunchArgument("rotation_speed_deg_s", default_value="12.0")' in launch_text
     assert 'DeclareLaunchArgument("motion_gate_enabled", default_value="true")' in launch_text
     assert 'DeclareLaunchArgument("input_filter_time_constant_sec", default_value="0.060")' in launch_text
@@ -43,7 +44,8 @@ def test_high_follow_configuration_is_200_hz_and_motion_locked():
     assert "ik_dt_sec: 0.005" in config
     assert "allow_motion: false" in config
     assert 'motion_confirmation: ""' in config
-    assert "max_translation_speed_mps: 0.05" in config
+    assert "position_scale: 0.75" in config
+    assert "max_translation_speed_mps: 0.08" in config
     assert "max_rotation_speed_deg_s: 12.0" in config
     assert "motion_gate_enabled: true" in config
     assert "input_filter_time_constant_sec: 0.060" in config

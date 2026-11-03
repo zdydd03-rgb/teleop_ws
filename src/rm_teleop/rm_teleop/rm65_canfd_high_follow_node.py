@@ -15,6 +15,10 @@ from rclpy.node import Node
 from rclpy.qos import DurabilityPolicy, HistoryPolicy, QoSProfile, ReliabilityPolicy
 from sensor_msgs.msg import JointState
 from std_msgs.msg import Bool, Int32, String
+from std_srvs.srv import Trigger
+
+from .o7_single_session_hil import SingleSessionHil, StreamConfig
+from .o7_auto_stream_hil import AutoStreamConfig
 
 from pico_rm65_teleop_interfaces.msg import RmCanfdControlState, RmTeleopTarget
 
@@ -176,6 +180,12 @@ class Rm65CanfdHighFollowNode(Node):
         self._max_command_duration_ms = 0.0
         self._max_command_interval_sec = 0.0
 
+        self.hil_event_pub = self.create_publisher(String, "/rm65/o7_modbus_hil/event", reliable_qos)
+        self._hil = SingleSessionHil(self._emit_hil_event)
+        self._hil_service = self.create_service(
+            Trigger, "/rm65/o7_modbus_hil/trigger_once", self._trigger_hil_once)
+        self._stream_hil_service = self.create_service(
+            Trigger, "/rm65/o7_stream_hil/start", self._start_stream_hil)
         self._stop_event = threading.Event()
         self._connection_thread = threading.Thread(
             target=self._connection_worker,
@@ -184,6 +194,10 @@ class Rm65CanfdHighFollowNode(Node):
         )
         self._connection_thread.start()
         self.create_timer(1.0 / self.publish_hz, self.on_timer)
+        self._auto_hil_last_gate = None
+        if self.enable_o7_auto_stream_hil:
+            # Admission only; no native SDK call, join or trajectory generation here.
+            self._auto_hil_timer = self.create_timer(.05, self._maybe_start_auto_hil)
 
         csv_path = str(self.csv_logger.path) if self.csv_logger.path is not None else "disabled"
         self.get_logger().warning(
@@ -234,6 +248,16 @@ class Rm65CanfdHighFollowNode(Node):
         self.declare_parameter("ik_dq_weight", [1.0] * 6)
         self.declare_parameter("allowed_arm_current_statuses", [0, 5])
 
+        self.declare_parameter("enable_o7_single_session_hil", False)
+        self.declare_parameter("enable_o7_stream_hil", False)
+        self.declare_parameter("enable_o7_auto_stream_hil", False)
+        self.declare_parameter("o7_auto_stream_hz", 10.0)
+        self.declare_parameter("o7_auto_stream_timeout_sec", 60.0)
+        self.declare_parameter("o7_auto_stream_open_pose_confirmed", False)
+        self.declare_parameter("o7_stream_hz", 1.0)
+        self.declare_parameter("o7_stream_duration_sec", 10.0)
+        self.declare_parameter("o7_stream_joint", 2)
+        self.declare_parameter("o7_stream_open_pose_confirmed", False)
         self.declare_parameter("allow_motion", False)
         self.declare_parameter("motion_confirmation", "")
         self.declare_parameter("canfd_trajectory_mode", 0)
@@ -274,6 +298,14 @@ class Rm65CanfdHighFollowNode(Node):
         self.ik_dq_weight = self._float_tuple_parameter("ik_dq_weight", 6)
         self.allowed_arm_current_statuses = self._int_tuple_parameter("allowed_arm_current_statuses")
 
+        self.enable_o7_single_session_hil = bool(p("enable_o7_single_session_hil"))
+        self.enable_o7_stream_hil = bool(p("enable_o7_stream_hil"))
+        self.enable_o7_auto_stream_hil = bool(p("enable_o7_auto_stream_hil"))
+        self.o7_auto_stream_config = AutoStreamConfig(
+            p("o7_auto_stream_hz"), p("o7_auto_stream_timeout_sec"),
+            p("o7_auto_stream_open_pose_confirmed"))
+        self.o7_stream_config = StreamConfig(p("o7_stream_hz"), p("o7_stream_duration_sec"),
+                                            p("o7_stream_joint"), p("o7_stream_open_pose_confirmed"))
         self.allow_motion = bool(p("allow_motion"))
         self.motion_confirmation = str(p("motion_confirmation"))
         self.canfd_trajectory_mode = int(p("canfd_trajectory_mode"))
@@ -343,6 +375,9 @@ class Rm65CanfdHighFollowNode(Node):
                 )
                 configuration.update(
                     {
+                        "enable_o7_single_session_hil": self.enable_o7_single_session_hil,
+                        "enable_o7_stream_hil": self.enable_o7_stream_hil,
+                        "o7_stream_config": vars(self.o7_stream_config),
                         "remote_ik": remote_ik_config,
                         "operation_mode": "canfd_high_follow_realtime",
                         "motion_output_enabled": self.motion_permitted,
@@ -371,12 +406,17 @@ class Rm65CanfdHighFollowNode(Node):
                     default=str,
                 )
                 with self._adapter_lock:
-                    self._adapter = adapter
-                    self._connected = True
-                    self._connection_error = ""
-                    self._ik_initialized = True
-                    self._ik_initialization_error = ""
-                    self._configuration_json = configuration_json
+                    closing = self._stop_event.is_set()
+                    if not closing:
+                        self._adapter = adapter
+                        self._connected = True
+                        self._connection_error = ""
+                        self._ik_initialized = True
+                        self._ik_initialization_error = ""
+                        self._configuration_json = configuration_json
+                if closing:
+                    adapter.disconnect()
+                    return
                 self.configuration_pub.publish(String(data=configuration_json))
                 self.get_logger().warning(
                     "connected to RM65; dedicated high-follow mode initialized; "
@@ -949,6 +989,10 @@ class Rm65CanfdHighFollowNode(Node):
         msg.ik_fk_orientation_error_deg = v["fk_orientation_error_deg"]
         self._copy_pose(v["target_pose"], msg.target_pose)
         self._copy_pose(v["solved_fk"], msg.ik_solved_fk_pose)
+        if (self.enable_o7_single_session_hil or self.enable_o7_stream_hil
+                or self.enable_o7_auto_stream_hil):
+            self._hil.record(time.monotonic(), msg.state == "ACTIVE" and msg.command_sent
+                             and not msg.fault_latched)
         self.control_state_pub.publish(msg)
 
         self._last_summary = ControlSummary(
@@ -1254,8 +1298,68 @@ class Rm65CanfdHighFollowNode(Node):
             raise ValueError(f"parameter {name} must not be empty")
         return result
 
+    def _emit_hil_event(self, event: dict) -> None:
+        # Wall-clock timestamp is shared with the external monitor; perf_counter measures duration.
+        payload = json.dumps(event, ensure_ascii=False)
+        self.get_logger().warning(f"O7 HIL {payload}")
+        try:
+            self.hil_event_pub.publish(String(data=payload))
+        except Exception as exc:
+            self.get_logger().error(f"HIL event publish failed: {exc}; event={payload}")
+
+    def _hil_rejection(self):
+        # Read-only safety snapshot, also polled by the stream worker. No native calls.
+        with self._adapter_lock:
+            adapter = self._adapter
+            connected = self._connected
+            initialized = self._ik_initialized
+        snapshot = self.store.latest()
+        age = time.monotonic() - snapshot.received_monotonic if snapshot else math.inf
+        reason = self._critical_feedback_reason(
+            connected=connected, ik_initialized=initialized, snapshot=snapshot, feedback_age=age)
+        if self._stop_event.is_set():
+            reason = "node_closing"
+        elif adapter is None or adapter.arm is None or adapter.handle is None:
+            reason = "api2_not_connected"
+        elif self._fault_latched:
+            reason = "FAULT_LATCHED:" + self._fault_reason
+        elif not self.motion_permitted:
+            reason = "motion_not_permitted"
+        elif abs(self.publish_hz - 200.0) > 1e-6:
+            reason = "HIL_requires_200Hz_control"
+        elif self._last_summary.state != "ACTIVE" or not self._last_summary.command_sent:
+            reason = reason or "control_not_ACTIVE_sending"
+        return reason
+
+    def _trigger_hil_once(self, request, response):
+        # Service and timer share the default mutually exclusive callback group.
+        reason = self._hil_rejection()
+        response.success, response.message = self._hil.trigger(
+            self.enable_o7_single_session_hil, self._adapter, reason)
+        return response
+
+    def _start_stream_hil(self, request, response):
+        reason = self._hil_rejection()
+        response.success, response.message = self._hil.trigger(
+            self.enable_o7_stream_hil, self._adapter, reason,
+            stream_config=self.o7_stream_config, safety=self._hil_rejection)
+        return response
+
+    def _maybe_start_auto_hil(self):
+        if not self.enable_o7_auto_stream_hil or self._hil.used or self._stop_event.is_set():
+            return
+        reason = self._hil_rejection()
+        accepted, message = self._hil.trigger(
+            True, self._adapter, reason, auto_config=self.o7_auto_stream_config,
+            safety=self._hil_rejection)
+        gate = (accepted, message)
+        if gate != self._auto_hil_last_gate:
+            self._auto_hil_last_gate = gate
+            self.get_logger().warning(f"O7 auto HIL accepted={accepted}: {message}")
+
     def destroy_node(self) -> bool:
         self._stop_event.set()
+        self._hil.begin_close()
         with self._adapter_lock:
             adapter = self._adapter
             self._adapter = None
@@ -1270,6 +1374,7 @@ class Rm65CanfdHighFollowNode(Node):
                     )
                 except Exception as exc:
                     self.get_logger().error(f"shutdown quick_stop failed: {exc}")
+            self._hil.wait_closed(self.get_logger().error)
             try:
                 adapter.disconnect()
             except Exception as exc:
@@ -1277,6 +1382,9 @@ class Rm65CanfdHighFollowNode(Node):
         self.csv_logger.close()
         if self._connection_thread.is_alive():
             self._connection_thread.join(timeout=2.0)
+            if self._connection_thread.is_alive():
+                self.get_logger().error("API2 initialization still blocked; waiting for safe cleanup")
+                self._connection_thread.join()
         return super().destroy_node()
 
 
