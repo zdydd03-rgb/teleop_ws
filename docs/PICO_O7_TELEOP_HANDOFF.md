@@ -1,5 +1,7 @@
 # RM65 + O7 单 Session 并发控制阶段总结与 PICO 手指遥操作开发交接
 
+> 本文为2026-11-03单次/自动HIL阶段历史交接。2026-11-04已完成PICO手部接入并统一迁入teleop_ws；当前请从 [工作空间交接](PICO_O7_WORKSPACE_HANDOFF.md) 开始。以下“待开发/待调查”和旧 NEW_SESSION 内容只代表当时状态。
+
 核查日期：2026-11-03（Asia/Shanghai）。工作空间 `/home/ai/teleop_ws`。本轮仅源码/原始日志审计、外部归档、文档和离线验证；不连真机、不改控制代码、不做 Modbus 优化。
 
 ## 1. 项目背景与当前边界
@@ -284,7 +286,7 @@ root README列出全部主要topic类型；Trigger success只代表接受请求�
 
 详细结果以 [WORKSPACE_CLEANUP_REPORT.md](WORKSPACE_CLEANUP_REPORT.md) 为准。Git没有自动add/commit/push，新增HIL文件和文档仍需之后审阅纳入版本管理。不可git clean删除尚未跟踪的工程成果。
 
-## NEW_SESSION_START_HERE
+## LEGACY_SESSION_START_20261103
 
 当前项目是RM65-B六轴机械臂、PICO和LinkerHand O7右手遥操作系统，工作空间为~/teleop_ws。已完成机械臂位姿遥操作、Remote IK、CANFD二百赫兹、五毫秒UDP反馈、安全检查与故障锁存，以及同一API2会话下的O7并发位置HIL。下一阶段只开发PICO手指到O7位置遥操作，不再优化Modbus吞吐，不重新设计机械臂控制。
 

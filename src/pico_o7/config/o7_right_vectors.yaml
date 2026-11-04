@@ -1,0 +1,34 @@
+# Derived from somehand O7: use only verified URDF body origins.
+# Original fingertip site constraints cannot be reproduced without the upstream MJCF/meshes.
+hand:
+  name: linkerhand_o7v3_right_vendor_kinematic
+  side: right
+  mjcf_path: ../models/o7_right_kinematic.xml
+  urdf_source: vendor/linkerhand-urdf/O7/right/linkerhand_o7v3_right.urdf
+controller:
+  backend: viewer
+retargeting:
+  vector_constraints:
+    - {human: [1, 2], robot: [thumb_metacarpals, thumb_proximal]}
+    - {human: [2, 3], robot: [thumb_proximal, thumb_distal]}
+    - {human: [5, 6], robot: [index_proximal, index_middle]}
+    - {human: [6, 7], robot: [index_middle, index_distal]}
+    - {human: [9, 10], robot: [middle_proximal, middle_middle]}
+    - {human: [10, 11], robot: [middle_middle, middle_distal]}
+    - {human: [13, 14], robot: [ring_proximal, ring_middle]}
+    - {human: [14, 15], robot: [ring_middle, ring_distal]}
+    - {human: [17, 18], robot: [pinky_proximal, pinky_middle]}
+    - {human: [18, 19], robot: [pinky_middle, pinky_distal]}
+  frame_constraints:
+    # Geometry-defined frame, no raw PICO quaternions.
+    - name: thumb_cmc_frame
+      human_origin: 1
+      human_primary: 2
+      human_secondary: 5
+      robot_origin: thumb_metacarpals
+      robot_primary: thumb_proximal
+      robot_secondary: index_proximal
+      primary_weight: 2.0
+      secondary_weight: 1.8
+  preprocess: {temporal_filter_alpha: 0.65}
+  solver: {max_iterations: 60, norm_delta: 0.001, output_alpha: 0.92}

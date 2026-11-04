@@ -1,0 +1,13 @@
+{
+  "schema_version": 1,
+  "joint_index": 2,
+  "hold_positions": [255, 255, 255, 255, 255, 255, 255],
+  "target_positions": [255, 255, 245, 255, 255, 255, 255],
+  "approved_index_range": [245, 255],
+  "hold_confirmed_current_session": [false, false, false, false, false, false, false],
+  "hold_evidence": ["", "", "", "", "", "", ""],
+  "local_window_confirmed_current_session": false,
+  "operator": "",
+  "confirmation_utc": "",
+  "note": "EXAMPLE ONLY. Unconfirmed holds, not executable on hardware. Single245 target, no automatic return to255."
+}

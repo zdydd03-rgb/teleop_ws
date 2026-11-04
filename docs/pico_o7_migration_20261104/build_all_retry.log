@@ -1,0 +1,12 @@
+Starting >>> pico_rm65_teleop_interfaces
+[Processing: pico_rm65_teleop_interfaces]
+Finished <<< pico_rm65_teleop_interfaces [30.0s]
+Starting >>> rm_teleop
+[Processing: rm_teleop]
+[Processing: rm_teleop]
+Finished <<< rm_teleop [1min 0s]
+Starting >>> pico_o7
+[Processing: pico_o7]
+Finished <<< pico_o7 [30.6s]
+
+Summary: 3 packages finished [2min 1s]

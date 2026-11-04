@@ -1,0 +1,70 @@
+{
+  "changes": [
+    {
+      "path": "/home/ai/pico_o7_retargeting/o7_shared_session_node.py",
+      "sha256": "d9357fa0ad18e4430c0d1329700a490947281e28bf7fd73ef7333eae0420e89e",
+      "replacement": "/tmp/o7_parameter_start/o7_shared_session_node.py",
+      "after_sha256": "7446be137df481417081e93966db4ab8ad25d82a1d5a11898a300bf6e04c56fb",
+      "backup": "/home/ai/pico_o7_retargeting/outputs/parameter_start_20261104/source_before/o7_shared_session_node.py"
+    },
+    {
+      "path": "/home/ai/pico_o7_retargeting/o7_stage/realtime.py",
+      "sha256": "47c9528a27b650c6881519443f6359aaf008aab7202c30c3751ebb70e5fe7023",
+      "replacement": "/tmp/o7_parameter_start/o7_stage/realtime.py",
+      "after_sha256": "28cb757f9700e3c669d8b22856677bdce27e525700276274d418d4066e5dfc7b",
+      "backup": "/home/ai/pico_o7_retargeting/outputs/parameter_start_20261104/source_before/o7_stage/realtime.py"
+    },
+    {
+      "path": "/home/ai/pico_o7_retargeting/o7_field.sh",
+      "sha256": "ec2f72030bf2e8a7a2c0605f655f38b9a3952bf5e2f080dad5b6eeebaec14cf8",
+      "replacement": "/tmp/o7_parameter_start/o7_field.sh",
+      "after_sha256": "f4f464b0a7b54a2b37532dd391c9f63fe4ebd244688c773eb9f172cb73373176",
+      "backup": "/home/ai/pico_o7_retargeting/outputs/parameter_start_20261104/source_before/o7_field.sh"
+    },
+    {
+      "path": "/home/ai/pico_o7_retargeting/o7_session_tools.py",
+      "sha256": "41f97853742296a140e6a2a7fa9494d8d747a83e97fbeb0264016472b571bb9b",
+      "replacement": "/tmp/o7_parameter_start/o7_session_tools.py",
+      "after_sha256": "e1cc27d92887a5e9b683c3b4874ca3f55c71fb8d4e74a63d587c454f12aa4b55",
+      "backup": "/home/ai/pico_o7_retargeting/outputs/parameter_start_20261104/source_before/o7_session_tools.py"
+    },
+    {
+      "path": "/home/ai/pico_o7_retargeting/o7_stage/worker.py",
+      "sha256": "e0cb361cd5004a75ed16681e176d2131d444d792cf6ecb266d862b90fe91685e",
+      "replacement": "/tmp/o7_parameter_start/o7_stage/worker.py",
+      "after_sha256": "a288f765c138674f8f3a2f07a26c7cad6baa3aa92dad134eb00cc9bc09d30445",
+      "backup": "/home/ai/pico_o7_retargeting/outputs/parameter_start_20261104/source_before/o7_stage/worker.py"
+    },
+    {
+      "path": "/home/ai/pico_o7_retargeting/README.md",
+      "sha256": "7bf15b0051c2f5f8aa1b5bc821d44104c047e1658621ca2eefd9997ae79b5ef2",
+      "replacement": "/tmp/o7_parameter_start/README.md",
+      "after_sha256": "712e039675846fdd581edc05dfceb96216525a75ec6901d99e212ff5d29b9ee8",
+      "backup": "/home/ai/pico_o7_retargeting/outputs/parameter_start_20261104/source_before/README.md"
+    },
+    {
+      "path": "/home/ai/pico_o7_retargeting/PICO_O7_HANDOFF.md",
+      "sha256": "8f45d1184966edc6371cc9fe25cd6551cd2cc5f36da7b093c445f8b4a935a88b",
+      "replacement": "/tmp/o7_parameter_start/PICO_O7_HANDOFF.md",
+      "after_sha256": "60f9cca90418fea10446634540e3b4e8ac96d64cba5ee96f722850cda29ec908",
+      "backup": "/home/ai/pico_o7_retargeting/outputs/parameter_start_20261104/source_before/PICO_O7_HANDOFF.md"
+    },
+    {
+      "path": "/home/ai/pico_o7_retargeting/O7_REALTIME_COMMANDS.md",
+      "sha256": "4a666f99725fd1b1a6f6f57ad07c49e48327ae5cd34f747b96d9a28cca730958",
+      "replacement": "/tmp/o7_parameter_start/O7_REALTIME_COMMANDS.md",
+      "after_sha256": "eb619e600e35b8468bf934a214651fc20d17e4baa4cf3ffec873dbde002de6bf",
+      "backup": "/home/ai/pico_o7_retargeting/outputs/parameter_start_20261104/source_before/O7_REALTIME_COMMANDS.md"
+    },
+    {
+      "path": "/home/ai/pico_o7_retargeting/O7_WRITE_LATENCY_COMMANDS.md",
+      "sha256": "ec1689afc6201b1b5d2033f6c94b81a3df9cf6362c2a225e68c0688b5e29d87e",
+      "replacement": "/tmp/o7_parameter_start/O7_WRITE_LATENCY_COMMANDS.md",
+      "after_sha256": "9ff217c7ff58d22f4d6ad0f02757cd9ff9c5b582580cc6d6d18d32df06ab9804",
+      "backup": "/home/ai/pico_o7_retargeting/outputs/parameter_start_20261104/source_before/O7_WRITE_LATENCY_COMMANDS.md"
+    }
+  ],
+  "arm_sources_unchanged": true,
+  "device_config_unchanged": true,
+  "hardware_io": false
+}

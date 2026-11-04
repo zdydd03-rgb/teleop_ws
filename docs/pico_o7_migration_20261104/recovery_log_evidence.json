@@ -1,0 +1,195 @@
+{
+  "source_log": "/home/ai/.ros/log/python3_26594_1793782470682.log",
+  "source_log_sha256": "aaeab5594d98d459722c411188216f2f9aa3466aa88d8234ca034fce27ef6981",
+  "arm_csv": "/home/ai/pico_o7_retargeting/outputs/field/canfd/rm65_canfd_high_follow_20261104_165430.csv",
+  "arm_csv_sha256": "02c942c5ee64b745bd4f293021058c82b375187f954135861eba3295b1a920d9",
+  "hand_events": {
+    "O7_HAND_STATUS": 190,
+    "O7_HAND_PARAMETER_START": 1,
+    "O7_HAND_WRITE_START": 477,
+    "O7_HAND_WRITE_FINISH": 476,
+    "O7_HAND_WRITE_CANCELLED": 1
+  },
+  "completed_calls": 476,
+  "raw_codes": {
+    "1": 476
+  },
+  "sdk_exceptions": 0,
+  "mean_adapter_duration_ms": 246.86094362184875,
+  "max_adapter_duration_ms": 448.47229,
+  "status_transitions": [
+    {
+      "event": "O7_HAND_STATUS",
+      "timestamp_ns": 1793782471744005196,
+      "enabled": false,
+      "startup_pending": true,
+      "epoch": 0,
+      "reason": "startup_wait:control_not_ACTIVE_sending",
+      "inflight": false,
+      "pending": false,
+      "last_target": [
+        255,
+        255,
+        255,
+        255,
+        255,
+        255,
+        255
+      ],
+      "last_code": null,
+      "last_duration_ms": null,
+      "last_solve_ms": null,
+      "input_hz": 0.0,
+      "write_hz": 0.0,
+      "frequency_basis": "since node startup; cumulative",
+      "counts": {
+        "input": 0,
+        "valid_input": 0,
+        "solved": 0,
+        "invalid": 0,
+        "raw_overwritten": 0,
+        "target_overwritten": 0,
+        "pre_enable_dropped": 0,
+        "stale_dropped": 0,
+        "obsolete_result_dropped": 0,
+        "identical_dropped": 0,
+        "cancelled_before_call": 0,
+        "writes": 0,
+        "calls_returned": 0,
+        "call_exceptions": 0
+      },
+      "raw_return_code_counts": {},
+      "physical_write_result": "requires_field_observation",
+      "source_line": 9
+    },
+    {
+      "event": "O7_HAND_STATUS",
+      "timestamp_ns": 1793782497744030159,
+      "enabled": true,
+      "startup_pending": false,
+      "epoch": 1,
+      "reason": "tracking_valid",
+      "inflight": true,
+      "pending": true,
+      "last_target": [
+        207,
+        225,
+        207,
+        207,
+        207,
+        207,
+        207
+      ],
+      "last_code": 1,
+      "last_duration_ms": 233.106995,
+      "last_solve_ms": 2.550315999542363,
+      "input_hz": 19.14689071581214,
+      "write_hz": 0.11110381459852307,
+      "frequency_basis": "since node startup; cumulative",
+      "counts": {
+        "input": 517,
+        "valid_input": 23,
+        "solved": 23,
+        "invalid": 0,
+        "raw_overwritten": 0,
+        "target_overwritten": 19,
+        "pre_enable_dropped": 0,
+        "stale_dropped": 0,
+        "obsolete_result_dropped": 0,
+        "identical_dropped": 0,
+        "cancelled_before_call": 0,
+        "writes": 3,
+        "calls_returned": 2,
+        "call_exceptions": 0
+      },
+      "raw_return_code_counts": {
+        "1": 2
+      },
+      "physical_write_result": "requires_field_observation",
+      "source_line": 44
+    },
+    {
+      "event": "O7_HAND_STATUS",
+      "timestamp_ns": 1793782625743998110,
+      "enabled": false,
+      "startup_pending": false,
+      "epoch": 3,
+      "reason": "control_not_ACTIVE_sending",
+      "inflight": false,
+      "pending": false,
+      "last_target": [
+        176,
+        255,
+        220,
+        220,
+        221,
+        214,
+        255
+      ],
+      "last_code": 1,
+      "last_duration_ms": 218.727789,
+      "last_solve_ms": 2.095582000038121,
+      "input_hz": 26.74163529900804,
+      "write_hz": 3.0709332695603924,
+      "frequency_basis": "since node startup; cumulative",
+      "counts": {
+        "input": 4145,
+        "valid_input": 3630,
+        "solved": 3629,
+        "invalid": 1,
+        "raw_overwritten": 1,
+        "target_overwritten": 3152,
+        "pre_enable_dropped": 0,
+        "stale_dropped": 0,
+        "obsolete_result_dropped": 0,
+        "identical_dropped": 0,
+        "cancelled_before_call": 1,
+        "writes": 476,
+        "calls_returned": 476,
+        "call_exceptions": 0
+      },
+      "raw_return_code_counts": {
+        "1": 476
+      },
+      "physical_write_result": "requires_field_observation",
+      "source_line": 1124
+    }
+  ],
+  "arm_state_counts": {
+    "WAITING_ROBOT": 92,
+    "READY": 6988,
+    "ACTIVE": 31098
+  },
+  "arm_fault_latched_samples": 0,
+  "cause": "normal READY/teleop_disabled at 1793782625.080616149; ACTIVE restored at 1793782626.960910757; hand permanently disabled by control_not_ACTIVE_sending despite renewed inputs; operator confirms tracking loss/recovery",
+  "physical_motion": "operator reports both followed before loss; no new-version HIL performed",
+  "retained_log": "/home/ai/teleop_ws/concurrency_logs/pico_o7_tracking_loss_20261104/teleop_console.log",
+  "arm_metrics": {
+    "sent": 31098,
+    "attempted": 31098,
+    "failed": 0,
+    "interval_sec": {
+      "count": 31096,
+      "avg": 0.004999999869114994,
+      "p95": 0.005029395999372355,
+      "p99": 0.005057891999967978,
+      "max": 0.008996158001536969
+    },
+    "intervals_over_10ms": 0,
+    "call_duration_ms": {
+      "count": 31098,
+      "avg": 0.0679113218964948,
+      "p95": 0.09854600102698896,
+      "p99": 0.10804399971675593,
+      "max": 0.38824600051157176
+    },
+    "feedback_age_sec_active": {
+      "count": 31098,
+      "avg": 0.001989035662904631,
+      "p95": 0.005308413999955519,
+      "p99": 0.005398645030254556,
+      "max": 0.0056052370000543306
+    }
+  },
+  "retained_arm_csv": "/home/ai/teleop_ws/concurrency_logs/pico_o7_tracking_loss_20261104/arm_control/rm65_canfd_high_follow_20261104_165430.csv"
+}

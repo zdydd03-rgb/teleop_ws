@@ -1,0 +1,47 @@
+test_disabled_again_cancels_queued_diagnostic (test_o7_write_latency.LatencyTests) ... ok
+test_identical_timing_scope_raw_codes_only (test_o7_write_latency.LatencyTests) ... ok
+test_latency_request_disabled_follow_only_consumes_once (test_o7_write_latency.LatencyTests) ... ok
+test_mutually_exclusive_project_session_lease (test_o7_write_latency.LatencyTests) ... ok
+test_plan_and_guard_reject_before_native (test_o7_write_latency.LatencyTests) ... ok
+test_standalone_only_connect_position_delete_no_other_sdk_calls (test_o7_write_latency.LatencyTests) ... ok
+test_actual_solver_subprocess_and_shared_worker_mock_native (test_o7_realtime.RealtimeTests) ... ok
+test_cancel_after_claim_and_no_hold_anchor_advance (test_o7_realtime.RealtimeTests) ... ok
+test_clamp_both_sides_and_single_step (test_o7_realtime.RealtimeTests) ... ok
+test_direction_flip_and_per_axis_range (test_o7_realtime.RealtimeTests) ... ok
+test_existing_adapter_exact_slave39_fc16_bytes (test_o7_realtime.RealtimeTests) ... ok
+test_invalid_keypoint_tracking_and_no_finite_data (test_o7_realtime.RealtimeTests) ... ok
+test_latest_overwrites_and_low_frequency (test_o7_realtime.RealtimeTests) ... ok
+test_named_reorder_independent_of_dictionary_or_solver_order (test_o7_realtime.RealtimeTests) ... ok
+test_nan_inf_bool_missing_rejected_before_target (test_o7_realtime.RealtimeTests) ... ok
+test_new_locked_once_does_not_weaken_old_active_gate (test_o7_realtime.RealtimeTests) ... ok
+test_original_receiver_path_retains_21_points_without_extra_socket (test_o7_realtime.RealtimeTests) ... ok
+test_return_codes_never_decide_enable_or_success_and_no_retry (test_o7_realtime.RealtimeTests) ... ok
+test_slow_call_only_duration_based (test_o7_realtime.RealtimeTests) ... ok
+test_stale_input_solution_and_pending_discard (test_o7_realtime.RealtimeTests) ... ok
+test_stop_reenable_rejects_old_solver_and_cached_targets (test_o7_realtime.RealtimeTests) ... ok
+test_all_hold_confirmations_and_fresh_evidence_required (test_o7_shared_stage.SharedStageTests) ... ok
+test_domain_index_and_local_window_validation (test_o7_shared_stage.SharedStageTests) ... ok
+test_dry_run_unconfirmed_is_not_executable (test_o7_shared_stage.SharedStageTests) ... ok
+test_existing_monitor_can_capture_new_single_write (test_o7_shared_stage.SharedStageTests) ... ok
+test_full_read_byte_order_signed_bytes_and_bad_data (test_o7_shared_stage.SharedStageTests) ... ok
+test_guard_rechecked_after_start_before_submission (test_o7_shared_stage.SharedStageTests) ... ok
+test_node_read_gate_rejects_motion_enabled (test_o7_shared_stage.SharedStageTests) ... ok
+test_nonzero_read_keeps_raw_but_never_positions (test_o7_shared_stage.SharedStageTests) ... ok
+test_once_all_return_codes_are_only_raw_diagnostics (test_o7_shared_stage.SharedStageTests) ... ok
+test_once_preserves_return1_no_retry_return_or_reads (test_o7_shared_stage.SharedStageTests) ... ok
+test_original_sources_still_match_staged_manifest (test_o7_shared_stage.SharedStageTests) ... ok
+test_other_six_values_reject_before_any_sdk_call (test_o7_shared_stage.SharedStageTests) ... ok
+test_read_and_write_cannot_overlap_and_close_waits (test_o7_shared_stage.SharedStageTests) ... ok
+test_read_calls_only_existing_arm_and_exact_ir_parameters (test_o7_shared_stage.SharedStageTests) ... ok
+test_worker_exception_consumes_attempt_and_never_restores (test_o7_shared_stage.SharedStageTests) ... ok
+test_actual_adapter_preserves_array_order_and_return_code (test_o7_mapping_audit.MappingAuditChecks) ... ok
+test_auto_generator_only_varies_index (test_o7_mapping_audit.MappingAuditChecks) ... ok
+test_current_shared_hil_rejects_other_axes (test_o7_mapping_audit.MappingAuditChecks) ... ok
+test_evidence_does_not_promote_unconfirmed_sdk_calls (test_o7_mapping_audit.MappingAuditChecks) ... ok
+test_permutation_keeps_names_units_and_separates_zero (test_o7_mapping_audit.MappingAuditChecks) ... ok
+test_user_endpoints_not_claimed_as_measured_calibration (test_o7_mapping_audit.MappingAuditChecks) ... ok
+
+----------------------------------------------------------------------
+Ran 42 tests in 1.118s
+
+OK

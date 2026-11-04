@@ -1,0 +1,48 @@
+{
+  "hardware_connections": 0,
+  "hardware_sdk_calls": 0,
+  "reference_project_modified": false,
+  "project_runtime_reference_dependency": false,
+  "arm_source_config_changed": false,
+  "pytest_tests": 238,
+  "colcon_rm_teleop": "Summary: 164 tests, 0 errors, 0 failures, 0 skipped",
+  "colcon_pico_o7": "Summary: 53 tests, 0 errors, 0 failures, 0 skipped",
+  "build": "3 packages finished",
+  "replay": [
+    {
+      "capture": "pico_raw_20261103_205724",
+      "frames": 861,
+      "valid": 861,
+      "solved": 861,
+      "solver_exceptions": 0,
+      "maximum_joint_target_difference": 0.0,
+      "hardware_sdk_calls": 0
+    },
+    {
+      "capture": "pico_raw_20261103_210246",
+      "frames": 718,
+      "valid": 548,
+      "solved": 548,
+      "solver_exceptions": 0,
+      "maximum_joint_target_difference": 0.0,
+      "hardware_sdk_calls": 0
+    },
+    {
+      "capture": "pico_raw_20261103_210154",
+      "frames": 851,
+      "valid": 851,
+      "solved": 851,
+      "solver_exceptions": 0,
+      "maximum_joint_target_difference": 0.0,
+      "hardware_sdk_calls": 0
+    }
+  ],
+  "launch_matrix": "4 modes passed",
+  "entry_points": "3 passed",
+  "solver_environment": "workspace-local Python3.11 with copied installed dependencies; no dependency upgrades",
+  "static": "compileall, bash -n, git diff --check passed",
+  "resolved_verification_issues": [
+    "Preserved pre-existing generated Python directory at build/pico_o7_migration_backup_20261104/interface_python_directory before symlink-install rebuild",
+    "Restricted new package pytest discovery to test/ so ROS Python3.10 does not import vendored solver Python3.11 modules during collection"
+  ]
+}

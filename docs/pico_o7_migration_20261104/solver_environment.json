@@ -1,0 +1,12 @@
+{
+  "python": "/home/ai/teleop_ws/.o7_solver_venv/bin/python",
+  "share": "/home/ai/teleop_ws/src/pico_o7",
+  "dependency_paths": {
+    "numpy": "/home/ai/teleop_ws/.o7_solver_venv/lib/python3.11/site-packages/numpy/__init__.py",
+    "scipy": "/home/ai/teleop_ws/.o7_solver_venv/lib/python3.11/site-packages/scipy/__init__.py",
+    "mujoco": "/home/ai/teleop_ws/.o7_solver_venv/lib/python3.11/site-packages/mujoco/__init__.py",
+    "yaml": "/home/ai/teleop_ws/.o7_solver_venv/lib/python3.11/site-packages/yaml/__init__.py"
+  },
+  "engine_source": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/application/engine.py",
+  "native_sdk_loaded": false
+}

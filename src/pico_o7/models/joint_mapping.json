@@ -1,0 +1,184 @@
+{
+  "model_joint_order": [
+    "thumb_cmc_roll",
+    "thumb_cmc_yaw",
+    "thumb_cmc_pitch",
+    "thumb_mcp",
+    "thumb_ip",
+    "index_mcp_pitch",
+    "index_pip",
+    "index_dip",
+    "middle_mcp_pitch",
+    "middle_pip",
+    "middle_dip",
+    "ring_mcp_pitch",
+    "ring_pip",
+    "ring_dip",
+    "pinky_mcp_pitch",
+    "pinky_pip",
+    "pinky_dip"
+  ],
+  "independent_joint_order": [
+    "thumb_cmc_roll",
+    "thumb_cmc_yaw",
+    "thumb_cmc_pitch",
+    "index_mcp_pitch",
+    "middle_mcp_pitch",
+    "ring_mcp_pitch",
+    "pinky_mcp_pitch"
+  ],
+  "effective_independent_bounds_rad": {
+    "thumb_cmc_roll": [
+      0.0,
+      1.1339
+    ],
+    "thumb_cmc_yaw": [
+      0.0,
+      1.9189
+    ],
+    "thumb_cmc_pitch": [
+      0.0,
+      0.5146
+    ],
+    "index_mcp_pitch": [
+      0.0,
+      1.3606447778933295
+    ],
+    "middle_mcp_pitch": [
+      0.0,
+      1.3606447778933295
+    ],
+    "ring_mcp_pitch": [
+      0.0,
+      1.3606447778933295
+    ],
+    "pinky_mcp_pitch": [
+      0.0,
+      1.3606447778933295
+    ]
+  },
+  "mimic": {
+    "thumb_mcp": {
+      "source": "thumb_cmc_pitch",
+      "multiplier": 1.3898,
+      "offset": 0.0
+    },
+    "thumb_ip": {
+      "source": "thumb_cmc_pitch",
+      "multiplier": 1.5085,
+      "offset": 0.0
+    },
+    "index_pip": {
+      "source": "index_mcp_pitch",
+      "multiplier": 1.3462,
+      "offset": 0.0
+    },
+    "index_dip": {
+      "source": "index_mcp_pitch",
+      "multiplier": 0.4615,
+      "offset": 0.0
+    },
+    "middle_pip": {
+      "source": "middle_mcp_pitch",
+      "multiplier": 1.3462,
+      "offset": 0.0
+    },
+    "middle_dip": {
+      "source": "middle_mcp_pitch",
+      "multiplier": 0.4615,
+      "offset": 0.0
+    },
+    "ring_pip": {
+      "source": "ring_mcp_pitch",
+      "multiplier": 1.3462,
+      "offset": 0.0
+    },
+    "ring_dip": {
+      "source": "ring_mcp_pitch",
+      "multiplier": 0.4615,
+      "offset": 0.0
+    },
+    "pinky_pip": {
+      "source": "pinky_mcp_pitch",
+      "multiplier": 1.3462,
+      "offset": 0.0
+    },
+    "pinky_dip": {
+      "source": "pinky_mcp_pitch",
+      "multiplier": 0.4615,
+      "offset": 0.0
+    }
+  },
+  "vendor_limits_rad": {
+    "thumb_cmc_roll": [
+      0.0,
+      1.1339
+    ],
+    "thumb_cmc_yaw": [
+      0.0,
+      1.9189
+    ],
+    "thumb_cmc_pitch": [
+      0.0,
+      0.5146
+    ],
+    "thumb_mcp": [
+      0.0,
+      0.7152
+    ],
+    "thumb_ip": [
+      0.0,
+      0.7763
+    ],
+    "index_mcp_pitch": [
+      0.0,
+      1.3607
+    ],
+    "index_pip": [
+      0.0,
+      1.8317
+    ],
+    "index_dip": [
+      0.0,
+      0.638
+    ],
+    "middle_mcp_pitch": [
+      0.0,
+      1.3607
+    ],
+    "middle_pip": [
+      0.0,
+      1.8317
+    ],
+    "middle_dip": [
+      0.0,
+      0.628
+    ],
+    "ring_mcp_pitch": [
+      0.0,
+      1.3607
+    ],
+    "ring_pip": [
+      0.0,
+      1.8317
+    ],
+    "ring_dip": [
+      0.0,
+      0.628
+    ],
+    "pinky_mcp_pitch": [
+      0.0,
+      1.3607
+    ],
+    "pinky_pip": [
+      0.0,
+      1.8317
+    ],
+    "pinky_dip": [
+      0.0,
+      0.628
+    ]
+  },
+  "evidence": "URDF non-mimic roots; model coordinates only. Hardware channel order/sign/calibration not established.",
+  "display": "Joint origins and URDF inertial centers; no surface mesh or verified fingertip sites."
+}

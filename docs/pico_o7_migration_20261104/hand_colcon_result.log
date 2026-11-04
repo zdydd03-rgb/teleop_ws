@@ -1,0 +1,7 @@
+build/pico_o7/pytest.xml: 1 test, 1 error, 0 failures, 0 skipped
+- pico_o7
+  <<< error message
+    collection failure
+  >>>
+
+Summary: 1 test, 1 error, 0 failures, 0 skipped

@@ -1,6 +1,6 @@
 # PICO → RM65 CANFD 高跟随（单链路版）
 
-工作空间总入口及最新 O7 证据见 [根 README](../../README.md)，下一阶段见 [PICO-O7 交接](../../docs/PICO_O7_TELEOP_HANDOFF.md)。本页保留机械臂坐标映射和运行说明，不代表 PICO 手指映射已经实现。
+工作空间总入口及最新 O7 证据见 [根 README](../../README.md)，下一阶段见 [PICO-O7 交接](../../docs/PICO_O7_TELEOP_HANDOFF.md)。本页保留机械臂坐标映射和原运行说明；PICO手部已在同工作空间 pico_o7 包接入，当前入口见 [工作空间交接](../../docs/PICO_O7_WORKSPACE_HANDOFF.md)。
 
 O7 使用高跟随节点内的同一 Adapter/handle。三种 HIL 默认关闭、共用进程一次接受机会；自动模式 10 Hz 是目标生成，最新共享 Session 实际写入约 4.032 Hz。位置非零返回表示 SDK 未确认，不能等同于未执行或成功。不要另开 O7 API2 Client。
 

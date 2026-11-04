@@ -1,0 +1,1962 @@
+{
+  "retained": [
+    {
+      "path": "/home/ai/teleop_ws/concurrency_logs/o7_write_only_1hz_20261103_165032/events.csv",
+      "sha256": "7a35cc26a574762c9eda4fccf8736e19a074cd874ea7a1e3938b97633c3a53e6",
+      "events": 24,
+      "event_counts": {
+        "TRIGGER_RESPONSE": 1,
+        "STREAM_START": 1,
+        "POSITION_WRITE_START": 10,
+        "POSITION_WRITE_FINISH": 10,
+        "STREAM_STOP": 1,
+        "STREAM_FINISH": 1
+      },
+      "starts": [
+        {
+          "csv_line": 3,
+          "payload": {
+            "event": "STREAM_START",
+            "timestamp_ns": 1793695859911517319,
+            "elapsed_time": 1.0685000233934261e-05,
+            "command_sequence": 0,
+            "sequence": 0,
+            "joint_index": 2,
+            "consecutive_failures": 0,
+            "unconfirmed_writes": 0,
+            "session": "existing_rm65_api2_handle",
+            "stream_hz": 1.0,
+            "duration_sec": 10.0,
+            "position_A": [
+              255,
+              255,
+              220,
+              255,
+              255,
+              255,
+              255
+            ],
+            "position_B": [
+              255,
+              255,
+              255,
+              255,
+              255,
+              255,
+              255
+            ],
+            "open_pose_confirmed": true,
+            "actual_motion": "NOT AUTOMATICALLY VERIFIED"
+          }
+        }
+      ],
+      "finishes": [
+        {
+          "csv_line": 25,
+          "payload": {
+            "event": "STREAM_FINISH",
+            "timestamp_ns": 1793695869912172056,
+            "elapsed_time": 10.0006654230001,
+            "command_sequence": 10,
+            "sequence": 10,
+            "joint_index": 2,
+            "consecutive_failures": 10,
+            "unconfirmed_writes": 10,
+            "session": "existing_rm65_api2_handle",
+            "reason": "duration_complete",
+            "schedule_completed": true,
+            "position_write_count": 10,
+            "last_target_positions": [
+              255,
+              255,
+              255,
+              255,
+              255,
+              255,
+              255
+            ],
+            "last_return_code": 1,
+            "sdk_acknowledged_success_count": 0,
+            "sdk_unconfirmed_command_count": 10,
+            "sdk_exception_count": 0,
+            "actual_motion": "NOT AUTOMATICALLY VERIFIED"
+          }
+        }
+      ],
+      "position_calls": 10,
+      "sdk_return_codes": {
+        "1": 10
+      },
+      "sdk_acknowledged_count": 0,
+      "sdk_unconfirmed_count": 10,
+      "sdk_exception_count": 0,
+      "changed_target_indices": [
+        2
+      ],
+      "target_values_by_channel": [
+        [
+          255
+        ],
+        [
+          255
+        ],
+        [
+          220,
+          255
+        ],
+        [
+          255
+        ],
+        [
+          255
+        ],
+        [
+          255
+        ],
+        [
+          255
+        ]
+      ],
+      "sdk_acknowledged_target_values_by_channel": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "write_rows": [
+        {
+          "csv_line": 5,
+          "command_sequence": 1,
+          "timestamp_ns": 1793695860109317357,
+          "target_positions": [
+            255,
+            255,
+            220,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 196.68634700065013
+        },
+        {
+          "csv_line": 7,
+          "command_sequence": 2,
+          "timestamp_ns": 1793695861200487395,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 288.2179570005974
+        },
+        {
+          "csv_line": 9,
+          "command_sequence": 3,
+          "timestamp_ns": 1793695862134402623,
+          "target_positions": [
+            255,
+            255,
+            220,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 222.0115310001347
+        },
+        {
+          "csv_line": 11,
+          "command_sequence": 4,
+          "timestamp_ns": 1793695863121839118,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 209.59589600079198
+        },
+        {
+          "csv_line": 13,
+          "command_sequence": 5,
+          "timestamp_ns": 1793695864136534911,
+          "target_positions": [
+            255,
+            255,
+            220,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 224.27452900046774
+        },
+        {
+          "csv_line": 15,
+          "command_sequence": 6,
+          "timestamp_ns": 1793695865125637181,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 213.3465859997159
+        },
+        {
+          "csv_line": 17,
+          "command_sequence": 7,
+          "timestamp_ns": 1793695866114744194,
+          "target_positions": [
+            255,
+            255,
+            220,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 202.45782300025894
+        },
+        {
+          "csv_line": 19,
+          "command_sequence": 8,
+          "timestamp_ns": 1793695867121596641,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 209.3323090002741
+        },
+        {
+          "csv_line": 21,
+          "command_sequence": 9,
+          "timestamp_ns": 1793695868130008011,
+          "target_positions": [
+            255,
+            255,
+            220,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 217.8286520002075
+        },
+        {
+          "csv_line": 23,
+          "command_sequence": 10,
+          "timestamp_ns": 1793695869130557052,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 218.4116170001289
+        }
+      ],
+      "call_duration_ms_mean": 220.21632470032273,
+      "call_duration_ms_max": 288.2179570005974,
+      "read_failures": [],
+      "evidence_limits": "Command submission/SDK status only. No O7 actual-position, direction, mechanical endpoint or per-axis operator annotation in these event rows."
+    },
+    {
+      "path": "/home/ai/teleop_ws/concurrency_logs/o7_auto_10hz_20261103_172402/events.csv",
+      "sha256": "0aebd3944f9585eb0af30b95219b8b8fc45ec01c31774afbf40c862fe8a1f856",
+      "events": 275,
+      "event_counts": {
+        "AUTO_STREAM_START": 1,
+        "POSITION_WRITE_START": 61,
+        "TARGET_GENERATED": 150,
+        "POSITION_WRITE_FINISH": 61,
+        "AUTO_STREAM_STOP": 1,
+        "AUTO_STREAM_FINISH": 1
+      },
+      "starts": [
+        {
+          "csv_line": 2,
+          "payload": {
+            "event": "AUTO_STREAM_START",
+            "timestamp_ns": 1793697876563189773,
+            "mode": "auto_stream",
+            "elapsed_time": 1.6623000192339532e-05,
+            "joint_index": 2,
+            "session": "existing_rm65_api2_handle",
+            "configured_target_generation_hz": 10.0,
+            "timeout_sec": 15.0,
+            "triangle_period_sec": 2.0,
+            "start_monotonic": 9115.178116131,
+            "deadline_monotonic": 9130.178116131,
+            "position_min": 220,
+            "position_max": 255,
+            "open_pose_confirmed": true,
+            "actual_motion": "NOT AUTOMATICALLY VERIFIED"
+          }
+        }
+      ],
+      "finishes": [
+        {
+          "csv_line": 276,
+          "payload": {
+            "event": "AUTO_STREAM_FINISH",
+            "timestamp_ns": 1793697891885066306,
+            "mode": "auto_stream",
+            "elapsed_time": 15.321891969000717,
+            "joint_index": 2,
+            "session": "existing_rm65_api2_handle",
+            "reason": "timeout_limit",
+            "schedule_completed": true,
+            "sdk_acknowledged_success_count": 0,
+            "sdk_unconfirmed_command_count": 61,
+            "sdk_exception_count": 0,
+            "last_return_code": 1,
+            "actual_motion": "NOT AUTOMATICALLY VERIFIED",
+            "configured_target_generation_hz": 10.0,
+            "target_generation_count": 150,
+            "position_write_count": 61,
+            "target_generation_hz": 10.001457757441676,
+            "actual_modbus_write_hz": 4.031874359325067,
+            "overwritten_target_count": 88,
+            "skipped_generation_slots": 0,
+            "discarded_pending_target_count": 1,
+            "cancelled_selected_target_count": 0,
+            "last_target_positions": [
+              255,
+              255,
+              227,
+              255,
+              255,
+              255,
+              255
+            ]
+          }
+        }
+      ],
+      "position_calls": 61,
+      "sdk_return_codes": {
+        "1": 61
+      },
+      "sdk_acknowledged_count": 0,
+      "sdk_unconfirmed_count": 61,
+      "sdk_exception_count": 0,
+      "changed_target_indices": [
+        2
+      ],
+      "target_values_by_channel": [
+        [
+          255
+        ],
+        [
+          255
+        ],
+        [
+          220,
+          223,
+          224,
+          227,
+          230,
+          231,
+          234,
+          237,
+          241,
+          244,
+          245,
+          248,
+          251,
+          252,
+          255
+        ],
+        [
+          255
+        ],
+        [
+          255
+        ],
+        [
+          255
+        ],
+        [
+          255
+        ]
+      ],
+      "sdk_acknowledged_target_values_by_channel": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "write_rows": [
+        {
+          "csv_line": 7,
+          "command_sequence": 1,
+          "timestamp_ns": 1793697876768128659,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 201.4280149996921
+        },
+        {
+          "csv_line": 12,
+          "command_sequence": 2,
+          "timestamp_ns": 1793697877140574166,
+          "target_positions": [
+            255,
+            255,
+            248,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 370.80227300066326
+        },
+        {
+          "csv_line": 17,
+          "command_sequence": 3,
+          "timestamp_ns": 1793697877367771517,
+          "target_positions": [
+            255,
+            255,
+            237,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 226.3080570010061
+        },
+        {
+          "csv_line": 22,
+          "command_sequence": 4,
+          "timestamp_ns": 1793697877666814071,
+          "target_positions": [
+            255,
+            255,
+            227,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 298.09389500042016
+        },
+        {
+          "csv_line": 27,
+          "command_sequence": 5,
+          "timestamp_ns": 1793697878033219740,
+          "target_positions": [
+            255,
+            255,
+            224,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 364.6935710003163
+        },
+        {
+          "csv_line": 33,
+          "command_sequence": 6,
+          "timestamp_ns": 1793697878376610628,
+          "target_positions": [
+            255,
+            255,
+            234,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 342.02073300002667
+        },
+        {
+          "csv_line": 37,
+          "command_sequence": 7,
+          "timestamp_ns": 1793697878595949186,
+          "target_positions": [
+            255,
+            255,
+            248,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 217.46973500012245
+        },
+        {
+          "csv_line": 41,
+          "command_sequence": 8,
+          "timestamp_ns": 1793697878832728113,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 236.01192600108334
+        },
+        {
+          "csv_line": 46,
+          "command_sequence": 9,
+          "timestamp_ns": 1793697879074196907,
+          "target_positions": [
+            255,
+            255,
+            248,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 240.4014029998507
+        },
+        {
+          "csv_line": 50,
+          "command_sequence": 10,
+          "timestamp_ns": 1793697879306899804,
+          "target_positions": [
+            255,
+            255,
+            237,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 231.85872199974256
+        },
+        {
+          "csv_line": 54,
+          "command_sequence": 11,
+          "timestamp_ns": 1793697879543596806,
+          "target_positions": [
+            255,
+            255,
+            230,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 234.85786200035363
+        },
+        {
+          "csv_line": 59,
+          "command_sequence": 12,
+          "timestamp_ns": 1793697879781656838,
+          "target_positions": [
+            255,
+            255,
+            223,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 236.92615199979628
+        },
+        {
+          "csv_line": 63,
+          "command_sequence": 13,
+          "timestamp_ns": 1793697880007824791,
+          "target_positions": [
+            255,
+            255,
+            227,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 224.5639000011579
+        },
+        {
+          "csv_line": 67,
+          "command_sequence": 14,
+          "timestamp_ns": 1793697880247775017,
+          "target_positions": [
+            255,
+            255,
+            234,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 239.03124900061812
+        },
+        {
+          "csv_line": 72,
+          "command_sequence": 15,
+          "timestamp_ns": 1793697880473161721,
+          "target_positions": [
+            255,
+            255,
+            241,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 224.60664299978816
+        },
+        {
+          "csv_line": 76,
+          "command_sequence": 16,
+          "timestamp_ns": 1793697880702474853,
+          "target_positions": [
+            255,
+            255,
+            252,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 228.70522999983223
+        },
+        {
+          "csv_line": 80,
+          "command_sequence": 17,
+          "timestamp_ns": 1793697880948480350,
+          "target_positions": [
+            255,
+            255,
+            251,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 245.016470000337
+        },
+        {
+          "csv_line": 85,
+          "command_sequence": 18,
+          "timestamp_ns": 1793697881229598110,
+          "target_positions": [
+            255,
+            255,
+            244,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 279.9862550000398
+        },
+        {
+          "csv_line": 89,
+          "command_sequence": 19,
+          "timestamp_ns": 1793697881448475990,
+          "target_positions": [
+            255,
+            255,
+            234,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 218.24504399955913
+        },
+        {
+          "csv_line": 94,
+          "command_sequence": 20,
+          "timestamp_ns": 1793697881744278377,
+          "target_positions": [
+            255,
+            255,
+            227,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 294.6542589997989
+        },
+        {
+          "csv_line": 99,
+          "command_sequence": 21,
+          "timestamp_ns": 1793697881963153882,
+          "target_positions": [
+            255,
+            255,
+            224,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 218.2972869995865
+        },
+        {
+          "csv_line": 103,
+          "command_sequence": 22,
+          "timestamp_ns": 1793697882187189428,
+          "target_positions": [
+            255,
+            255,
+            234,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 222.47898500063457
+        },
+        {
+          "csv_line": 107,
+          "command_sequence": 23,
+          "timestamp_ns": 1793697882431219243,
+          "target_positions": [
+            255,
+            255,
+            241,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 242.92086900095455
+        },
+        {
+          "csv_line": 111,
+          "command_sequence": 24,
+          "timestamp_ns": 1793697882658416590,
+          "target_positions": [
+            255,
+            255,
+            248,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 226.57163599978958
+        },
+        {
+          "csv_line": 116,
+          "command_sequence": 25,
+          "timestamp_ns": 1793697882888088288,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 228.7681559992052
+        },
+        {
+          "csv_line": 120,
+          "command_sequence": 26,
+          "timestamp_ns": 1793697883109218491,
+          "target_positions": [
+            255,
+            255,
+            244,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 220.57691699956194
+        },
+        {
+          "csv_line": 124,
+          "command_sequence": 27,
+          "timestamp_ns": 1793697883336406339,
+          "target_positions": [
+            255,
+            255,
+            237,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 226.61912799958372
+        },
+        {
+          "csv_line": 129,
+          "command_sequence": 28,
+          "timestamp_ns": 1793697883573106900,
+          "target_positions": [
+            255,
+            255,
+            230,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 235.1511240012769
+        },
+        {
+          "csv_line": 133,
+          "command_sequence": 29,
+          "timestamp_ns": 1793697883812924145,
+          "target_positions": [
+            255,
+            255,
+            220,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 239.14522799896076
+        },
+        {
+          "csv_line": 137,
+          "command_sequence": 30,
+          "timestamp_ns": 1793697884048691481,
+          "target_positions": [
+            255,
+            255,
+            227,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 235.1475620016572
+        },
+        {
+          "csv_line": 143,
+          "command_sequence": 31,
+          "timestamp_ns": 1793697884369092515,
+          "target_positions": [
+            255,
+            255,
+            234,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 319.4428759998118
+        },
+        {
+          "csv_line": 147,
+          "command_sequence": 32,
+          "timestamp_ns": 1793697884608662799,
+          "target_positions": [
+            255,
+            255,
+            248,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 238.97188100090716
+        },
+        {
+          "csv_line": 152,
+          "command_sequence": 33,
+          "timestamp_ns": 1793697884865388498,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 255.7568550000724
+        },
+        {
+          "csv_line": 156,
+          "command_sequence": 34,
+          "timestamp_ns": 1793697885128044801,
+          "target_positions": [
+            255,
+            255,
+            244,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 261.94273100009013
+        },
+        {
+          "csv_line": 161,
+          "command_sequence": 35,
+          "timestamp_ns": 1793697885433963050,
+          "target_positions": [
+            255,
+            255,
+            237,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 305.23792100029823
+        },
+        {
+          "csv_line": 165,
+          "command_sequence": 36,
+          "timestamp_ns": 1793697885657706516,
+          "target_positions": [
+            255,
+            255,
+            227,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 222.7544389988907
+        },
+        {
+          "csv_line": 170,
+          "command_sequence": 37,
+          "timestamp_ns": 1793697885889336082,
+          "target_positions": [
+            255,
+            255,
+            220,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 230.77707899938105
+        },
+        {
+          "csv_line": 175,
+          "command_sequence": 38,
+          "timestamp_ns": 1793697886199326797,
+          "target_positions": [
+            255,
+            255,
+            231,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 309.3590669996047
+        },
+        {
+          "csv_line": 179,
+          "command_sequence": 39,
+          "timestamp_ns": 1793697886416773967,
+          "target_positions": [
+            255,
+            255,
+            241,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 216.47714000027918
+        },
+        {
+          "csv_line": 183,
+          "command_sequence": 40,
+          "timestamp_ns": 1793697886638722223,
+          "target_positions": [
+            255,
+            255,
+            248,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 220.5092380008864
+        },
+        {
+          "csv_line": 188,
+          "command_sequence": 41,
+          "timestamp_ns": 1793697886866354122,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 226.69630100062932
+        },
+        {
+          "csv_line": 192,
+          "command_sequence": 42,
+          "timestamp_ns": 1793697887093684445,
+          "target_positions": [
+            255,
+            255,
+            244,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 226.77585000019462
+        },
+        {
+          "csv_line": 196,
+          "command_sequence": 43,
+          "timestamp_ns": 1793697887314997490,
+          "target_positions": [
+            255,
+            255,
+            237,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 220.39881800083094
+        },
+        {
+          "csv_line": 200,
+          "command_sequence": 44,
+          "timestamp_ns": 1793697887562915735,
+          "target_positions": [
+            255,
+            255,
+            230,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 247.2984699998051
+        },
+        {
+          "csv_line": 205,
+          "command_sequence": 45,
+          "timestamp_ns": 1793697887784900797,
+          "target_positions": [
+            255,
+            255,
+            223,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 220.48430399991048
+        },
+        {
+          "csv_line": 209,
+          "command_sequence": 46,
+          "timestamp_ns": 1793697888020582644,
+          "target_positions": [
+            255,
+            255,
+            227,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 234.91603399997985
+        },
+        {
+          "csv_line": 214,
+          "command_sequence": 47,
+          "timestamp_ns": 1793697888270531186,
+          "target_positions": [
+            255,
+            255,
+            234,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 249.23259500064887
+        },
+        {
+          "csv_line": 219,
+          "command_sequence": 48,
+          "timestamp_ns": 1793697888576094426,
+          "target_positions": [
+            255,
+            255,
+            245,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 304.97671000011906
+        },
+        {
+          "csv_line": 223,
+          "command_sequence": 49,
+          "timestamp_ns": 1793697888793211523,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 216.3500959995872
+        },
+        {
+          "csv_line": 228,
+          "command_sequence": 50,
+          "timestamp_ns": 1793697889078465858,
+          "target_positions": [
+            255,
+            255,
+            248,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 284.229687998959
+        },
+        {
+          "csv_line": 232,
+          "command_sequence": 51,
+          "timestamp_ns": 1793697889304198063,
+          "target_positions": [
+            255,
+            255,
+            237,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 224.6090099997673
+        },
+        {
+          "csv_line": 236,
+          "command_sequence": 52,
+          "timestamp_ns": 1793697889535640032,
+          "target_positions": [
+            255,
+            255,
+            230,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 230.7770769984927
+        },
+        {
+          "csv_line": 240,
+          "command_sequence": 53,
+          "timestamp_ns": 1793697889756808224,
+          "target_positions": [
+            255,
+            255,
+            223,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 220.5484170008276
+        },
+        {
+          "csv_line": 245,
+          "command_sequence": 54,
+          "timestamp_ns": 1793697890028219733,
+          "target_positions": [
+            255,
+            255,
+            224,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 269.9166879992845
+        },
+        {
+          "csv_line": 249,
+          "command_sequence": 55,
+          "timestamp_ns": 1793697890255603482,
+          "target_positions": [
+            255,
+            255,
+            234,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 226.7402290017344
+        },
+        {
+          "csv_line": 254,
+          "command_sequence": 56,
+          "timestamp_ns": 1793697890472622032,
+          "target_positions": [
+            255,
+            255,
+            241,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 216.37621599984413
+        },
+        {
+          "csv_line": 258,
+          "command_sequence": 57,
+          "timestamp_ns": 1793697890714671411,
+          "target_positions": [
+            255,
+            255,
+            252,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 241.0520400007954
+        },
+        {
+          "csv_line": 263,
+          "command_sequence": 58,
+          "timestamp_ns": 1793697890985475017,
+          "target_positions": [
+            255,
+            255,
+            251,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 270.03541799967934
+        },
+        {
+          "csv_line": 267,
+          "command_sequence": 59,
+          "timestamp_ns": 1793697891215100404,
+          "target_positions": [
+            255,
+            255,
+            241,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 228.83226500016463
+        },
+        {
+          "csv_line": 271,
+          "command_sequence": 60,
+          "timestamp_ns": 1793697891446397520,
+          "target_positions": [
+            255,
+            255,
+            234,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 230.6654680014617
+        },
+        {
+          "csv_line": 275,
+          "command_sequence": 61,
+          "timestamp_ns": 1793697891884685180,
+          "target_positions": [
+            255,
+            255,
+            227,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 436.5909970001667
+        }
+      ],
+      "call_duration_ms_mean": 250.16541318046754,
+      "call_duration_ms_max": 436.5909970001667,
+      "read_failures": [],
+      "evidence_limits": "Command submission/SDK status only. No O7 actual-position, direction, mechanical endpoint or per-axis operator annotation in these event rows."
+    }
+  ],
+  "archived_context_only": [
+    {
+      "path": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_stream_1hz_20261103_162055/events.csv",
+      "sha256": "a6d574aad2480a6f4031b3f08a46db38b65231ba7b98c5b4771172aebf60b2c8",
+      "events": 7,
+      "event_counts": {
+        "TRIGGER_RESPONSE": 1,
+        "STREAM_START": 1,
+        "INITIAL_POSITION_READ_START": 1,
+        "INITIAL_POSITION_READ_FAILED": 1,
+        "STREAM_EXCEPTION": 1,
+        "STREAM_STOP": 1,
+        "STREAM_FINISH": 1
+      },
+      "starts": [
+        {
+          "csv_line": 3,
+          "payload": {
+            "event": "STREAM_START",
+            "timestamp_ns": 1793694066183299400,
+            "elapsed_time": 9.497999599261675e-06,
+            "command_sequence": 0,
+            "joint_index": 2,
+            "consecutive_failures": 0,
+            "unconfirmed_writes": 0,
+            "session": "existing_rm65_api2_handle",
+            "stream_hz": 1.0,
+            "duration_sec": 10.0,
+            "amplitude": 5
+          }
+        }
+      ],
+      "finishes": [
+        {
+          "csv_line": 8,
+          "payload": {
+            "event": "STREAM_FINISH",
+            "timestamp_ns": 1793694067220017111,
+            "elapsed_time": 1.0367272089997641,
+            "command_sequence": 0,
+            "joint_index": 2,
+            "consecutive_failures": 0,
+            "unconfirmed_writes": 0,
+            "session": "existing_rm65_api2_handle",
+            "reason": "sdk_or_initial_position_exception",
+            "restored_confirmed": false,
+            "success": false,
+            "position_write_count": 0
+          }
+        }
+      ],
+      "position_calls": 0,
+      "sdk_return_codes": {},
+      "sdk_acknowledged_count": 0,
+      "sdk_unconfirmed_count": 0,
+      "sdk_exception_count": 0,
+      "changed_target_indices": [],
+      "target_values_by_channel": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "sdk_acknowledged_target_values_by_channel": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "write_rows": [],
+      "call_duration_ms_mean": null,
+      "call_duration_ms_max": null,
+      "read_failures": [
+        {
+          "csv_line": 5,
+          "payload": {
+            "event": "INITIAL_POSITION_READ_FAILED",
+            "timestamp_ns": 1793694067218232598,
+            "elapsed_time": 1.0349438840003131,
+            "command_sequence": 0,
+            "joint_index": 2,
+            "consecutive_failures": 0,
+            "unconfirmed_writes": 0,
+            "session": "existing_rm65_api2_handle",
+            "error": "ValueError('O7 initial position read return_code=-2; raw=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]')",
+            "modbus_return_code": -2,
+            "modbus_duration_ms": 1033.1783680003355
+          }
+        }
+      ],
+      "evidence_limits": "Command submission/SDK status only. No O7 actual-position, direction, mechanical endpoint or per-axis operator annotation in these event rows."
+    },
+    {
+      "path": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/o7_write_only_1hz_20261103_164300/events.csv",
+      "sha256": "1da21869a0fe5aa5033e68670909b147d7fc7a09fedfd681aa64124ca8ab80cb",
+      "events": 24,
+      "event_counts": {
+        "TRIGGER_RESPONSE": 1,
+        "STREAM_START": 1,
+        "POSITION_WRITE_START": 10,
+        "POSITION_WRITE_FINISH": 10,
+        "STREAM_STOP": 1,
+        "STREAM_FINISH": 1
+      },
+      "starts": [
+        {
+          "csv_line": 3,
+          "payload": {
+            "event": "STREAM_START",
+            "timestamp_ns": 1793695390395300299,
+            "elapsed_time": 9.499000043433625e-06,
+            "command_sequence": 0,
+            "sequence": 0,
+            "joint_index": 2,
+            "consecutive_failures": 0,
+            "unconfirmed_writes": 0,
+            "session": "existing_rm65_api2_handle",
+            "stream_hz": 1.0,
+            "duration_sec": 10.0,
+            "position_A": [
+              255,
+              255,
+              245,
+              255,
+              255,
+              255,
+              255
+            ],
+            "position_B": [
+              255,
+              255,
+              255,
+              255,
+              255,
+              255,
+              255
+            ],
+            "open_pose_confirmed": true,
+            "actual_motion": "NOT AUTOMATICALLY VERIFIED"
+          }
+        }
+      ],
+      "finishes": [
+        {
+          "csv_line": 25,
+          "payload": {
+            "event": "STREAM_FINISH",
+            "timestamp_ns": 1793695400395914575,
+            "elapsed_time": 10.000623773999905,
+            "command_sequence": 10,
+            "sequence": 10,
+            "joint_index": 2,
+            "consecutive_failures": 10,
+            "unconfirmed_writes": 10,
+            "session": "existing_rm65_api2_handle",
+            "reason": "duration_complete",
+            "schedule_completed": true,
+            "position_write_count": 10,
+            "last_target_positions": [
+              255,
+              255,
+              255,
+              255,
+              255,
+              255,
+              255
+            ],
+            "last_return_code": 1,
+            "sdk_acknowledged_success_count": 0,
+            "sdk_unconfirmed_command_count": 10,
+            "sdk_exception_count": 0,
+            "actual_motion": "NOT AUTOMATICALLY VERIFIED"
+          }
+        }
+      ],
+      "position_calls": 10,
+      "sdk_return_codes": {
+        "1": 10
+      },
+      "sdk_acknowledged_count": 0,
+      "sdk_unconfirmed_count": 10,
+      "sdk_exception_count": 0,
+      "changed_target_indices": [
+        2
+      ],
+      "target_values_by_channel": [
+        [
+          255
+        ],
+        [
+          255
+        ],
+        [
+          245,
+          255
+        ],
+        [
+          255
+        ],
+        [
+          255
+        ],
+        [
+          255
+        ],
+        [
+          255
+        ]
+      ],
+      "sdk_acknowledged_target_values_by_channel": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "write_rows": [
+        {
+          "csv_line": 5,
+          "command_sequence": 1,
+          "timestamp_ns": 1793695390618895552,
+          "target_positions": [
+            255,
+            255,
+            245,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 221.89621300003637
+        },
+        {
+          "csv_line": 7,
+          "command_sequence": 2,
+          "timestamp_ns": 1793695391607528718,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 211.41464399988763
+        },
+        {
+          "csv_line": 9,
+          "command_sequence": 3,
+          "timestamp_ns": 1793695392680070195,
+          "target_positions": [
+            255,
+            255,
+            245,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 284.0470919991276
+        },
+        {
+          "csv_line": 11,
+          "command_sequence": 4,
+          "timestamp_ns": 1793695393613440027,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 217.4236099999689
+        },
+        {
+          "csv_line": 13,
+          "command_sequence": 5,
+          "timestamp_ns": 1793695394688126938,
+          "target_positions": [
+            255,
+            255,
+            245,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 291.99967900058255
+        },
+        {
+          "csv_line": 15,
+          "command_sequence": 6,
+          "timestamp_ns": 1793695395602572222,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 206.5787219999038
+        },
+        {
+          "csv_line": 17,
+          "command_sequence": 7,
+          "timestamp_ns": 1793695396613938721,
+          "target_positions": [
+            255,
+            255,
+            245,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 217.89021199947456
+        },
+        {
+          "csv_line": 19,
+          "command_sequence": 8,
+          "timestamp_ns": 1793695397609790637,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 213.82961200015416
+        },
+        {
+          "csv_line": 21,
+          "command_sequence": 9,
+          "timestamp_ns": 1793695398657240615,
+          "target_positions": [
+            255,
+            255,
+            245,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 261.32315800077777
+        },
+        {
+          "csv_line": 23,
+          "command_sequence": 10,
+          "timestamp_ns": 1793695399633720366,
+          "target_positions": [
+            255,
+            255,
+            255,
+            255,
+            255,
+            255,
+            255
+          ],
+          "return_code": 1,
+          "sdk_acknowledged": false,
+          "duration_ms": 237.69095499937976
+        }
+      ],
+      "call_duration_ms_mean": 236.4093896999293,
+      "call_duration_ms_max": 291.99967900058255,
+      "read_failures": [],
+      "evidence_limits": "Command submission/SDK status only. No O7 actual-position, direction, mechanical endpoint or per-axis operator annotation in these event rows."
+    },
+    {
+      "path": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_153842/events.csv",
+      "sha256": "c60e5780169edbdef41073ac41811b3eaadc354e63919b83418045f24f49adaf",
+      "events": 1,
+      "event_counts": {
+        "TRIGGER_RESPONSE": 1
+      },
+      "starts": [],
+      "finishes": [],
+      "position_calls": 0,
+      "sdk_return_codes": {},
+      "sdk_acknowledged_count": 0,
+      "sdk_unconfirmed_count": 0,
+      "sdk_exception_count": 0,
+      "changed_target_indices": [],
+      "target_values_by_channel": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "sdk_acknowledged_target_values_by_channel": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "write_rows": [],
+      "call_duration_ms_mean": null,
+      "call_duration_ms_max": null,
+      "read_failures": [],
+      "evidence_limits": "Command submission/SDK status only. No O7 actual-position, direction, mechanical endpoint or per-axis operator annotation in these event rows."
+    },
+    {
+      "path": "/home/ai/teleop_ws_legacy_archive/20261103_174140/concurrency_logs/single_session_20261103_154058/events.csv",
+      "sha256": "e5be1966cfc9b8ca7d56a1afe1d416a81b825e9223d5c8e5913fcdb30848edd9",
+      "events": 3,
+      "event_counts": {
+        "TRIGGER_RESPONSE": 1,
+        "MODBUS_START": 1,
+        "MODBUS_FINISH": 1
+      },
+      "starts": [],
+      "finishes": [],
+      "position_calls": 0,
+      "sdk_return_codes": {},
+      "sdk_acknowledged_count": 0,
+      "sdk_unconfirmed_count": 0,
+      "sdk_exception_count": 0,
+      "changed_target_indices": [],
+      "target_values_by_channel": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "sdk_acknowledged_target_values_by_channel": [
+        [],
+        [],
+        [],
+        [],
+        [],
+        [],
+        []
+      ],
+      "write_rows": [],
+      "call_duration_ms_mean": null,
+      "call_duration_ms_max": null,
+      "read_failures": [],
+      "evidence_limits": "Command submission/SDK status only. No O7 actual-position, direction, mechanical endpoint or per-axis operator annotation in these event rows."
+    }
+  ],
+  "archived_note": "245<->255 is another channel2-only run; speed writes/read failures do not calibrate position axes. Not combined into retained71 calls."
+}

@@ -1,0 +1,8 @@
+PASS false false /home/ai/teleop_ws/.o7_solver_venv/bin/python
+PASS false true /home/ai/teleop_ws/.o7_solver_venv/bin/python
+PASS true false /home/ai/teleop_ws/.o7_solver_venv/bin/python
+PASS true true /home/ai/teleop_ws/.o7_solver_venv/bin/python
+ENTRY o7_session_tools pico_o7.session_tools:main
+ENTRY pico_hand_receiver_node pico_o7.pico_hand_receiver_node:main
+ENTRY shared_session_node pico_o7.shared_session_node:main
+No ROS node or SDK constructed

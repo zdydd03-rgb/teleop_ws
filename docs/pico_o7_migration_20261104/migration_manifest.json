@@ -1,0 +1,409 @@
+[
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_stage/hand_input.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/o7_stage/hand_input.py",
+    "sha256": "7b20b3436a33831304d44c45ae01288ca9a3fd011d8fd3f4d87c707a6e54bc51",
+    "migrated_sha256": "7b20b3436a33831304d44c45ae01288ca9a3fd011d8fd3f4d87c707a6e54bc51",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_stage/mapping.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/o7_stage/mapping.py",
+    "sha256": "c210379cd8b0f9af7a71214b44761f3ed1e96add5c4d8a4742b71c8574a677bc",
+    "migrated_sha256": "4f2ac67440f305da87cd84f0e24bd1b6dc8826621d6a7caa43a92f7e9a01ef56",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_stage/plan.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/o7_stage/plan.py",
+    "sha256": "9cd181777911916890a2bb9409c0725b4103f7d6b5c614ece30afc5150e3d26a",
+    "migrated_sha256": "9cd181777911916890a2bb9409c0725b4103f7d6b5c614ece30afc5150e3d26a",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_stage/protocol.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/o7_stage/protocol.py",
+    "sha256": "d2c2e12c6fd0bb43bc1b9368abea189957f88a575f0f5a552c612457a12b0959",
+    "migrated_sha256": "d2c2e12c6fd0bb43bc1b9368abea189957f88a575f0f5a552c612457a12b0959",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_stage/worker.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/o7_stage/worker.py",
+    "sha256": "a288f765c138674f8f3a2f07a26c7cad6baa3aa92dad134eb00cc9bc09d30445",
+    "migrated_sha256": "a288f765c138674f8f3a2f07a26c7cad6baa3aa92dad134eb00cc9bc09d30445",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_stage/realtime.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/o7_stage/realtime.py",
+    "sha256": "28cb757f9700e3c669d8b22856677bdce27e525700276274d418d4066e5dfc7b",
+    "migrated_sha256": "029a507de61ab8ce95e3e9e4541bb3eea48885ff98cfe1bf08bfa14eb1d46943",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_stage/write_timing.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/o7_stage/write_timing.py",
+    "sha256": "f25c0f204b14b2aab655dccc55a04b0cf9f93c3fa4823f0312550a7c0499b0db",
+    "migrated_sha256": "3b46049420fede9d27676b9dcdd8b8d86b458d55f6635867f40c4a935c95f72c",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_shared_session_node.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/shared_session_node.py",
+    "sha256": "7446be137df481417081e93966db4ab8ad25d82a1d5a11898a300bf6e04c56fb",
+    "migrated_sha256": "2a470dcac877e0dff7aaac9a7b5adb382d3eae3c53956a3fa4f0dfb0eba6f7e1",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/pico_hand_receiver_node.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/pico_hand_receiver_node.py",
+    "sha256": "3cd414a4221a84cacbaec100b142397e4531d5df02435ab2144f2181594e98c7",
+    "migrated_sha256": "41f92aeb4a379465a8d0adbdafb186f9abf8400790d481894eca0ab8ae05b6dc",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_solver_process.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/solver_process.py",
+    "sha256": "fd2ef902a6dca9d625c5a0e99fe0d46b5bbaea5b2699383117c540ac559e4822",
+    "migrated_sha256": "910549fc14aa00008928983c95730036951e0c9c91eddad08efc12ed066d4944",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/capture_io.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/capture_io.py",
+    "sha256": "20f86b5dad0d6d669e84acead6c776ec301b21c622043f6a07400d471a103bf1",
+    "migrated_sha256": "e4edfab9d0a8ce4e5e514685622d1798c27757e86a28dadd7009d4aa1f044917",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_retarget_dry_run.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/retarget_dry_run.py",
+    "sha256": "4c4316b731b35e4393c6634c9cc3cfaa53766ba948732afec72e0e061b15a6de",
+    "migrated_sha256": "d966e940e7f31c35b053bd9b068ec6a6ee6a15e9588f3f207944d1eeae05fb74",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_session_tools.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/session_tools.py",
+    "sha256": "e1cc27d92887a5e9b683c3b4874ca3f55c71fb8d4e74a63d587c454f12aa4b55",
+    "migrated_sha256": "41c300b8560b6018e8056ca2f6e1381392f1a241fdae8bdd16aa4d40bd2df61d",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_standalone_write.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/standalone_write.py",
+    "sha256": "544b3ca6f6a8bb0f1237bfd154adee755b41be1816dcf64d76012855b7bea20f",
+    "migrated_sha256": "c4120310e184cd92ab5c4c44fb395e0e2677ab01a1976065031d243320c64fbb",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/o7_write_latency_report.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/write_latency_report.py",
+    "sha256": "34d7fbc7616cee0133beb496706322e6c6e2f4a7c2eba18e845d225174620476",
+    "migrated_sha256": "7102568252d5caf7e13e58dc4b029e273330a1cd749013541455da3542e1e974",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/pico_hand_skeleton_viewer.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/pico_o7/pico_hand_skeleton_viewer.py",
+    "sha256": "bdf7d74b1f83aee0ef1a7ba26c31eb0deb46e1d105f710d38683bbfed0c38d56",
+    "migrated_sha256": "bdf7d74b1f83aee0ef1a7ba26c31eb0deb46e1d105f710d38683bbfed0c38d56",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/LICENSE",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/LICENSE",
+    "sha256": "0b491fbe4701194529a0b2de7a2649ed2f03f9e3422dfcf348fd58a344d9837e",
+    "migrated_sha256": "0b491fbe4701194529a0b2de7a2649ed2f03f9e3422dfcf348fd58a344d9837e",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/upstream_vector_solver.py.txt",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/upstream_vector_solver.py.txt",
+    "sha256": "29e8971f0e7fbed3f7ebc26ecf9b69c38ab63686957de4db963dd10f369beb8a",
+    "migrated_sha256": "29e8971f0e7fbed3f7ebc26ecf9b69c38ab63686957de4db963dd10f369beb8a",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/pyproject.toml",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/pyproject.toml",
+    "sha256": "1f3fdf00e326ddc843eceef47d594a9e9d193ea11f08a8e4c0cd4048075fb0f5",
+    "migrated_sha256": "1f3fdf00e326ddc843eceef47d594a9e9d193ea11f08a8e4c0cd4048075fb0f5",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/configs/retargeting/base/_universal_common.yaml",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/configs/retargeting/base/_universal_common.yaml",
+    "sha256": "01faf24b5bd14378db598369ea8d5e6570054cccc2bf2cacb95b1c15edebff8f",
+    "migrated_sha256": "01faf24b5bd14378db598369ea8d5e6570054cccc2bf2cacb95b1c15edebff8f",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/configs/retargeting/base/linkerhand_o7.yaml",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/configs/retargeting/base/linkerhand_o7.yaml",
+    "sha256": "3505972f660149cb7571d09425339a67ffc82fda5c4813451565678e31f9d6d2",
+    "migrated_sha256": "3505972f660149cb7571d09425339a67ffc82fda5c4813451565678e31f9d6d2",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/configs/retargeting/right/linkerhand_o7_right.yaml",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/configs/retargeting/right/linkerhand_o7_right.yaml",
+    "sha256": "a26ae989b4efc6ec21fe44d6cf3887773837265052cfab00bb76757f6ec3dd3b",
+    "migrated_sha256": "a26ae989b4efc6ec21fe44d6cf3887773837265052cfab00bb76757f6ec3dd3b",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/__init__.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/__init__.py",
+    "sha256": "970546ac478138004960cb5ec75a14123bcbc727215b639cad675117d41d8711",
+    "migrated_sha256": "970546ac478138004960cb5ec75a14123bcbc727215b639cad675117d41d8711",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/external_assets.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/external_assets.py",
+    "sha256": "cff7d5d327d8f417d5c66fea244461efce3a217de4eac41b90fe95979ac62540",
+    "migrated_sha256": "cff7d5d327d8f417d5c66fea244461efce3a217de4eac41b90fe95979ac62540",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/paths.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/paths.py",
+    "sha256": "5463ad5785239e69b5ad7672b070e1c9f7ef4e3d42c4141fc0c184c380a3e98d",
+    "migrated_sha256": "5463ad5785239e69b5ad7672b070e1c9f7ef4e3d42c4141fc0c184c380a3e98d",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/infrastructure/vector_solver_primitives.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/infrastructure/vector_solver_primitives.py",
+    "sha256": "ec3a3be35f9909e92e6a21bae310f7fcb4e656d87212481811711be3f8b487c1",
+    "migrated_sha256": "ec3a3be35f9909e92e6a21bae310f7fcb4e656d87212481811711be3f8b487c1",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/infrastructure/__init__.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/infrastructure/__init__.py",
+    "sha256": "d18316f57ab757e033ac1ecaa89ca3b044e75c07234093ff6ccce2a0df8c70d8",
+    "migrated_sha256": "d18316f57ab757e033ac1ecaa89ca3b044e75c07234093ff6ccce2a0df8c70d8",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/infrastructure/vector_solver_objective.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/infrastructure/vector_solver_objective.py",
+    "sha256": "52f41d735052e08d5adc3f31464b449c65c3963c3fbf8e27ca15015431778813",
+    "migrated_sha256": "52f41d735052e08d5adc3f31464b449c65c3963c3fbf8e27ca15015431778813",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/infrastructure/vector_solver.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/infrastructure/vector_solver.py",
+    "sha256": "b56d40c4593e9b3a5cc4f17c6c0e255f2844e47aaa813571b0658355bf7dc202",
+    "migrated_sha256": "b56d40c4593e9b3a5cc4f17c6c0e255f2844e47aaa813571b0658355bf7dc202",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/infrastructure/hand_model.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/infrastructure/hand_model.py",
+    "sha256": "9a02940f602a30199666e013a7a3a13be991834d1c17e8ed29a72a2559386274",
+    "migrated_sha256": "9a02940f602a30199666e013a7a3a13be991834d1c17e8ed29a72a2559386274",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/infrastructure/model_name_resolver.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/infrastructure/model_name_resolver.py",
+    "sha256": "fbd6deccb29553d05203babf3cff47f65943076b113eed96c2f1bba943a544a2",
+    "migrated_sha256": "fbd6deccb29553d05203babf3cff47f65943076b113eed96c2f1bba943a544a2",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/infrastructure/vector_solver_targets.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/infrastructure/vector_solver_targets.py",
+    "sha256": "a29ddbed5c97bd691cd3e367a0319d5aaa9d8da80f241c69a42a10dd6cbae419",
+    "migrated_sha256": "a29ddbed5c97bd691cd3e367a0319d5aaa9d8da80f241c69a42a10dd6cbae419",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/infrastructure/config_loader.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/infrastructure/config_loader.py",
+    "sha256": "52bacbdeb841b65d769e82dd1c0df0dadd4118c025578d8ac2068676293f6be9",
+    "migrated_sha256": "52bacbdeb841b65d769e82dd1c0df0dadd4118c025578d8ac2068676293f6be9",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/domain/__init__.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/domain/__init__.py",
+    "sha256": "a230848f427fee06b856a21956e39d6e9035486113e78c19268e785de64a1fd5",
+    "migrated_sha256": "a230848f427fee06b856a21956e39d6e9035486113e78c19268e785de64a1fd5",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/domain/hand_side.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/domain/hand_side.py",
+    "sha256": "83126197961cd9377584c2857e5f54e4191bc4349b74bf8fbff322efe9fced13",
+    "migrated_sha256": "83126197961cd9377584c2857e5f54e4191bc4349b74bf8fbff322efe9fced13",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/domain/config.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/domain/config.py",
+    "sha256": "7f3f00cb9f951c3f1c8cd936b371deb53176e10857f69643b9365dc66fb64275",
+    "migrated_sha256": "7f3f00cb9f951c3f1c8cd936b371deb53176e10857f69643b9365dc66fb64275",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/domain/models.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/domain/models.py",
+    "sha256": "817b9f3786b988e20bd405ab9803a65b11c35110451b8904f9b73f5e82a9da84",
+    "migrated_sha256": "817b9f3786b988e20bd405ab9803a65b11c35110451b8904f9b73f5e82a9da84",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/domain/preprocessing.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/domain/preprocessing.py",
+    "sha256": "9f40f170384feb30c4ebcfdb17623438d881ae7f0eb8c7768b46ee0c6bbc81db",
+    "migrated_sha256": "9f40f170384feb30c4ebcfdb17623438d881ae7f0eb8c7768b46ee0c6bbc81db",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/runtime/__init__.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/runtime/__init__.py",
+    "sha256": "d9abd9bbbf063a7181613a3d120f30fdc26eb46e078d03a3cff646bd1d9b67d6",
+    "migrated_sha256": "d9abd9bbbf063a7181613a3d120f30fdc26eb46e078d03a3cff646bd1d9b67d6",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/runtime/config_validation.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/runtime/config_validation.py",
+    "sha256": "98800eab4df537a3744c03467c13d1d5c2cfe5d545c3108558044289f475c560",
+    "migrated_sha256": "98800eab4df537a3744c03467c13d1d5c2cfe5d545c3108558044289f475c560",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/application/__init__.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/application/__init__.py",
+    "sha256": "104480b3f0411baa716b4d02f4a113216b0443274288e895af5538455dcc3da5",
+    "migrated_sha256": "104480b3f0411baa716b4d02f4a113216b0443274288e895af5538455dcc3da5",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/somehand/src/somehand/application/engine.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/somehand/src/somehand/application/engine.py",
+    "sha256": "d828987b8da9c6715bc42cf1d25bc93a2b80c9b9445e2be883ce640379c9b982",
+    "migrated_sha256": "d828987b8da9c6715bc42cf1d25bc93a2b80c9b9445e2be883ce640379c9b982",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/models/o7_right_kinematic.xml",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/models/o7_right_kinematic.xml",
+    "sha256": "8779960b4fcb86455682e721bad0762354233443d8d09be823fe654eba0facc3",
+    "migrated_sha256": "8779960b4fcb86455682e721bad0762354233443d8d09be823fe654eba0facc3",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/models/joint_mapping.json",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/models/joint_mapping.json",
+    "sha256": "eafe42c441c07efd499b999c63fe1b0a33982ac310f083fa5a36fba9dcd4512b",
+    "migrated_sha256": "eafe42c441c07efd499b999c63fe1b0a33982ac310f083fa5a36fba9dcd4512b",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/models/display_edges.json",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/models/display_edges.json",
+    "sha256": "b7260a5583141de638e6e135aa69fb55c1e6faa3abf60ef353c35c45724c227c",
+    "migrated_sha256": "b7260a5583141de638e6e135aa69fb55c1e6faa3abf60ef353c35c45724c227c",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/configs/o7_device_linear.json",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/config/o7_device_linear.json",
+    "sha256": "f97cfa2e070161fce036be6ccb039efad88a968635d4327509ee9eabe3755231",
+    "migrated_sha256": "f97cfa2e070161fce036be6ccb039efad88a968635d4327509ee9eabe3755231",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/configs/o7_right_vectors.yaml",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/config/o7_right_vectors.yaml",
+    "sha256": "6c27eac03dcaf8b75c01b70fa8c84a5d5c16dfb0312d20652aea7276a486478a",
+    "migrated_sha256": "6c27eac03dcaf8b75c01b70fa8c84a5d5c16dfb0312d20652aea7276a486478a",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/linkerhand-urdf/O7/right/linkerhand_o7v3_right.urdf",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/linkerhand-urdf/O7/right/linkerhand_o7v3_right.urdf",
+    "sha256": "894570e4b3279ea25772054841830caabaebd4e2f49ecddc31ac17e84d4d3512",
+    "migrated_sha256": "894570e4b3279ea25772054841830caabaebd4e2f49ecddc31ac17e84d4d3512",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/vendor/linkerhand-urdf/LICENSE",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/vendor/linkerhand-urdf/LICENSE",
+    "sha256": "bac74067fbb87e785490d2f07ce21647d22335738eac4eb13134b60002255736",
+    "migrated_sha256": "bac74067fbb87e785490d2f07ce21647d22335738eac4eb13134b60002255736",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/calibration/index2_plan.example.json",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/calibration/index2_plan.example.json",
+    "sha256": "cd6f28abd78e961aa9d563a030b682c3474ad2e6912cfc8dff54c7661b915934",
+    "migrated_sha256": "cd6f28abd78e961aa9d563a030b682c3474ad2e6912cfc8dff54c7661b915934",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/requirements.lock",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/requirements.lock",
+    "sha256": "60ffc3598392a5482978f426fdc8cd1485b57eea1dab1ffe9c8db6b7af0b1c79",
+    "migrated_sha256": "60ffc3598392a5482978f426fdc8cd1485b57eea1dab1ffe9c8db6b7af0b1c79",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/sources_manifest.json",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/sources_manifest.json",
+    "sha256": "d4ad2bf3abee90a61e4aa388d8e5682384de11894657713b7dfab8d998ecb4f6",
+    "migrated_sha256": "d4ad2bf3abee90a61e4aa388d8e5682384de11894657713b7dfab8d998ecb4f6",
+    "adapted_for_workspace": false
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/VENDOR_NOTES.md",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/VENDOR_NOTES.md",
+    "sha256": "a691df6fedb6aa2e7e9848a45bd247127cfda57b6f0a09433ce94589997956ac",
+    "migrated_sha256": "9311b7c4069a16c37600d307b070d241ee0b94c8e15f06108ff0d4da9c391df4",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/test_o7_realtime.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/test/test_o7_realtime.py",
+    "sha256": "767a6faa79776b04a388e02b5692f0a678a0fbeb76cead28bc17fc45b566fd1d",
+    "migrated_sha256": "87921c38b39b40dc36efd4602b0dccec07931f298721f0467ce980d940af1248",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/test_o7_shared_stage.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/test/test_o7_shared_stage.py",
+    "sha256": "d867d3d2eeea09ba5f0fca7a99ddd1c2ed9d5616542ccb3182eb174aae95e207",
+    "migrated_sha256": "b84421774a523a40f9af89af6005c605bc3635f70051b09f35b0a6018ad2cad3",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/test_o7_write_latency.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/test/test_o7_write_latency.py",
+    "sha256": "c288546ae20f1c75ca02d764a1537056027a6167c63b83bbfc2e80ef99bcdfd2",
+    "migrated_sha256": "74848e9f6286d2c962ef542537dafd2ea173ad829549f4168bd98da6f5f1d85f",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/test_o7_mapping_audit.py",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/test/test_o7_mapping_audit.py",
+    "sha256": "64c850d0f6005fa5a07c3031e22e0d4fdd518f39aa7eb70367c36e2fedbcc325",
+    "migrated_sha256": "8e80d043edee1b4232bef9baca12fc28cc3ee0e563b1fcca5646d75b54ce9743",
+    "adapted_for_workspace": true
+  },
+  {
+    "source": "/home/ai/pico_o7_retargeting/data/recapture/01_open_fist/pico_udp_captures/pico_raw_20261103_205724.jsonl",
+    "destination": "/home/ai/teleop_ws/src/pico_o7/test/fixtures/right_hand_frame.jsonl",
+    "selection": "first original JSONL record",
+    "sha256": "24ddc97c37a27f602d4c5e5ed6271a56146f02039bc680215e8c7dd1e297c662",
+    "migrated_sha256": "24ddc97c37a27f602d4c5e5ed6271a56146f02039bc680215e8c7dd1e297c662",
+    "adapted_for_workspace": false
+  }
+]

@@ -1,0 +1,72 @@
+Starting >>> rm_teleop
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/ai/teleop_ws/build/rm_teleop/.pytest_cache
+rootdir: /home/ai/teleop_ws/src/rm_teleop
+plugins: launch-testing-1.0.14, ament-xmllint-0.12.15, ament-lint-0.12.15, launch-testing-ros-0.19.13, ament-copyright-0.12.15, ament-pep257-0.12.15, ament-flake8-0.12.15, colcon-core-0.20.1, cov-3.0.0
+collected 164 items
+
+test/test_canfd_control_core.py ........                                 [  4%]
+test/test_canfd_static_safety.py ...                                     [  6%]
+test/test_o7_auto_stream_hil.py ................................         [ 26%]
+test/test_o7_single_session_hil.py ...................                   [ 37%]
+test/test_o7_stream_hil.py ..........................................    [ 63%]
+test/test_protocol.py ...........                                        [ 70%]
+test/test_receiver_core.py ......                                        [ 73%]
+test/test_remote_ik_matrix.py .                                          [ 74%]
+test/test_rm_feedback_core.py ........                                   [ 79%]
+test/test_sequence.py .....                                              [ 82%]
+test/test_single_high_follow_profile.py ......                           [ 85%]
+test/test_target_generator_core.py ..............                        [ 94%]
+test/test_target_math.py .........                                       [100%]
+
+------ generated xml file: /home/ai/teleop_ws/build/rm_teleop/pytest.xml -------
+============================= 164 passed in 2.26s ==============================
+[Processing: rm_teleop]
+Finished <<< rm_teleop [30.0s]
+Starting >>> pico_o7
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/ai/teleop_ws/build/pico_o7/.pytest_cache
+rootdir: /home/ai/teleop_ws/src/pico_o7
+plugins: launch-testing-1.0.14, ament-xmllint-0.12.15, ament-lint-0.12.15, launch-testing-ros-0.19.13, ament-copyright-0.12.15, ament-pep257-0.12.15, ament-flake8-0.12.15, colcon-core-0.20.1, cov-3.0.0
+collected 0 items / 1 error
+
+==================================== ERRORS ====================================
+________________________ ERROR collecting test session _________________________
+/usr/lib/python3/dist-packages/pluggy/hooks.py:286: in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+/usr/lib/python3/dist-packages/pluggy/manager.py:92: in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+/usr/lib/python3/dist-packages/pluggy/manager.py:83: in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+/usr/lib/python3/dist-packages/_pytest/python.py:200: in pytest_collect_file
+    module: Module = ihook.pytest_pycollect_makemodule(path=path, parent=parent)
+/usr/lib/python3/dist-packages/pluggy/hooks.py:286: in __call__
+    return self._hookexec(self, self.get_hookimpls(), kwargs)
+/usr/lib/python3/dist-packages/pluggy/manager.py:92: in _hookexec
+    return self._inner_hookexec(hook, methods, kwargs)
+/usr/lib/python3/dist-packages/pluggy/manager.py:83: in <lambda>
+    self._inner_hookexec = lambda hook, methods, kwargs: hook.multicall(
+/opt/ros/humble/lib/python3.10/site-packages/launch_testing/pytest/hooks.py:193: in pytest_pycollect_makemodule
+    entrypoint = find_launch_test_entrypoint(path)
+/opt/ros/humble/lib/python3.10/site-packages/launch_testing/pytest/hooks.py:186: in find_launch_test_entrypoint
+    module = path.pyimport()
+/usr/lib/python3/dist-packages/py/_path/local.py:704: in pyimport
+    __import__(modname)
+vendor/somehand/src/somehand/application/__init__.py:2: in <module>
+    from .engine import RetargetingEngine
+vendor/somehand/src/somehand/application/engine.py:7: in <module>
+    from somehand.infrastructure.hand_model import HandModel
+vendor/somehand/src/somehand/infrastructure/hand_model.py:8: in <module>
+    import mujoco
+E   ModuleNotFoundError: No module named 'mujoco'
+------- generated xml file: /home/ai/teleop_ws/build/pico_o7/pytest.xml --------
+=========================== short test summary info ============================
+ERROR  - ModuleNotFoundError: No module named 'mujoco'
+!!!!!!!!!!!!!!!!!!!! Interrupted: 1 error during collection !!!!!!!!!!!!!!!!!!!!
+=============================== 1 error in 0.22s ===============================
+Failed   <<< pico_o7 [0.61s, exited with code 2]
+
+Summary: 1 package finished [30.8s]
+  1 package failed: pico_o7

@@ -1,0 +1,20 @@
+Starting >>> pico_o7
+============================= test session starts ==============================
+platform linux -- Python 3.10.12, pytest-6.2.5, py-1.10.0, pluggy-0.13.0
+cachedir: /home/ai/teleop_ws/build/pico_o7/.pytest_cache
+rootdir: /home/ai/teleop_ws/src/pico_o7, configfile: pytest.ini, testpaths: test
+plugins: launch-testing-1.0.14, ament-xmllint-0.12.15, ament-lint-0.12.15, launch-testing-ros-0.19.13, ament-copyright-0.12.15, ament-pep257-0.12.15, ament-flake8-0.12.15, colcon-core-0.20.1, cov-3.0.0
+collected 53 items
+
+test/test_node_lifecycle.py ....                                         [  7%]
+test/test_o7_mapping_audit.py ......                                     [ 18%]
+test/test_o7_realtime.py ...............                                 [ 47%]
+test/test_o7_shared_stage.py ...............                             [ 75%]
+test/test_o7_write_latency.py ......                                     [ 86%]
+test/test_recovery.py .......                                            [100%]
+
+------- generated xml file: /home/ai/teleop_ws/build/pico_o7/pytest.xml --------
+============================== 53 passed in 1.96s ==============================
+Finished <<< pico_o7 [2.27s]
+
+Summary: 1 package finished [2.46s]

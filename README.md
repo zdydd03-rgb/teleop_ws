@@ -1,13 +1,26 @@
 # RM65 + PICO + LinkerHand O7 遥操作系统
 
-ROS2 Humble 工作空间：PICO 位姿驱动 RM65-B 六轴机械臂，Remote IK + CANFD 200 Hz 高跟随；O7 右手经同一个 RealMan API2 Session、RM65 Tool RS485 和阻塞 Modbus 写入控制。目前 O7 仍是实验 HIL 轨迹，**PICO 手指映射尚未实现**，不是完整七自由度手指联合遥操作。
+ROS2 Humble 工作空间：PICO 位姿驱动 RM65-B 六轴机械臂，Remote IK + CANFD 200 Hz 高跟随；O7 右手经同一个 RealMan API2 Session、RM65 Tool RS485 和阻塞 Modbus 写入控制。PICO右手21点已接入somehand重定向和O7七轴绝对位置映射，手部模块已统一迁入本工作空间。锁臂跟手及一次本版迁移前联动有现场记录；新版追踪恢复修复仍需现场验收。
 
-下一阶段从 [PICO-O7 开发交接](docs/PICO_O7_TELEOP_HANDOFF.md) 开始；其中 `NEW_SESSION_START_HERE` 可独立复制到新会话。
+当前入口见 [PICO-O7 工作空间交接](docs/PICO_O7_WORKSPACE_HANDOFF.md) 与 [现场流程](docs/PICO_O7_COMBINED_FIELD_GUIDE.md)。旧 HIL 阶段交接保留作历史资料，不再作为开发起点。
+
+```bash
+cd ~/teleop_ws
+source /opt/ros/humble/setup.bash
+source install/setup.bash
+# 仅手部；ARM=false/true 与 O7=false/true 可独立选择。
+ros2 launch pico_o7 teleop.launch.py allow_motion:=false enable_o7_retargeting:=true
+# 联动需结束旧实例，再使用：
+# ros2 launch pico_o7 teleop.launch.py allow_motion:=true motion_confirmation:=RM65_CANFD_HIGH_FOLLOW_CONFIRMED enable_o7_retargeting:=true
+```
+
+`enable_o7_retargeting=true` 直接选择手部执行，无 enable/disable 服务步骤。追踪暂失/普通退出ACTIVE只暂停，健康恢复后清缓存并用新帧继续；故障锁存和SDK异常仍停写。
 
 ## 真实架构
 
 ```text
-PICO UDP JSON v1 → pico_receiver_node → /pico/teleop_state
+PICO UDP JSON v1 → 单一增强接收器 → /pico/teleop_state
+                       └→ /pico/right_hand_raw → O7求解/映射
                                       ↓
                             target_generator_node
                                       ↓ /rm_teleop/flange_target
@@ -16,9 +29,9 @@ PICO UDP JSON v1 → pico_receiver_node → /pico/teleop_state
                      RmApi2MotionAdapter / 单 RoboticArm
                      单 API2 handle / RM_TRIPLE_MODE_E
                          ┌────────────┴────────────┐
-                    主 ROS 回调              O7 HIL owner
+                    主 ROS 回调              O7 Hand owner
                    Remote IK                   ↓
-                CANFD 200 Hz          10 Hz 时间三角波生成线程
+                CANFD 200 Hz          PICO 21点 → somehand求解
                          │             latest-value mailbox
                          │              串行 Modbus worker
                          └────────────┬────────────┘
@@ -38,8 +51,9 @@ UDP realtime 5 ms 反馈由原高跟随节点接收并发布。不能另开 O7 A
 | 同 Session 1 Hz 位置写入 | 220↔255，10 次返回 1；操作者观察到运动，主线无故障 |
 | 自动 HIL 10 Hz 目标生成 | 最新日志实际配置 **15 秒**；10.001 Hz 生成、4.032 Hz 实际写入，150 个目标 / 61 次写调用 / 88 次覆盖 |
 | SDK 返回码 | 61 次均为 1：SDK 未确认，设备仍可能执行；不能改成成功，也不能认定未执行 |
-| 长时运行、所有控制器状态和异常恢复、完整七指同步 | 尚未验证 |
-| PICO 手指数据 / 映射 | 当前协议与消息只有 palm/wrist，无手指数组；待调查开发 |
+| 长时运行、所有控制器状态和异常恢复、完整七轴同步 | 尚未验证 |
+| PICO 手指数据 / 映射 | 已在 pico_o7 包接入21点、按名七轴映射；0.25s新鲜度、4Hz/限步16，逐轴标定仍待验证 |
+| 追踪移出/移回 | 已定位旧永久禁用问题；新版可恢复暂停已通过mock，待现场复验 |
 
 保留原始数据：
 
@@ -56,17 +70,20 @@ src/
     config/high_follow.yaml  三节点参数
     launch/teleop_high_follow.launch.py
     test/                    164 项自动测试基线
+  pico_o7/                   手部正式包：增强接收器/共享节点、重定向、模型、vendor、测试
+    launch/teleop.launch.py   当前臂手联合入口
+    config/ models/ vendor/  自包含运行资源
   pico_rm65_teleop_interfaces/msg/
     PicoTeleopState.msg / RmTeleopTarget.msg / RmCanfdControlState.msg
 docs/                        HIL、整理清单/报告、开发交接
-concurrency_logs/            仅保留上述两轮；每轮 arm_control/ 保存关联原始机械臂 CSV
+concurrency_logs/            原两轮HIL、当前跟手/追踪恢复证据和后续采集
 canfd_logs/                  后续运行时原节点 CSV 输出目录（已清理历史内容）
 build/ install/ log/         colcon 生成，Git 忽略
 一、参数生效关系.md           参数优先级说明（已校正）
 开发交接.md                  legacy：旧 RM65 输入稳定实验笔记
 ```
 
-根目录没有独立 launch/config/test/scripts；它们位于包内，monitor 通过 setup.py console entry point 安装，不依赖 scripts 目录。
+运行launch/config/test位于包内；根tools提供字段分析、环境重建和启动便捷脚本。求解Python3.11环境位于工作空间 .o7_solver_venv（Git忽略），不使用旧参考目录环境。
 
 本机核对：Ubuntu 22.04.5 LTS、Python 3.10.12、ROS_DISTRO=humble，RMW 为 `rmw_cyclonedds_cpp`；ROS_DOMAIN_ID 环境未设置，实际部署 domain 待确认。SDK 自动搜索可用路径 `/home/ai/RM_API2/Python`，本地 SDK 仓库 tag 为 `1.1.5`；本次未查询真机固件/运行库版本。需安装 ROS 包 rclpy、diagnostic_msgs、geometry_msgs、sensor_msgs、std_msgs、std_srvs、launch/launch_ros、ament_index_python，以及 colcon、pytest、setuptools 和 ROSIDL 构建依赖。详见两个 package.xml。
 
@@ -75,9 +92,9 @@ build/ install/ log/         colcon 生成，Git 忽略
 ```bash
 cd ~/teleop_ws
 source /opt/ros/humble/setup.bash
-colcon build --packages-select pico_rm65_teleop_interfaces rm_teleop --symlink-install
+colcon build --packages-select pico_rm65_teleop_interfaces rm_teleop pico_o7 --symlink-install
 source install/setup.bash
-python3 -m pytest src/rm_teleop/test -q
+python3 -m pytest src/rm_teleop/test src/pico_o7/test tools -q
 python3 -m compileall -q src/rm_teleop/rm_teleop
 git diff --check
 colcon test --packages-select rm_teleop --event-handlers console_direct+

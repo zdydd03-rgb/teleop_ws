@@ -1,0 +1,117 @@
+Arguments (pass arguments as '<name>:=<value>'):
+
+    'o7_solver_python':
+        no description given
+        (default: '/home/ai/teleop_ws/.o7_solver_venv/bin/python')
+
+    'enable_o7_read_diag':
+        no description given
+        (default: 'false')
+
+    'enable_o7_retargeting':
+        no description given
+        (default: 'false')
+
+    'o7_device_mapping_path':
+        no description given
+        (default: '/home/ai/teleop_ws/install/pico_o7/share/pico_o7/config/o7_device_linear.json')
+
+    'enable_o7_index2_calibration':
+        no description given
+        (default: 'false')
+
+    'o7_index2_plan_path':
+        no description given
+        (default: '/home/ai/teleop_ws/install/pico_o7/share/pico_o7/calibration/index2_plan.example.json')
+
+    'enable_o7_single_session_hil':
+        no description given
+        (default: 'false')
+
+    'enable_o7_stream_hil':
+        no description given
+        (default: 'false')
+
+    'enable_o7_auto_stream_hil':
+        no description given
+        (default: 'false')
+
+    'o7_auto_stream_hz':
+        no description given
+        (default: '10.0')
+
+    'o7_auto_stream_timeout_sec':
+        no description given
+        (default: '60.0')
+
+    'o7_auto_stream_open_pose_confirmed':
+        no description given
+        (default: 'false')
+
+    'o7_stream_hz':
+        no description given
+        (default: '1.0')
+
+    'o7_stream_duration_sec':
+        no description given
+        (default: '10.0')
+
+    'o7_stream_joint':
+        no description given
+        (default: '2')
+
+    'o7_stream_open_pose_confirmed':
+        no description given
+        (default: 'false')
+
+    'allow_motion':
+        no description given
+        (default: 'false')
+
+    'motion_confirmation':
+        no description given
+        (default: '')
+
+    'position_scale':
+        no description given
+        (default: '0.75')
+
+    'translation_speed_mps':
+        no description given
+        (default: '0.08')
+
+    'rotation_speed_deg_s':
+        no description given
+        (default: '12.0')
+
+    'motion_gate_enabled':
+        no description given
+        (default: 'true')
+
+    'input_filter_time_constant_sec':
+        no description given
+        (default: '0.060')
+
+    'motion_detection_window_sec':
+        no description given
+        (default: '0.40')
+
+    'motion_start_translation_m':
+        no description given
+        (default: '0.004')
+
+    'motion_start_rotation_deg':
+        no description given
+        (default: '2.0')
+
+    'motion_stop_translation_m':
+        no description given
+        (default: '0.0035')
+
+    'motion_stop_rotation_deg':
+        no description given
+        (default: '1.5')
+
+    'motion_stop_hold_sec':
+        no description given
+        (default: '0.30')

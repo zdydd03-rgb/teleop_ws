@@ -1,0 +1,153 @@
+{
+  "dry_run": true,
+  "hardware_sdk_calls": 0,
+  "input": "/home/ai/pico_o7_retargeting/data/recapture/04_pinch/pico_udp_captures/pico_raw_20261103_210154.jsonl",
+  "raw_jsonl_sha256": "4daf7a4ba078ec40ff3eb907039457cb70dc6d57672564dd2e7b6450dabca2d3",
+  "frames": 851,
+  "input_valid": 851,
+  "solved": 851,
+  "invalid_input": 0,
+  "solver_failures": [],
+  "history_resets": 1,
+  "dry_scheduled_targets": 112,
+  "device_order": [
+    "thumb_pitch",
+    "thumb_yaw",
+    "index_pitch",
+    "middle_pitch",
+    "ring_pitch",
+    "little_pitch",
+    "thumb_roll"
+  ],
+  "model_order_in_device_order": [
+    "thumb_cmc_pitch",
+    "thumb_cmc_yaw",
+    "index_mcp_pitch",
+    "middle_mcp_pitch",
+    "ring_mcp_pitch",
+    "pinky_mcp_pitch",
+    "thumb_cmc_roll"
+  ],
+  "output_range": [
+    0,
+    255
+  ],
+  "mapping_type": "provisional model-limit linear mapping, NOT measured calibration",
+  "note": "Representative frames selected by geometry, not manual gesture identification. scheduled targets simulate configured admission/step limit; no SDK return code is synthesized.",
+  "solve_elapsed_sec": 1.5937471650013322,
+  "solve_ms_median": 1.7299129995080875,
+  "representative_frames": {
+    "most_open_geometry_candidate": {
+      "frame_index": 555,
+      "seq": 9167,
+      "time_s": 19.704701900482178,
+      "mean_four_finger_bend_deg": 3.8429630574443454,
+      "thumb_index_distance": 0.09710396998166161,
+      "model_angles_rad": {
+        "thumb_cmc_pitch": 0.09867740310344275,
+        "thumb_cmc_yaw": 3.329316776155742e-19,
+        "index_mcp_pitch": 0.13858862494085478,
+        "middle_mcp_pitch": 0.15403283553941777,
+        "ring_mcp_pitch": 0.1611059589705287,
+        "pinky_mcp_pitch": 0.2238091466209097,
+        "thumb_cmc_roll": 0.1550255650775395
+      },
+      "device_channels": [
+        "thumb_pitch",
+        "thumb_yaw",
+        "index_pitch",
+        "middle_pitch",
+        "ring_pitch",
+        "little_pitch",
+        "thumb_roll"
+      ],
+      "linear_target": [
+        206,
+        255,
+        229,
+        226,
+        225,
+        213,
+        220
+      ],
+      "scheduled_target": null
+    },
+    "most_flexed_geometry_candidate": {
+      "frame_index": 771,
+      "seq": 9383,
+      "time_s": 27.24918794631958,
+      "mean_four_finger_bend_deg": 40.19092742589732,
+      "thumb_index_distance": 0.05537684467163684,
+      "model_angles_rad": {
+        "thumb_cmc_pitch": 3.322306875367123e-17,
+        "thumb_cmc_yaw": 0.7074889428835197,
+        "index_mcp_pitch": 0.5493514031513829,
+        "middle_mcp_pitch": 0.5444999464361753,
+        "ring_mcp_pitch": 0.5350184146744376,
+        "pinky_mcp_pitch": 0.4763618874517618,
+        "thumb_cmc_roll": 0.36433833621628553
+      },
+      "device_channels": [
+        "thumb_pitch",
+        "thumb_yaw",
+        "index_pitch",
+        "middle_pitch",
+        "ring_pitch",
+        "little_pitch",
+        "thumb_roll"
+      ],
+      "linear_target": [
+        255,
+        161,
+        152,
+        153,
+        155,
+        166,
+        173
+      ],
+      "scheduled_target": null
+    },
+    "closest_pinch_geometry_candidate": {
+      "frame_index": 421,
+      "seq": 9033,
+      "time_s": 14.98359489440918,
+      "mean_four_finger_bend_deg": 18.61638055392744,
+      "thumb_index_distance": 0.005136996984726985,
+      "model_angles_rad": {
+        "thumb_cmc_pitch": 5.904199154614101e-17,
+        "thumb_cmc_yaw": 0.6181523355676116,
+        "index_mcp_pitch": 0.9342378789746079,
+        "middle_mcp_pitch": 0.4461493696567727,
+        "ring_mcp_pitch": 0.3500403536368959,
+        "pinky_mcp_pitch": 0.3549886957241214,
+        "thumb_cmc_roll": 0.32579467060020356
+      },
+      "device_channels": [
+        "thumb_pitch",
+        "thumb_yaw",
+        "index_pitch",
+        "middle_pitch",
+        "ring_pitch",
+        "little_pitch",
+        "thumb_roll"
+      ],
+      "linear_target": [
+        255,
+        173,
+        80,
+        171,
+        189,
+        188,
+        182
+      ],
+      "scheduled_target": null
+    }
+  },
+  "solver_config": "config/o7_right_vectors.yaml",
+  "model": "models/o7_right_kinematic.xml",
+  "mapping_config": "/home/ai/teleop_ws/src/pico_o7/config/o7_device_linear.json",
+  "direction_pending": [
+    "thumb_yaw",
+    "thumb_roll"
+  ]
+}

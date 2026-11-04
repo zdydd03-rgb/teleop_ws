@@ -8,6 +8,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .coverage
+/.o7_solver_venv/
 
 # Runtime and hardware-test artifacts (large and reproducible)
 /canfd_logs/

@@ -1,0 +1,5 @@
+Resolved launch parameters: {'allow_motion': False, 'enable_o7_retargeting': False, 'o7_device_mapping_path': '/home/ai/pico_o7_retargeting/configs/o7_device_linear.json'}
+Resolved launch parameters: {'allow_motion': False, 'enable_o7_retargeting': True, 'o7_device_mapping_path': '/home/ai/pico_o7_retargeting/configs/o7_device_linear.json'}
+Resolved launch parameters: {'allow_motion': True, 'enable_o7_retargeting': False, 'o7_device_mapping_path': '/home/ai/pico_o7_retargeting/configs/o7_device_linear.json'}
+Resolved launch parameters: {'allow_motion': True, 'enable_o7_retargeting': True, 'o7_device_mapping_path': '/home/ai/pico_o7_retargeting/configs/o7_device_linear.json'}
+Metadata evaluation only; no launch service, ROS node or process started

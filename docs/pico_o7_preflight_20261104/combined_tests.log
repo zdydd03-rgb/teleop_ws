@@ -1,0 +1,17 @@
+test_combined_active_fresh_sending_allowed (test_pico_o7_combined.CombinedGuards) ... ok
+test_fault_disconnect_close_rejected (test_pico_o7_combined.CombinedGuards) ... ok
+test_locked_hand_stays_independent_of_active (test_pico_o7_combined.CombinedGuards) ... ok
+test_ready_rejected (test_pico_o7_combined.CombinedGuards) ... ok
+test_stale_feedback_rejected (test_pico_o7_combined.CombinedGuards) ... ok
+test_stalled_canfd_rejected_despite_old_active_summary (test_pico_o7_combined.CombinedGuards) ... ok
+test_unsent_rejected (test_pico_o7_combined.CombinedGuards) ... ok
+test_blocked_write_returns_then_stops_without_overlap_or_retry (test_pico_o7_combined.CombinedWorker) ... ok
+test_empty_mailbox_safety_loss_disables_and_never_autorearms (test_pico_o7_combined.CombinedWorker) ... ok
+test_exact_write_timing_and_raw_code_and_disabled_window (test_pico_o7_field_review.ReviewTests) ... ok
+test_inflight_finish_after_disable_is_not_new_submission (test_pico_o7_field_review.ReviewTests) ... ok
+test_only_sent_intervals_but_failed_cycles_are_retained (test_pico_o7_field_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.114s
+
+OK

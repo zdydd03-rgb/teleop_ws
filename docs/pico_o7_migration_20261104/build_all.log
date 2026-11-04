@@ -1,0 +1,17 @@
+Starting >>> pico_rm65_teleop_interfaces
+--- stderr: pico_rm65_teleop_interfaces
+failed to create symbolic link '/home/ai/teleop_ws/build/pico_rm65_teleop_interfaces/ament_cmake_python/pico_rm65_teleop_interfaces/pico_rm65_teleop_interfaces' because existing path cannot be removed: Is a directory
+gmake[2]: *** [CMakeFiles/ament_cmake_python_symlink_pico_rm65_teleop_interfaces.dir/build.make:70：CMakeFiles/ament_cmake_python_symlink_pico_rm65_teleop_interfaces] 错误 1
+gmake[1]: *** [CMakeFiles/Makefile2:440：CMakeFiles/ament_cmake_python_symlink_pico_rm65_teleop_interfaces.dir/all] 错误 2
+gmake[1]: *** 正在等待未完成的任务....
+gmake: *** [Makefile:146：all] 错误 2
+---
+Failed   <<< pico_rm65_teleop_interfaces [1min 30s, exited with code 2]
+[Processing: pico_rm65_teleop_interfaces]
+[Processing: pico_rm65_teleop_interfaces]
+[Processing: pico_rm65_teleop_interfaces]
+
+Summary: 0 packages finished [1min 30s]
+  1 package failed: pico_rm65_teleop_interfaces
+  1 package had stderr output: pico_rm65_teleop_interfaces
+  2 packages not processed

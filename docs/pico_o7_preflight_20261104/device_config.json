@@ -1,0 +1,89 @@
+{
+  "schema": 1,
+  "description": "Provisional linear mapping using effective model limits, NOT measured hardware calibration; device 255=open,0=closed.",
+  "write_hz": 4.0,
+  "max_age_sec": 0.25,
+  "max_call_ms": 750.0,
+  "initial_hold": [
+    255,
+    255,
+    255,
+    255,
+    255,
+    255,
+    255
+  ],
+  "axes": [
+    {
+      "index": 0,
+      "channel": "thumb_pitch",
+      "joint": "thumb_cmc_pitch",
+      "direction": "decreasing",
+      "device_min": 0,
+      "device_max": 255,
+      "max_step": 16,
+      "direction_evidence": "positive model flexion -> decreasing device value; field verification pending"
+    },
+    {
+      "index": 1,
+      "channel": "thumb_yaw",
+      "joint": "thumb_cmc_yaw",
+      "direction": "decreasing",
+      "device_min": 0,
+      "device_max": 255,
+      "max_step": 16,
+      "direction_evidence": "provisional; yaw/roll sign MUST be observed on site"
+    },
+    {
+      "index": 2,
+      "channel": "index_pitch",
+      "joint": "index_mcp_pitch",
+      "direction": "decreasing",
+      "device_min": 0,
+      "device_max": 255,
+      "max_step": 16,
+      "direction_evidence": "positive model flexion -> decreasing device value; field verification pending"
+    },
+    {
+      "index": 3,
+      "channel": "middle_pitch",
+      "joint": "middle_mcp_pitch",
+      "direction": "decreasing",
+      "device_min": 0,
+      "device_max": 255,
+      "max_step": 16,
+      "direction_evidence": "positive model flexion -> decreasing device value; field verification pending"
+    },
+    {
+      "index": 4,
+      "channel": "ring_pitch",
+      "joint": "ring_mcp_pitch",
+      "direction": "decreasing",
+      "device_min": 0,
+      "device_max": 255,
+      "max_step": 16,
+      "direction_evidence": "positive model flexion -> decreasing device value; field verification pending"
+    },
+    {
+      "index": 5,
+      "channel": "little_pitch",
+      "joint": "pinky_mcp_pitch",
+      "direction": "decreasing",
+      "device_min": 0,
+      "device_max": 255,
+      "max_step": 16,
+      "direction_evidence": "positive model flexion -> decreasing device value; field verification pending"
+    },
+    {
+      "index": 6,
+      "channel": "thumb_roll",
+      "joint": "thumb_cmc_roll",
+      "direction": "decreasing",
+      "device_min": 0,
+      "device_max": 255,
+      "max_step": 16,
+      "direction_evidence": "provisional; yaw/roll sign MUST be observed on site"
+    }
+  ],
+  "return_code_policy": "raw log only; never determines write/motion success or admission"
+}

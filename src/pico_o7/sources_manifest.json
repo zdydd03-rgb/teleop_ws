@@ -1,0 +1,165 @@
+{
+  "date": "2026-11-03",
+  "somehand_version": "0.3.0",
+  "somehand_commit": null,
+  "vendor_model": "linkerhand_o7v3_right",
+  "vendor_commit": null,
+  "retrieval": "Source and URDF text fetched through connected web tool; Git and PyPI socket operations blocked. Commit resolution unavailable; exact delivered bytes pinned below.",
+  "files": [
+    {
+      "path": "vendor/linkerhand-urdf/LICENSE",
+      "sha256": "bac74067fbb87e785490d2f07ce21647d22335738eac4eb13134b60002255736",
+      "source": "https://raw.githubusercontent.com/linker-bot/linkerhand-urdf/main/LICENSE"
+    },
+    {
+      "path": "vendor/linkerhand-urdf/O7/right/linkerhand_o7v3_right.urdf",
+      "sha256": "894570e4b3279ea25772054841830caabaebd4e2f49ecddc31ac17e84d4d3512",
+      "source": "https://raw.githubusercontent.com/linker-bot/linkerhand-urdf/main/O7/right/linkerhand_o7v3_right.urdf"
+    },
+    {
+      "path": "vendor/pico_hand_skeleton_viewer.py",
+      "sha256": "bdf7d74b1f83aee0ef1a7ba26c31eb0deb46e1d105f710d38683bbfed0c38d56",
+      "source": "local original Stage 1.5 file or preserved upstream solver baseline"
+    },
+    {
+      "path": "vendor/somehand/LICENSE",
+      "sha256": "0b491fbe4701194529a0b2de7a2649ed2f03f9e3422dfcf348fd58a344d9837e",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/LICENSE"
+    },
+    {
+      "path": "vendor/somehand/configs/retargeting/base/_universal_common.yaml",
+      "sha256": "01faf24b5bd14378db598369ea8d5e6570054cccc2bf2cacb95b1c15edebff8f",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/configs/retargeting/base/_universal_common.yaml"
+    },
+    {
+      "path": "vendor/somehand/configs/retargeting/base/linkerhand_o7.yaml",
+      "sha256": "3505972f660149cb7571d09425339a67ffc82fda5c4813451565678e31f9d6d2",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/configs/retargeting/base/linkerhand_o7.yaml"
+    },
+    {
+      "path": "vendor/somehand/configs/retargeting/right/linkerhand_o7_right.yaml",
+      "sha256": "a26ae989b4efc6ec21fe44d6cf3887773837265052cfab00bb76757f6ec3dd3b",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/configs/retargeting/right/linkerhand_o7_right.yaml"
+    },
+    {
+      "path": "vendor/somehand/pyproject.toml",
+      "sha256": "1f3fdf00e326ddc843eceef47d594a9e9d193ea11f08a8e4c0cd4048075fb0f5",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/pyproject.toml"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/__init__.py",
+      "sha256": "970546ac478138004960cb5ec75a14123bcbc727215b639cad675117d41d8711",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/__init__.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/application/__init__.py",
+      "sha256": "104480b3f0411baa716b4d02f4a113216b0443274288e895af5538455dcc3da5",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/application/__init__.py",
+      "local_modification": "Offline subset exports / package initializer created locally; not a pristine upstream file."
+    },
+    {
+      "path": "vendor/somehand/src/somehand/application/engine.py",
+      "sha256": "d828987b8da9c6715bc42cf1d25bc93a2b80c9b9445e2be883ce640379c9b982",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/application/engine.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/domain/__init__.py",
+      "sha256": "a230848f427fee06b856a21956e39d6e9035486113e78c19268e785de64a1fd5",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/domain/__init__.py",
+      "local_modification": "Offline subset exports / package initializer created locally; not a pristine upstream file."
+    },
+    {
+      "path": "vendor/somehand/src/somehand/domain/config.py",
+      "sha256": "7f3f00cb9f951c3f1c8cd936b371deb53176e10857f69643b9365dc66fb64275",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/domain/config.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/domain/hand_side.py",
+      "sha256": "83126197961cd9377584c2857e5f54e4191bc4349b74bf8fbff322efe9fced13",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/domain/hand_side.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/domain/models.py",
+      "sha256": "817b9f3786b988e20bd405ab9803a65b11c35110451b8904f9b73f5e82a9da84",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/domain/models.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/domain/preprocessing.py",
+      "sha256": "9f40f170384feb30c4ebcfdb17623438d881ae7f0eb8c7768b46ee0c6bbc81db",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/domain/preprocessing.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/external_assets.py",
+      "sha256": "cff7d5d327d8f417d5c66fea244461efce3a217de4eac41b90fe95979ac62540",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/external_assets.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/infrastructure/__init__.py",
+      "sha256": "d18316f57ab757e033ac1ecaa89ca3b044e75c07234093ff6ccce2a0df8c70d8",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/infrastructure/__init__.py",
+      "local_modification": "Offline subset exports / package initializer created locally; not a pristine upstream file."
+    },
+    {
+      "path": "vendor/somehand/src/somehand/infrastructure/config_loader.py",
+      "sha256": "52bacbdeb841b65d769e82dd1c0df0dadd4118c025578d8ac2068676293f6be9",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/infrastructure/config_loader.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/infrastructure/hand_model.py",
+      "sha256": "9a02940f602a30199666e013a7a3a13be991834d1c17e8ed29a72a2559386274",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/infrastructure/hand_model.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/infrastructure/model_name_resolver.py",
+      "sha256": "fbd6deccb29553d05203babf3cff47f65943076b113eed96c2f1bba943a544a2",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/infrastructure/model_name_resolver.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/infrastructure/vector_solver.py",
+      "sha256": "b56d40c4593e9b3a5cc4f17c6c0e255f2844e47aaa813571b0658355bf7dc202",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/infrastructure/vector_solver.py",
+      "local_modification": "Expose last_optimize_result for honest solver success counts; baseline preserved in upstream_vector_solver.py.txt."
+    },
+    {
+      "path": "vendor/somehand/src/somehand/infrastructure/vector_solver_objective.py",
+      "sha256": "52f41d735052e08d5adc3f31464b449c65c3963c3fbf8e27ca15015431778813",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/infrastructure/vector_solver_objective.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/infrastructure/vector_solver_primitives.py",
+      "sha256": "ec3a3be35f9909e92e6a21bae310f7fcb4e656d87212481811711be3f8b487c1",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/infrastructure/vector_solver_primitives.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/infrastructure/vector_solver_targets.py",
+      "sha256": "a29ddbed5c97bd691cd3e367a0319d5aaa9d8da80f241c69a42a10dd6cbae419",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/infrastructure/vector_solver_targets.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/paths.py",
+      "sha256": "5463ad5785239e69b5ad7672b070e1c9f7ef4e3d42c4141fc0c184c380a3e98d",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/paths.py"
+    },
+    {
+      "path": "vendor/somehand/src/somehand/runtime/__init__.py",
+      "sha256": "d9abd9bbbf063a7181613a3d120f30fdc26eb46e078d03a3cff646bd1d9b67d6",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/runtime/__init__.py",
+      "local_modification": "Offline subset exports / package initializer created locally; not a pristine upstream file."
+    },
+    {
+      "path": "vendor/somehand/src/somehand/runtime/config_validation.py",
+      "sha256": "98800eab4df537a3744c03467c13d1d5c2cfe5d545c3108558044289f475c560",
+      "source": "https://raw.githubusercontent.com/BotRunner64/somehand/master/src/somehand/runtime/config_validation.py"
+    },
+    {
+      "path": "vendor/somehand/upstream_vector_solver.py.txt",
+      "sha256": "29e8971f0e7fbed3f7ebc26ecf9b69c38ab63686957de4db963dd10f369beb8a",
+      "source": "local original Stage 1.5 file or preserved upstream solver baseline"
+    },
+    {
+      "path": "vendor/test_pico_hand_skeleton_viewer.py",
+      "sha256": "ceb27a169822bf1c5168c063c9787bcecbab29fe4e2ec4839dd4f6a586587f39",
+      "source": "local original Stage 1.5 file or preserved upstream solver baseline"
+    }
+  ]
+}

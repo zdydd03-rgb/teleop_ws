@@ -1,0 +1,26 @@
+test_combined_waits_for_active (test_o7_parameter_start.ParameterStartTests) ... ok
+test_node_master_parameter_and_removed_control_services (test_o7_parameter_start.ParameterStartTests) ... ok
+test_parameter_false_does_not_start_or_write (test_o7_parameter_start.ParameterStartTests) ... ok
+test_parameter_true_waits_for_connection_then_starts_without_service (test_o7_parameter_start.ParameterStartTests) ... ok
+test_removed_cli_controls (test_o7_parameter_start.ParameterStartTests) ... ok
+test_return_one_kept_and_following_continues_on_new_targets (test_o7_parameter_start.ParameterStartTests) ... ok
+test_safety_stop_requires_restart_not_service_or_auto_retry (test_o7_parameter_start.ParameterStartTests) ... ok
+test_shutdown_cancels_pending_start (test_o7_parameter_start.ParameterStartTests) ... ok
+test_startup_discards_pre_readiness_solution (test_o7_parameter_start.ParameterStartTests) ... ok
+test_combined_active_fresh_sending_allowed (test_pico_o7_combined.CombinedGuards) ... ok
+test_fault_disconnect_close_rejected (test_pico_o7_combined.CombinedGuards) ... ok
+test_locked_hand_stays_independent_of_active (test_pico_o7_combined.CombinedGuards) ... ok
+test_ready_rejected (test_pico_o7_combined.CombinedGuards) ... ok
+test_stale_feedback_rejected (test_pico_o7_combined.CombinedGuards) ... ok
+test_stalled_canfd_rejected_despite_old_active_summary (test_pico_o7_combined.CombinedGuards) ... ok
+test_unsent_rejected (test_pico_o7_combined.CombinedGuards) ... ok
+test_blocked_write_returns_then_stops_without_overlap_or_retry (test_pico_o7_combined.CombinedWorker) ... ok
+test_empty_mailbox_safety_loss_disables_and_never_autorearms (test_pico_o7_combined.CombinedWorker) ... ok
+test_exact_write_timing_and_raw_code_and_disabled_window (test_pico_o7_field_review.ReviewTests) ... ok
+test_inflight_finish_after_disable_is_not_new_submission (test_pico_o7_field_review.ReviewTests) ... ok
+test_only_sent_intervals_but_failed_cycles_are_retained (test_pico_o7_field_review.ReviewTests) ... ok
+
+----------------------------------------------------------------------
+Ran 21 tests in 0.579s
+
+OK
