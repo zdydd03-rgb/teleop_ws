@@ -10,7 +10,7 @@ __pycache__/
 .coverage
 /.o7_solver_venv/
 
-# Runtime and hardware-test artifacts (large and reproducible)
+# Runtime/hardware artifacts: retain raw evidence separately; not rebuildable
 /canfd_logs/
 /ik_logs/
 /test_results/
@@ -20,3 +20,8 @@ __pycache__/
 /.agents/
 /.codex/
 /.teleop_git/
+
+# V1.0.0 raw evidence and historical archives remain local; manifests are tracked.
+/concurrency_logs/
+/archive/
+/docs/validation/v1.0.0/raw_logs/

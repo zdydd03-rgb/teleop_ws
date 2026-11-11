@@ -30,7 +30,7 @@ def test_launch_exposes_tested_speed_controls_and_requires_confirmation():
     assert 'DeclareLaunchArgument("motion_confirmation", default_value="")' in launch_text
     assert 'DeclareLaunchArgument("position_scale", default_value="0.75")' in launch_text
     assert 'DeclareLaunchArgument("translation_speed_mps", default_value="0.08")' in launch_text
-    assert 'DeclareLaunchArgument("rotation_speed_deg_s", default_value="12.0")' in launch_text
+    assert 'DeclareLaunchArgument("rotation_speed_deg_s", default_value="")' in launch_text
     assert 'DeclareLaunchArgument("motion_gate_enabled", default_value="true")' in launch_text
     assert 'DeclareLaunchArgument("input_filter_time_constant_sec", default_value="0.060")' in launch_text
     assert 'executable="rm65_canfd_high_follow_node"' in launch_text
@@ -46,7 +46,7 @@ def test_high_follow_configuration_is_200_hz_and_motion_locked():
     assert 'motion_confirmation: ""' in config
     assert "position_scale: 0.75" in config
     assert "max_translation_speed_mps: 0.08" in config
-    assert "max_rotation_speed_deg_s: 12.0" in config
+    assert "max_rotation_speed_deg_s: 20.0" in config
     assert "motion_gate_enabled: true" in config
     assert "input_filter_time_constant_sec: 0.060" in config
     assert "motion_stop_translation_m: 0.0035" in config

@@ -392,11 +392,49 @@ def limit_rotation(
     return quaternion_slerp(current, target, max_angle_rad / angle)
 
 
+def limit_rotation_axes(
+    current: Quaternion, target: Quaternion, max_angles_rad: Vector3,
+) -> Quaternion:
+    """Limit the incremental rotation vector in the fixed RM65 Base frame."""
+    limits = _tuple3(max_angles_rad)
+    if not all(math.isfinite(value) and value >= 0.0 for value in limits):
+        raise ValueError("rotation axis limits must be finite and non-negative")
+    current = normalize_quaternion(current)
+    target = normalize_quaternion(target)
+    relative = matrix_to_quaternion(matrix_multiply(
+        quaternion_to_matrix(target), matrix_transpose(quaternion_to_matrix(current))
+    ))
+    if relative[3] < 0.0:
+        relative = tuple(-value for value in relative)
+    vector_length = vector_norm(relative[:3])
+    if vector_length < 1.0e-12:
+        return target
+    angle = 2.0 * math.atan2(vector_length, relative[3])
+    rotation_vector = tuple(value * angle / vector_length for value in relative[:3])
+    # Bound the combined angle too, preserving the old 20 deg/s total limit
+    # when all three limits are 20 deg/s.
+    max_angle = max(limits)
+    if angle > max_angle:
+        rotation_vector = tuple(value * max_angle / angle for value in rotation_vector)
+    step = tuple(max(-limit, min(limit, value)) for value, limit in zip(rotation_vector, limits))
+    step_angle = vector_norm(step)
+    if step_angle < 1.0e-15:
+        return current
+    if angle <= max_angle and all(abs(value) <= limit for value, limit in zip(rotation_vector, limits)):
+        return target
+    scale = math.sin(step_angle / 2.0) / step_angle
+    delta = (step[0] * scale, step[1] * scale, step[2] * scale, math.cos(step_angle / 2.0))
+    return matrix_to_quaternion(matrix_multiply(
+        quaternion_to_matrix(delta), quaternion_to_matrix(current)
+    ))
+
+
 def limit_pose_step(
     current: Pose3D,
     target: Pose3D,
     max_translation_distance: float,
     max_rotation_angle_rad: float,
+    max_rotation_angles_rad: Vector3 | None = None,
 ) -> Pose3D:
     current = validate_pose(current)
     target = validate_pose(target)
@@ -407,7 +445,9 @@ def limit_pose_step(
             target.position,
             max_translation_distance,
         ),
-        orientation=limit_rotation(
+        orientation=limit_rotation_axes(
+            current.orientation, target.orientation, max_rotation_angles_rad,
+        ) if max_rotation_angles_rad is not None else limit_rotation(
             current.orientation,
             target.orientation,
             max_rotation_angle_rad,

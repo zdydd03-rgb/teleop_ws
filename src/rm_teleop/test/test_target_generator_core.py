@@ -94,6 +94,25 @@ def test_translation_mapping_and_speed_limit():
     assert output.limited_target_pose.position == pytest.approx((0.4, 0.0, 0.501))
 
 
+def test_rotation_axis_limit_is_applied_in_base_frame():
+    config = TargetGeneratorConfig(
+        control_hz=100.0,
+        max_rotation_axis_speeds_rad_s=tuple(map(math.radians, (10.0, 20.0, 30.0))),
+        motion_gate_enabled=False,
+        input_filter_time_constant_sec=0.0,
+    )
+    core = prepare_active_core(config)
+    # PICO +Rz maps to Base +Rx, which is limited to 10 deg/s.
+    angle = math.radians(20.0)
+    moved = Pose3D(PALM.position, (0.0, 0.0, math.sin(angle / 2), math.cos(angle / 2)))
+    core.update_flange(FlangeInput(0.02, FLANGE))
+    core.update_pico(pico(0.02, seq=3, enabled=True, palm_pose=moved))
+    output = core.step(0.02)
+    assert quaternion_angular_distance(
+        output.limited_target_pose.orientation, FLANGE.orientation
+    ) == pytest.approx(math.radians(0.1), abs=1e-7)
+
+
 def test_pico_stale_exits_active_and_requires_new_edge():
     core = prepare_active_core()
 

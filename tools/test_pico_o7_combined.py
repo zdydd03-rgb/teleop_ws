@@ -59,25 +59,25 @@ class CombinedGuards(unittest.TestCase):
     def test_combined_active_fresh_sending_allowed(self):
         self.assertEqual(self.reject(), '')
 
-    def test_ready_rejected(self):
+    def test_arm_ready_does_not_reject_hand(self):
         self.node._last_summary.state = 'READY'
-        self.assertIn('not_ACTIVE', self.reject())
+        self.assertEqual(self.reject(), '')
 
-    def test_unsent_rejected(self):
+    def test_arm_unsent_does_not_reject_hand(self):
         self.node._last_summary.command_sent = False
-        self.assertIn('not_ACTIVE', self.reject())
+        self.assertEqual(self.reject(), '')
 
-    def test_stale_feedback_rejected(self):
+    def test_arm_feedback_does_not_reject_hand(self):
         self.node.store.latest = lambda: SimpleNamespace(received_monotonic=99.)
-        self.assertEqual(self.reject(), 'robot_feedback_stale')
+        self.assertEqual(self.reject(), '')
 
-    def test_stalled_canfd_rejected_despite_old_active_summary(self):
+    def test_canfd_gap_does_not_reject_hand(self):
         self.node._last_command_send_monotonic = 99.98
-        self.assertIn('CANFD_not_continuously', self.reject())
+        self.assertEqual(self.reject(), '')
 
-    def test_fault_disconnect_close_rejected(self):
+    def test_arm_fault_ignored_but_shared_disconnect_and_shutdown_rejected(self):
         self.node._fault_latched = True
-        self.assertIn('fault_latched', self.reject())
+        self.assertEqual(self.reject(), '')
         self.node._fault_latched = False
         self.node._connected = False
         self.assertIn('not connected', self.reject())
@@ -87,14 +87,12 @@ class CombinedGuards(unittest.TestCase):
 
 class CombinedWorker(unittest.TestCase):
     def controller(self, guard, emit=lambda event: None, write=None):
-        controller = object.__new__(realtime.HandController)
-        controller.state = realtime.LatestHand(Mapper())
+        adapter=SimpleNamespace(write_o7_hil_positions=write)
+        with patch.object(realtime.HandController,'_solve_loop',lambda self:None):
+            controller=realtime.HandController(Mapper(),lambda:adapter,guard,emit,
+                                               initializer=lambda *a:dict(success=True))
+        controller.solver_thread.join(1)
         controller.state.enable()
-        controller.stop = threading.Event()
-        controller.diagnostic = None
-        controller.guard = guard
-        controller.emit = emit
-        controller.adapter_getter = lambda: SimpleNamespace(write_o7_hil_positions=write)
         return controller
 
     def wait_for(self, predicate):
@@ -103,8 +101,8 @@ class CombinedWorker(unittest.TestCase):
             time.sleep(.005)
         self.assertTrue(predicate())
 
-    def test_empty_mailbox_tracking_interruption_pauses_and_resumes_without_cached_write(self):
-        reason = ['control_not_ACTIVE_sending']
+    def test_empty_mailbox_shared_disconnect_pauses_and_resumes_without_cached_write(self):
+        reason = ['existing API2 session not connected']
         controller = self.controller(lambda: reason[0])
         thread = threading.Thread(target=controller.write_loop)
         thread.start()
@@ -136,7 +134,7 @@ class CombinedWorker(unittest.TestCase):
         thread.start()
         try:
             self.assertTrue(entered.wait(1))
-            reason[0] = 'ARM_fault_latched'
+            reason[0] = 'node_closing'
             release.set()
             self.wait_for(lambda: not controller.state.enabled)
             self.assertEqual(len(calls), 1)
@@ -144,9 +142,46 @@ class CombinedWorker(unittest.TestCase):
             self.assertEqual(controller.state.return_codes, {'1': 1})
             finish=next(e for e in events if e['event']=='O7_HAND_WRITE_FINISH')
             self.assertEqual(finish['return_code'], 1)
-            self.assertEqual(events[-1]['event'], 'O7_HAND_SAFETY_STOP')
+            self.wait_for(lambda:controller.state.closed)
+            self.assertEqual(controller.state.reason, 'node_closing')
+            self.assertFalse(controller.state.startup_pending)
         finally:
             release.set(); controller.stop.set(); thread.join(1)
+        self.assertFalse(thread.is_alive())
+
+
+class DecoupledRuntime(unittest.TestCase):
+    def test_arm_transitions_do_not_pause_or_reinitialize_hand(self):
+        guard=method(CANDIDATE/'shared_session_node.py','_hand_rejection')
+        node=SimpleNamespace(_stop_event=threading.Event(),_adapter_lock=threading.Lock(),
+                             _connected=True,_adapter=SimpleNamespace(arm=object()),
+                             _hil_rejection=Mock(side_effect=AssertionError('ARM guard consulted')))
+        calls=[];inits=[]
+        adapter=SimpleNamespace(write_o7_hil_positions=lambda v:(calls.append(list(v)),0)[1])
+        with patch.object(realtime.HandController,'_solve_loop',lambda self:None):
+            c=realtime.HandController(Mapper(),lambda:adapter,lambda:guard(node),lambda e:None,
+                start_from_parameter=True,initializer=lambda *a:(inits.append(a),dict(success=True))[1])
+        thread=threading.Thread(target=c.write_loop);thread.start()
+        def wait(predicate):
+            deadline=time.monotonic()+2
+            while not predicate() and time.monotonic()<deadline:time.sleep(.005)
+            self.assertTrue(predicate())
+        try:
+            wait(lambda:c.state.enabled);epoch=c.state.epoch
+            for i,state in enumerate(('ACTIVE','READY','WAITING_ROBOT','FAULT_LATCHED')):
+                node._last_summary=SimpleNamespace(state=state,command_sent=False)
+                node._last_command_send_monotonic=time.monotonic()-.025
+                node._fault_latched=state=='FAULT_LATCHED'
+                now=time.monotonic()
+                q={n:lo+(hi-lo)*(.3+.15*i) for n,(lo,hi) in c.state.mapper.bounds.items()}
+                with c.state.lock:
+                    c.state.last_received=now
+                    c.state.pending=(epoch,now,dict(valid=True,seq=i,q_by_name=q))
+                wait(lambda:len(calls)==i+1 and not c.state.inflight)
+                self.assertTrue(c.state.enabled);self.assertEqual(c.state.epoch,epoch)
+            self.assertEqual(len(inits),1)
+            node._hil_rejection.assert_not_called()
+        finally:c.shutdown();thread.join(2)
         self.assertFalse(thread.is_alive())
 
 

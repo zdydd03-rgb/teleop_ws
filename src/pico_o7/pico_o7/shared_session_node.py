@@ -68,18 +68,20 @@ def main(args=None):
             self._index_once_service=self.create_service(Trigger,'/rm65/o7_calibration/index2/write_once',self._index_once)
             self._latency_once_service=self.create_service(Trigger,'/rm65/o7_hand/latency_once',self._latency_once)
             self.hand=None
+            self._hand_enable_service=self.create_service(Trigger,'/rm65/o7_hand/enable',self._hand_enable)
+            self._hand_disable_service=self.create_service(Trigger,'/rm65/o7_hand/disable',self._hand_disable)
             self._hand_status_service=self.create_service(Trigger,'/rm65/o7_hand/status',self._hand_status)
             if self.enable_o7_retargeting:
                 from pico_o7.o7_stage.realtime import HandController
                 from rclpy.qos import qos_profile_sensor_data
                 self.hand=HandController(self.device_mapper,self._hand_adapter,self._hand_rejection,self._emit_hil_event,
-                                         start_from_parameter=True,solver_python=self.o7_solver_python)
+                                         start_from_parameter=True,solver_python=self.o7_solver_python,initializer=self._initialize_hand)
                 okay,reason=self._hil.start_hand_worker(self.hand)
                 if not okay:
                     self.hand.shutdown();raise RuntimeError(reason)
                 self._hand_sub=self.create_subscription(String,'/pico/right_hand_raw',self._hand_input,qos_profile_sensor_data)
                 self._hand_status_timer=self.create_timer(1.,self._hand_report)
-                self.get_logger().warning('O7 enabled by launch parameter; waiting for safe session/ARM and NEW tracked frame; no position reads')
+                self.get_logger().warning('O7 enabled by launch parameter; waiting for shared SDK, automatic Modbus initialization and NEW tracked frame; no position reads')
             self.get_logger().warning('O7 stage: same API2 session and HIL worker; '+json.dumps(self.index2_plan.dry_run()))
 
         def _emit_hil_event(self,event):
@@ -132,22 +134,23 @@ def main(args=None):
                 request_id=self._hil.last_request_id if accepted else None,result_event='STREAM_FINISH'))
             return response
 
+        def _initialize_hand(self,adapter,reason):
+            # O7 worker only: no ARM-state gate and no lock shared with CANFD.
+            if self._stop_event.is_set():return None
+            with self._adapter_lock:
+                if not self._connected or adapter is None or adapter is not self._adapter or adapter.arm is None:
+                    return None
+            self._emit_hil_event(dict(event='O7_MODBUS_INIT_START',timestamp_ns=time.time_ns(),reason=reason))
+            return adapter.initialize_o7_modbus()
+
         def _hand_adapter(self):
             with self._adapter_lock:return self._adapter
 
         def _hand_rejection(self):
+            # Hand admission depends on its shared transport, not ARM motion/IK/status.
             if self._stop_event.is_set():return 'node_closing'
-            if self._fault_latched:return 'ARM_fault_latched'
             with self._adapter_lock:
                 if not self._connected or self._adapter is None or self._adapter.arm is None:return 'existing API2 session not connected'
-            # Locked-arm following remains independent of ARM ACTIVE. Combined
-            # following uses the original ARM safety snapshot, without SDK calls.
-            if self.motion_permitted:
-                reason=self._hil_rejection()
-                if reason:return reason
-                last=self._last_command_send_monotonic
-                if last is None or not 0<=time.monotonic()-last<=.010:
-                    return 'CANFD_not_continuously_sending'
             return ''
 
         def _index_rejection(self):
@@ -172,6 +175,27 @@ def main(args=None):
         def _hand_input(self,msg):
             try:self.hand.state.receive(json.loads(msg.data))
             except (ValueError,TypeError,KeyError):self.hand.state.clear('malformed_hand_topic')
+
+        def _hand_disable(self,request,response):
+            if self.hand is None:
+                response.success=False;response.message='hand mode unavailable';return response
+            with self.hand.state.lock:
+                self.hand.state.operator_stopped=True
+                self.hand.state.clear('operator_disabled',disable=True)
+                self.hand.state.modbus_initialized=False
+            response.success=True;response.message='disabled; in-flight call must drain';return response
+
+        def _hand_enable(self,request,response):
+            if self.hand is None:
+                response.success=False;response.message='hand mode unavailable';return response
+            with self.hand.state.lock:
+                if self.hand.state.enabled or self.hand.state.startup_pending or self.hand.state.inflight:
+                    response.success=False;response.message='already enabled, pending or draining';return response
+                self.hand.state.modbus_initialized=False
+                try:self.hand.state.request_startup()
+                except RuntimeError as exc:
+                    response.success=False;response.message=str(exc);return response
+            response.success=True;response.message='queued initialization; wait for shared SDK and NEW PICO frame';return response
 
         def _hand_status(self,request,response):
             response.success=True;response.message=json.dumps(self.hand.state.status()if self.hand else dict(enabled=False,reason='mode not prepared'))

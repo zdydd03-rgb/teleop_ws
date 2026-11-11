@@ -20,10 +20,12 @@ class ParameterStartTests(unittest.TestCase):
 
     def controller(self, selected=True):
         from types import SimpleNamespace
-        def write(target):self.calls.append(list(target));return 1
+        def write(target):self.calls.append(list(target));return 0
         with patch.object(realtime.HandController,'_solve_loop',lambda self:None):
-            controller=realtime.HandController(Mapper(),lambda:SimpleNamespace(write_o7_hil_positions=write),
-                lambda:self.reason[0],self.events.append,start_from_parameter=selected)
+            adapter=SimpleNamespace(write_o7_hil_positions=write)
+            controller=realtime.HandController(Mapper(),lambda:adapter,
+                lambda:self.reason[0],self.events.append,start_from_parameter=selected,
+                initializer=lambda *a:None if self.reason[0]=='existing API2 session not connected' else dict(success=True))
         self.controllers.append(controller)
         thread=threading.Thread(target=controller.write_loop)
         thread.start();self.threads.append(thread)
@@ -49,7 +51,7 @@ class ParameterStartTests(unittest.TestCase):
     def test_parameter_true_waits_for_connection_then_starts_without_service(self):
         self.reason[0]='existing API2 session not connected'
         c=self.controller()
-        self.wait(lambda:c.state.reason.startswith('startup_wait:'))
+        self.wait(lambda:c.state.startup_pending)
         self.assertFalse(c.state.enabled);self.assertTrue(c.state.startup_pending)
         self.reason[0]=''
         self.wait(lambda:c.state.enabled)
@@ -57,37 +59,37 @@ class ParameterStartTests(unittest.TestCase):
         self.assertEqual(self.calls,[])  # Safe readiness is not a position command.
         self.wait(lambda:any(e['event']=='O7_HAND_PARAMETER_START' for e in self.events))
 
-    def test_combined_waits_for_active(self):
-        self.reason[0]='control_not_ACTIVE_sending'
+    def test_combined_waits_only_for_shared_connection(self):
+        self.reason[0]='existing API2 session not connected'
         c=self.controller();time.sleep(.03)
         self.assertFalse(c.state.enabled);self.assertTrue(c.state.startup_pending)
         self.reason[0]='';self.wait(lambda:c.state.enabled)
 
     def test_startup_discards_pre_readiness_solution(self):
-        self.reason[0]='control_not_ACTIVE_sending'
+        self.reason[0]='existing API2 session not connected'
         c=self.controller();self.offer(c,.5)
         self.reason[0]='';self.wait(lambda:c.state.enabled)
         time.sleep(.03)
         self.assertIsNone(c.state.pending);self.assertEqual(self.calls,[])
         self.offer(c,.5);self.wait(lambda:len(self.calls)==1)
 
-    def test_return_one_kept_and_following_continues_on_new_targets(self):
+    def test_acknowledged_writes_continue_on_new_targets(self):
         c=self.controller();self.wait(lambda:c.state.enabled)
         self.offer(c,.5);self.wait(lambda:len(self.calls)==1)
         time.sleep(.26);self.offer(c,.7);self.wait(lambda:len(self.calls)==2)
-        self.wait(lambda:c.state.return_codes=={'1':2})
+        self.wait(lambda:c.state.return_codes=={'0':2})
         self.assertTrue(c.state.enabled)
-        self.assertTrue(all(e['return_code']==1 for e in self.events if e['event']=='O7_HAND_WRITE_FINISH'))
+        self.assertTrue(all(e['return_code']==0 for e in self.events if e['event']=='O7_HAND_WRITE_FINISH'))
 
     def test_safety_stop_requires_restart_not_service_or_auto_retry(self):
         c=self.controller();self.wait(lambda:c.state.enabled)
-        self.reason[0]='ARM_fault_latched';self.wait(lambda:not c.state.enabled)
+        self.reason[0]='node_closing';self.wait(lambda:not c.state.enabled)
         self.reason[0]='';time.sleep(.03)
         self.assertFalse(c.state.enabled);self.assertFalse(c.state.startup_pending)
         self.assertEqual(self.calls,[])
 
     def test_shutdown_cancels_pending_start(self):
-        self.reason[0]='control_not_ACTIVE_sending';c=self.controller()
+        self.reason[0]='existing API2 session not connected';c=self.controller()
         c.shutdown();self.reason[0]='';time.sleep(.02)
         self.assertFalse(c.state.startup_pending);self.assertFalse(c.state.enabled)
         self.assertEqual(self.calls,[])
@@ -95,7 +97,7 @@ class ParameterStartTests(unittest.TestCase):
     def test_node_master_parameter_and_removed_control_services(self):
         tree=ast.parse((CANDIDATE/'shared_session_node.py').read_text())
         names={n.name for n in ast.walk(tree) if isinstance(n,ast.FunctionDef)}
-        self.assertNotIn('_hand_enable',names);self.assertNotIn('_hand_disable',names)
+        self.assertIn('_hand_enable',names);self.assertIn('_hand_disable',names)
         self.assertIn('_hand_status',names)
         branch=next(n for n in ast.walk(tree) if isinstance(n,ast.If)
                     and ast.unparse(n.test)=='self.enable_o7_retargeting')

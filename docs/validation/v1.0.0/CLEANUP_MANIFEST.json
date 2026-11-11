@@ -1,0 +1,732 @@
+[
+  {
+    "action": "archive",
+    "source": "docs/WORKSPACE_CLEANUP_MANIFEST.json",
+    "destination": "docs/archive/legacy/WORKSPACE_CLEANUP_MANIFEST.json"
+  },
+  {
+    "action": "archive",
+    "source": "docs/O7_AUTO_STREAM_HIL.md",
+    "destination": "docs/archive/legacy/O7_AUTO_STREAM_HIL.md"
+  },
+  {
+    "action": "archive",
+    "source": "docs/PICO_O7_MIGRATION_REPORT.md",
+    "destination": "docs/archive/legacy/PICO_O7_MIGRATION_REPORT.md"
+  },
+  {
+    "action": "archive",
+    "source": "docs/RETAINED_HIL_SHA256.json",
+    "destination": "docs/archive/legacy/RETAINED_HIL_SHA256.json"
+  },
+  {
+    "action": "archive",
+    "source": "docs/WORKSPACE_CLEANUP_INVENTORY.md",
+    "destination": "docs/archive/legacy/WORKSPACE_CLEANUP_INVENTORY.md"
+  },
+  {
+    "action": "archive",
+    "source": "docs/PICO_O7_COMBINED_FIELD_GUIDE.md",
+    "destination": "docs/archive/legacy/PICO_O7_COMBINED_FIELD_GUIDE.md"
+  },
+  {
+    "action": "archive",
+    "source": "docs/PICO_O7_TELEOP_HANDOFF.md",
+    "destination": "docs/archive/legacy/PICO_O7_TELEOP_HANDOFF.md"
+  },
+  {
+    "action": "archive",
+    "source": "docs/O7_STREAM_HIL.md",
+    "destination": "docs/archive/legacy/O7_STREAM_HIL.md"
+  },
+  {
+    "action": "archive",
+    "source": "docs/WORKSPACE_CLEANUP_REPORT.md",
+    "destination": "docs/archive/legacy/WORKSPACE_CLEANUP_REPORT.md"
+  },
+  {
+    "action": "archive",
+    "source": "docs/pico_o7_preflight_20261104",
+    "destination": "docs/archive/legacy/pico_o7_preflight_20261104"
+  },
+  {
+    "action": "archive",
+    "source": "docs/PICO_O7_WORKSPACE_HANDOFF.md",
+    "destination": "docs/archive/legacy/PICO_O7_WORKSPACE_HANDOFF.md"
+  },
+  {
+    "action": "archive",
+    "source": "docs/pico_o7_migration_20261104",
+    "destination": "docs/archive/legacy/pico_o7_migration_20261104"
+  },
+  {
+    "action": "archive",
+    "source": "docs/o7_parameter_start_20261104",
+    "destination": "docs/archive/legacy/o7_parameter_start_20261104"
+  },
+  {
+    "action": "archive",
+    "source": "docs/O7_SINGLE_SESSION_HIL.md",
+    "destination": "docs/archive/legacy/O7_SINGLE_SESSION_HIL.md"
+  },
+  {
+    "action": "archive",
+    "source": "docs/RETAINED_HIL_EVIDENCE.json",
+    "destination": "docs/archive/legacy/RETAINED_HIL_EVIDENCE.json"
+  },
+  {
+    "action": "archive",
+    "source": "docs/WORKSPACE_ARCHIVE_VERIFICATION.json",
+    "destination": "docs/archive/legacy/WORKSPACE_ARCHIVE_VERIFICATION.json"
+  },
+  {
+    "action": "archive",
+    "source": "开发交接.md",
+    "destination": "docs/archive/legacy/开发交接.md"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_184616.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_184616.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_184220.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_184220.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_211145.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_211145.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_184807.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_184807.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_182517.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_182517.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_182617.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_182617.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_174311.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_174311.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_142248.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_142248.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_183119.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_183119.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_211029.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_211029.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_184338.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_184338.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_181002.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_181002.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_142326.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_142326.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_175047.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_175047.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261111_172328.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261111_172328.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_183929.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_183929.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_142342.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_142342.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_180402.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_180402.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261111_172410.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261111_172410.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_175949.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_175949.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_183320.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_183320.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_175321.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_175321.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_185332.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_185332.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_173209.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_173209.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_210906.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_210906.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_175652.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_175652.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_182909.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_182909.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_174845.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_174845.csv"
+  },
+  {
+    "action": "archive",
+    "source": "canfd_logs/rm65_canfd_high_follow_20261104_173250.csv",
+    "destination": "archive/canfd_logs/rm65_canfd_high_follow_20261104_173250.csv"
+  },
+  {
+    "action": "archive",
+    "source": "concurrency_logs/o7_write_only_1hz_20261103_165032",
+    "destination": "archive/concurrency_logs/o7_write_only_1hz_20261103_165032"
+  },
+  {
+    "action": "archive",
+    "source": "concurrency_logs/o7_auto_10hz_20261103_172402",
+    "destination": "archive/concurrency_logs/o7_auto_10hz_20261103_172402"
+  },
+  {
+    "action": "archive",
+    "source": "concurrency_logs/pico_o7_tracking_loss_20261104",
+    "destination": "archive/concurrency_logs/pico_o7_tracking_loss_20261104"
+  },
+  {
+    "action": "delete_cache",
+    "path": "__pycache__/ik_acceptance_test.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": ".pytest_cache/README.md"
+  },
+  {
+    "action": "delete_cache",
+    "path": ".pytest_cache/CACHEDIR.TAG"
+  },
+  {
+    "action": "delete_cache",
+    "path": ".pytest_cache/.gitignore"
+  },
+  {
+    "action": "delete_cache",
+    "path": ".pytest_cache/v/cache/lastfailed"
+  },
+  {
+    "action": "delete_cache",
+    "path": ".pytest_cache/v/cache/nodeids"
+  },
+  {
+    "action": "delete_cache",
+    "path": ".pytest_cache/v/cache/stepwise"
+  },
+  {
+    "action": "delete_cache",
+    "path": "tools/__pycache__/test_o7_parameter_start.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "tools/__pycache__/pico_o7_field_review.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "tools/__pycache__/test_pico_o7_combined.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "tools/__pycache__/test_pico_o7_field_review.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/pico_hand_skeleton_viewer.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/capture_io.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/write_latency_report.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/shared_session_node.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/paths.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/retarget_dry_run.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/solver_process.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/__init__.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/capture_io.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/paths.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/pico_hand_receiver_node.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/standalone_write.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/pico_hand_skeleton_viewer.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/__init__.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/solver_process.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/session_tools.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/plan.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/protocol.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/mapping.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/__init__.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/worker.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/write_timing.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/hand_input.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/mapping.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/__init__.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/realtime.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/hand_input.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/test/__pycache__/test_o7_mapping_audit.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/test/__pycache__/test_o7_write_latency.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/test/__pycache__/test_recovery.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/test/__pycache__/test_o7_shared_stage.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/test/__pycache__/test_node_lifecycle.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/test/__pycache__/test_o7_realtime.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/__pycache__/paths.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/__pycache__/__init__.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/__pycache__/external_assets.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/vector_solver_objective.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/vector_solver_targets.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/vector_solver.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/model_name_resolver.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/vector_solver_primitives.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/__init__.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/config_loader.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/hand_model.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/models.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/hand_side.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/preprocessing.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/__init__.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/config.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/runtime/__pycache__/config_validation.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/runtime/__pycache__/__init__.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/application/__pycache__/engine.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/vendor/somehand/src/somehand/application/__pycache__/__init__.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/launch/__pycache__/teleop_high_follow.launch.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_protocol.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_sequence.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_canfd_static_safety.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_single_high_follow_profile.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_target_math.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_remote_ik_matrix.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_target_generator_core.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_o7_single_session_hil.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_canfd_control_core.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_o7_stream_hil.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_sequence.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_protocol.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_rm_feedback_core.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_target_generator_core.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_target_math.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_canfd_control_core.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_o7_auto_stream_hil.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_receiver_core.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_canfd_static_safety.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_remote_ik_matrix.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_single_high_follow_profile.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_receiver_core.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/test/__pycache__/test_rm_feedback_core.cpython-310-pytest-6.2.5.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/target_generator_node.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/protocol.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/rm_api2_adapter.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/pico_receiver_node.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/receiver_core.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/canfd_csv_logger.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/o7_auto_stream_hil.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/single_session_hil_monitor.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/rm_feedback_core.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/o7_single_session_hil.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/__init__.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/target_generator_core.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/canfd_control_core.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/target_math.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/rm65_canfd_high_follow_node.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/rm_api2_motion_adapter.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/rm_teleop/__pycache__/hil_monitor_data.cpython-310.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/.pytest_cache/README.md"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/.pytest_cache/CACHEDIR.TAG"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/.pytest_cache/.gitignore"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/.pytest_cache/v/cache/lastfailed"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/.pytest_cache/v/cache/nodeids"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/.pytest_cache/v/cache/stepwise"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/.pytest_cache/README.md"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/.pytest_cache/CACHEDIR.TAG"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/.pytest_cache/.gitignore"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/.pytest_cache/v/cache/lastfailed"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/.pytest_cache/v/cache/nodeids"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/rm_teleop/.pytest_cache/v/cache/stepwise"
+  },
+  {
+    "action": "delete_temporary_script",
+    "path": "release_prepare.py",
+    "reason": "本轮一次性整理脚本，审计结果已保存，无运行或测试依赖"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/__pycache__/retarget_dry_run.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/write_timing.cpython-311.pyc"
+  },
+  {
+    "action": "delete_cache",
+    "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/realtime.cpython-311.pyc"
+  }
+]

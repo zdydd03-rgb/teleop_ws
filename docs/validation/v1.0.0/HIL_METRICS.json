@@ -1,0 +1,123 @@
+{
+  "bag_start_ns": 1794389175256105013,
+  "bag_end_ns": 1794389255498358653,
+  "o7_calls": 477,
+  "o7_codes": {
+    "0": 477
+  },
+  "o7_duration_ms": {
+    "n": 477,
+    "mean": 64.63204072117401,
+    "p50": 63.963925,
+    "p95": 76.3418626,
+    "p99": 88.55609444000001,
+    "max": 103.037091
+  },
+  "o7_hz": 9.442846441845784,
+  "canfd_sent": 10112,
+  "canfd_interval_ms": {
+    "n": 10111,
+    "mean": 4.999997219760629,
+    "p50": 4.999760001737741,
+    "p95": 5.028255998695386,
+    "p99": 5.053188999227132,
+    "max": 5.21466299869644
+  },
+  "over_ms": {
+    "5": 4868,
+    "10": 0,
+    "20": 0
+  },
+  "canfd_codes": {
+    "0": 10112
+  },
+  "ik_codes": {
+    "0": 10112
+  },
+  "fault_rows": 0,
+  "stop_rows": 0,
+  "initializations": [
+    {
+      "event": "O7_MODBUS_INIT_FAILED",
+      "mode": "pico_o7_realtime",
+      "timestamp_ns": 1794389173856794330,
+      "reason": "session_start_or_resume",
+      "success": false,
+      "return_code": -2,
+      "config": null,
+      "duration_ms": 518.9420930000779
+    },
+    {
+      "event": "O7_MODBUS_INIT_SUCCESS",
+      "mode": "pico_o7_realtime",
+      "timestamp_ns": 1794389175255421122,
+      "reason": "communication_recovery",
+      "success": true,
+      "return_code": 0,
+      "config": {
+        "return_code": 0,
+        "mode": 1,
+        "baudrate": 115200,
+        "timeout": 1
+      },
+      "duration_ms": 393.81867299925943
+    },
+    {
+      "event": "O7_MODBUS_INIT_SUCCESS",
+      "mode": "pico_o7_realtime",
+      "timestamp_ns": 1794389251746263529,
+      "reason": "session_start_or_resume",
+      "success": true,
+      "return_code": 0,
+      "config": {
+        "return_code": 0,
+        "mode": 1,
+        "baudrate": 115200,
+        "timeout": 1
+      },
+      "duration_ms": 270.29338300053496
+    }
+  ],
+  "files": [
+    {
+      "path": "concurrency_logs/o7_combined_10hz_20261111_172614/metadata.yaml",
+      "bytes": 2547,
+      "sha256": "e0d427633b8f9d2b21196a3547371f57b573b1fd822e4bd8d294d7a214dc2e58"
+    },
+    {
+      "path": "concurrency_logs/o7_combined_10hz_20261111_172614/o7_combined_10hz_20261111_172614_0.db3",
+      "bytes": 73486336,
+      "sha256": "1d7872d68e174d4cf0670678fffacea871d208cab3f9fdbd62667237d621a926"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261111_172612.csv",
+      "bytes": 18991815,
+      "sha256": "eef77beecf0c850c3d1b6e6c5094e314f4046959cbb25be91e69a5c2e3b87444"
+    },
+    {
+      "path": "docs/validation/v1.0.0/raw_logs/launch.log",
+      "bytes": 824,
+      "sha256": "c87a818247b7ee55cdf2adf391e240d2e61503997f2642a0d2b19744d7fdd1ba"
+    },
+    {
+      "path": "docs/validation/v1.0.0/raw_logs/python3_29026_1794389172660.log",
+      "bytes": 1948898,
+      "sha256": "8c56225cd0a2488429735936da32733d76084afe1ca267f7febf6b1a2cb7014e"
+    },
+    {
+      "path": "docs/validation/v1.0.0/raw_logs/python3_29028_1794389172618.log",
+      "bytes": 4996,
+      "sha256": "1005626d831fc647b9f70b023802a9ef0edfa09cc9928fcf846237bf311867c2"
+    },
+    {
+      "path": "docs/validation/v1.0.0/raw_logs/python3_29024_1794389172632.log",
+      "bytes": 693,
+      "sha256": "8102ca4bf6ad7e848aa03f5bd2c92b19fb4111d285dff25bb26ec2e65f8ee697"
+    },
+    {
+      "path": "docs/validation/v1.0.0/raw_logs/python3_29245_1794389175037.log",
+      "bytes": 1223,
+      "sha256": "a301731ff4ec1f1ffd2ab544655e55273594e3e2816482b68fbf56a88faf3ad0"
+    }
+  ]
+}

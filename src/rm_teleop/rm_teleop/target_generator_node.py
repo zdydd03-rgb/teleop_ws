@@ -42,6 +42,8 @@ class TargetGeneratorNode(Node):
         self.declare_parameter("position_scale", 0.25)
         self.declare_parameter("max_translation_speed_mps", 0.025)
         self.declare_parameter("max_rotation_speed_deg_s", 12.0)
+        for axis in ("rx", "ry", "rz"):
+            self.declare_parameter(f"max_rotation_{axis}_speed_deg_s", -1.0)
 
         self.declare_parameter("motion_gate_enabled", True)
         self.declare_parameter("input_filter_time_constant_sec", 0.060)
@@ -83,6 +85,13 @@ class TargetGeneratorNode(Node):
             ),
             max_rotation_speed_rad_s=math.radians(
                 float(self.get_parameter("max_rotation_speed_deg_s").value)
+            ),
+            max_rotation_axis_speeds_rad_s=tuple(
+                math.radians(
+                    float(self.get_parameter("max_rotation_speed_deg_s").value)
+                    if float(self.get_parameter(f"max_rotation_{axis}_speed_deg_s").value) == -1.0
+                    else float(self.get_parameter(f"max_rotation_{axis}_speed_deg_s").value)
+                ) for axis in ("rx", "ry", "rz")
             ),
             motion_gate_enabled=bool(
                 self.get_parameter("motion_gate_enabled").value
@@ -162,7 +171,7 @@ class TargetGeneratorNode(Node):
             f"control_hz={control_hz:.1f} "
             f"motion_gate={config.motion_gate_enabled} "
             f"filter_tau={config.input_filter_time_constant_sec:.3f}s "
-            f"rotation_limit={math.degrees(config.max_rotation_speed_rad_s):.1f}deg/s "
+            f"rotation_limits_rx_ry_rz_deg_s={tuple(round(math.degrees(v), 1) for v in config.max_rotation_axis_speeds_rad_s)} "
             f"stop_threshold={config.motion_stop_translation_m * 1000.0:.1f}mm/"
             f"{math.degrees(config.motion_stop_rotation_rad):.1f}deg "
             "target_output=enabled"

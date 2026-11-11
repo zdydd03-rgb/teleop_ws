@@ -3,7 +3,7 @@ from pathlib import Path
 from ament_index_python.packages import get_package_share_directory
 from launch import LaunchDescription
 from launch.actions import DeclareLaunchArgument
-from launch.substitutions import LaunchConfiguration
+from launch.substitutions import EqualsSubstitution, IfElseSubstitution, LaunchConfiguration
 from launch_ros.actions import Node
 from launch_ros.parameter_descriptions import ParameterValue
 
@@ -17,6 +17,7 @@ def generate_launch_description() -> LaunchDescription:
     position_scale = LaunchConfiguration("position_scale")
     translation_speed = LaunchConfiguration("translation_speed_mps")
     rotation_speed = LaunchConfiguration("rotation_speed_deg_s")
+    rotation_fallback = IfElseSubstitution(EqualsSubstitution(rotation_speed, ""), "20.0", rotation_speed)
     motion_gate_enabled = LaunchConfiguration("motion_gate_enabled")
     input_filter_tau = LaunchConfiguration("input_filter_time_constant_sec")
     motion_window = LaunchConfiguration("motion_detection_window_sec")
@@ -42,7 +43,10 @@ def generate_launch_description() -> LaunchDescription:
             DeclareLaunchArgument("motion_confirmation", default_value=""),
             DeclareLaunchArgument("position_scale", default_value="0.75"),
             DeclareLaunchArgument("translation_speed_mps", default_value="0.08"),
-            DeclareLaunchArgument("rotation_speed_deg_s", default_value="12.0"),
+            DeclareLaunchArgument("rotation_speed_deg_s", default_value=""),
+            *[DeclareLaunchArgument(f"rotation_{axis}_speed_deg_s", default_value=IfElseSubstitution(
+                EqualsSubstitution(rotation_speed, ""), default, rotation_speed))
+              for axis, default in (("rx", "70.0"), ("ry", "8.0"), ("rz", "8.0"))],
             DeclareLaunchArgument("motion_gate_enabled", default_value="true"),
             DeclareLaunchArgument("input_filter_time_constant_sec", default_value="0.060"),
             DeclareLaunchArgument("motion_detection_window_sec", default_value="0.40"),
@@ -103,9 +107,12 @@ def generate_launch_description() -> LaunchDescription:
                             value_type=float,
                         ),
                         "max_rotation_speed_deg_s": ParameterValue(
-                            rotation_speed,
+                            rotation_fallback,
                             value_type=float,
                         ),
+                        **{f"max_rotation_{axis}_speed_deg_s": ParameterValue(
+                            LaunchConfiguration(f"rotation_{axis}_speed_deg_s"), value_type=float)
+                           for axis in ("rx", "ry", "rz")},
                         "motion_gate_enabled": ParameterValue(
                             motion_gate_enabled,
                             value_type=bool,

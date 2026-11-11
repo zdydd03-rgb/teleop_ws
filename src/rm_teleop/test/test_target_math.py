@@ -6,6 +6,8 @@ from rm_teleop.target_math import (
     Pose3D,
     generate_raw_target,
     limit_pose_step,
+    limit_rotation,
+    limit_rotation_axes,
     matrix_multiply,
     matrix_to_quaternion,
     pose_within_workspace,
@@ -15,6 +17,39 @@ from rm_teleop.target_math import (
 
 
 IDENTITY = (0.0, 0.0, 0.0, 1.0)
+
+
+def test_equal_rotation_axis_limits_preserve_original_total_limit():
+    current = (0.0, 0.0, 0.0, 1.0)
+    target = axis_angle_quaternion((1 / math.sqrt(3),) * 3, math.radians(90))
+    step = math.radians(10)
+    actual = limit_rotation_axes(current, target, (step, step, step))
+    expected = limit_rotation(current, target, step)
+    assert quaternion_angular_distance(actual, expected) < 1e-7
+
+
+def test_rotation_axes_limit_fixed_base_components_at_rotated_anchor():
+    current = axis_angle_quaternion((0, 0, 1), math.radians(70))
+    delta = axis_angle_quaternion((1, 0, 0), math.radians(50))
+    target = matrix_to_quaternion(matrix_multiply(quaternion_to_matrix(delta), quaternion_to_matrix(current)))
+    actual = limit_rotation_axes(current, target, tuple(map(math.radians, (5, 10, 20))))
+    expected_delta = axis_angle_quaternion((1, 0, 0), math.radians(5))
+    expected = matrix_to_quaternion(matrix_multiply(quaternion_to_matrix(expected_delta), quaternion_to_matrix(current)))
+    assert quaternion_angular_distance(actual, expected) < 1e-7
+
+
+def test_rotation_axis_zero_blocks_only_its_component():
+    target = axis_angle_quaternion((1 / math.sqrt(2), 1 / math.sqrt(2), 0), math.radians(30))
+    actual = limit_rotation_axes(IDENTITY, target, (0.0, math.radians(10), math.radians(10)))
+    assert actual[0] == pytest.approx(0.0, abs=1e-9)
+    assert actual[1] > 0.0
+    assert quaternion_angular_distance(IDENTITY, actual) <= math.radians(10) + 1e-8
+
+
+@pytest.mark.parametrize("limits", [(-1.0, 1.0, 1.0), (float('nan'), 1.0, 1.0), (1.0, 1.0)])
+def test_rotation_axis_limits_reject_invalid_values(limits):
+    with pytest.raises(ValueError):
+        limit_rotation_axes(IDENTITY, IDENTITY, limits)
 
 
 def axis_angle_quaternion(axis, angle_rad):

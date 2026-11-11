@@ -1,0 +1,53 @@
+{
+  "python_ast_files": 84,
+  "syntax_errors": 0,
+  "package_manifests": {
+    "pico_o7": {
+      "version": "1.0.0",
+      "dependencies": [
+        "ament_python",
+        "rm_teleop",
+        "ament_index_python",
+        "rclpy",
+        "launch",
+        "launch_ros",
+        "std_msgs",
+        "std_srvs",
+        "python3-setuptools",
+        "python3-pytest"
+      ]
+    },
+    "pico_rm65_teleop_interfaces": {
+      "version": "1.0.0",
+      "dependencies": [
+        "ament_cmake",
+        "geometry_msgs",
+        "rosidl_default_generators",
+        "std_msgs",
+        "geometry_msgs",
+        "rosidl_default_runtime",
+        "std_msgs"
+      ]
+    },
+    "rm_teleop": {
+      "version": "1.0.0",
+      "dependencies": [
+        "ament_python",
+        "ament_index_python",
+        "diagnostic_msgs",
+        "geometry_msgs",
+        "launch",
+        "launch_ros",
+        "pico_rm65_teleop_interfaces",
+        "rclpy",
+        "sensor_msgs",
+        "std_msgs",
+        "std_srvs",
+        "python3-setuptools",
+        "python3-pytest"
+      ]
+    }
+  },
+  "runtime_changed": [],
+  "excluded": "documentation, tests, Python/pytest caches"
+}

@@ -1,3 +1,5 @@
+> V1.0.0说明：下文是保留的来源/移植历史，并非当前操作指南。历史run_offline.py、model_tools.py和configs/路径对应迁移前项目；当前入口为pico_o7.solver_process、pico_o7.retarget_dry_run，配置在config/，解析器在pico_o7/pico_hand_skeleton_viewer.py。运行不加载旧参考目录。sources_manifest.json是来源取证，当前候选文件完整性见工作区docs/validation/v1.0.0/RUNTIME_SHA256.json。当前使用方式以根README为准。
+
 > 2026-11-04迁入teleop_ws：本文及sources_manifest.json保留原参考项目的来源/哈希说明，不用于运行时加载旧目录。当前解析器在pico_o7/pico_hand_skeleton_viewer.py，模型/vendor/config均位于本包，入口见README.md。
 
 # Vendored source and model notes

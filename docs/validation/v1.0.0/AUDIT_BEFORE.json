@@ -1,0 +1,4160 @@
+{
+  "branch": "cleanup/remove-obsolete-code",
+  "head": "578f4e0536974af0451c249fabef5549c7bc83d0",
+  "status": " M README.md\n M src/pico_o7/config/o7_device_linear.json\n M src/pico_o7/launch/teleop.launch.py\n M src/pico_o7/pico_o7/o7_stage/realtime.py\n M src/pico_o7/pico_o7/shared_session_node.py\n M src/pico_o7/test/test_node_lifecycle.py\n M src/pico_o7/test/test_o7_realtime.py\n M src/pico_o7/test/test_recovery.py\n M src/rm_teleop/README.md\n M src/rm_teleop/config/high_follow.yaml\n M src/rm_teleop/launch/teleop_high_follow.launch.py\n M src/rm_teleop/rm_teleop/rm65_canfd_high_follow_node.py\n M src/rm_teleop/rm_teleop/rm_api2_motion_adapter.py\n M src/rm_teleop/rm_teleop/target_generator_core.py\n M src/rm_teleop/rm_teleop/target_generator_node.py\n M src/rm_teleop/rm_teleop/target_math.py\n M src/rm_teleop/test/test_single_high_follow_profile.py\n M src/rm_teleop/test/test_target_generator_core.py\n M src/rm_teleop/test/test_target_math.py\n D \"\\344\\270\\200\\343\\200\\201\\345\\217\\202\\346\\225\\260\\347\\224\\237\\346\\225\\210\\345\\205\\263\\347\\263\\273.md\"\n?? concurrency_logs/\n?? release_prepare.py\n",
+  "recent_commits": "578f4e0 Integrate PICO-O7 into workspace and recover after tracking loss\nda8c5eb Add single-session O7 HIL and finalize PICO teleop handoff\ndf980a2 Remove obsolete dry-run artifacts\n0e2d64a Merge remote initial commit\n7aa4dea Initial ROS 2 teleoperation workspace\n",
+  "files": [
+    {
+      "path": "src/pico_o7/requirements.lock",
+      "size": 202,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pytest.ini",
+      "size": 49,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/sources_manifest.json",
+      "size": 9375,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/README.md",
+      "size": 3950,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/setup.cfg",
+      "size": 84,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/package.xml",
+      "size": 703,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/VENDOR_NOTES.md",
+      "size": 3150,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/setup.py",
+      "size": 1211,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/launch/teleop.launch.py",
+      "size": 9724,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__init__.py",
+      "size": 66,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/session_tools.py",
+      "size": 5352,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/solver_process.py",
+      "size": 3367,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/capture_io.py",
+      "size": 4134,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/pico_hand_receiver_node.py",
+      "size": 851,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/retarget_dry_run.py",
+      "size": 5761,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/pico_hand_skeleton_viewer.py",
+      "size": 16015,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/standalone_write.py",
+      "size": 4110,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/shared_session_node.py",
+      "size": 13968,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/write_latency_report.py",
+      "size": 4855,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/paths.py",
+      "size": 832,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/mapping.py",
+      "size": 3477,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/hand_input.py",
+      "size": 1598,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__init__.py",
+      "size": 71,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/worker.py",
+      "size": 7882,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/protocol.py",
+      "size": 3241,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/plan.py",
+      "size": 4945,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/write_timing.py",
+      "size": 1684,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/realtime.py",
+      "size": 21449,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/plan.cpython-310.pyc",
+      "size": 5390,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/protocol.cpython-310.pyc",
+      "size": 3210,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/mapping.cpython-311.pyc",
+      "size": 7955,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/__init__.cpython-310.pyc",
+      "size": 209,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/worker.cpython-310.pyc",
+      "size": 7912,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/write_timing.cpython-310.pyc",
+      "size": 1934,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/hand_input.cpython-310.pyc",
+      "size": 2302,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/mapping.cpython-310.pyc",
+      "size": 4039,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/__init__.cpython-311.pyc",
+      "size": 246,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/realtime.cpython-310.pyc",
+      "size": 18090,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/o7_stage/__pycache__/hand_input.cpython-311.pyc",
+      "size": 3985,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/pico_hand_skeleton_viewer.cpython-311.pyc",
+      "size": 30308,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/capture_io.cpython-310.pyc",
+      "size": 3948,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/write_latency_report.cpython-310.pyc",
+      "size": 5512,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/shared_session_node.cpython-310.pyc",
+      "size": 12927,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/paths.cpython-311.pyc",
+      "size": 1980,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/retarget_dry_run.cpython-310.pyc",
+      "size": 6365,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/solver_process.cpython-310.pyc",
+      "size": 3440,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/__init__.cpython-310.pyc",
+      "size": 216,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/capture_io.cpython-311.pyc",
+      "size": 8202,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/paths.cpython-310.pyc",
+      "size": 1131,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/pico_hand_receiver_node.cpython-310.pyc",
+      "size": 1503,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/standalone_write.cpython-310.pyc",
+      "size": 4101,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/pico_hand_skeleton_viewer.cpython-310.pyc",
+      "size": 15509,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/__init__.cpython-311.pyc",
+      "size": 232,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/solver_process.cpython-311.pyc",
+      "size": 6775,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/pico_o7/__pycache__/session_tools.cpython-310.pyc",
+      "size": 4709,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/test_o7_realtime.py",
+      "size": 10155,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/test_o7_write_latency.py",
+      "size": 5051,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/test_recovery.py",
+      "size": 11828,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/test_o7_mapping_audit.py",
+      "size": 5523,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/test_node_lifecycle.py",
+      "size": 4118,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/test_o7_shared_stage.py",
+      "size": 9287,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/fixtures/right_hand_frame.jsonl",
+      "size": 5867,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/__pycache__/test_o7_mapping_audit.cpython-310-pytest-6.2.5.pyc",
+      "size": 7938,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/__pycache__/test_o7_write_latency.cpython-310-pytest-6.2.5.pyc",
+      "size": 6984,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/__pycache__/test_recovery.cpython-310-pytest-6.2.5.pyc",
+      "size": 32687,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/__pycache__/test_o7_shared_stage.cpython-310-pytest-6.2.5.pyc",
+      "size": 13181,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/__pycache__/test_node_lifecycle.cpython-310-pytest-6.2.5.pyc",
+      "size": 10015,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/test/__pycache__/test_o7_realtime.cpython-310-pytest-6.2.5.pyc",
+      "size": 13507,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/config/o7_right_vectors.yaml",
+      "size": 1482,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/config/o7_device_linear.json",
+      "size": 2568,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/models/o7_right_kinematic.xml",
+      "size": 11268,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/models/joint_mapping.json",
+      "size": 3274,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/models/display_edges.json",
+      "size": 964,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/linkerhand-urdf/LICENSE",
+      "size": 11291,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/linkerhand-urdf/O7/right/linkerhand_o7v3_right.urdf",
+      "size": 24028,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/LICENSE",
+      "size": 10737,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/upstream_vector_solver.py.txt",
+      "size": 18840,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/pyproject.toml",
+      "size": 975,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/configs/retargeting/base/_universal_common.yaml",
+      "size": 520,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/configs/retargeting/base/linkerhand_o7.yaml",
+      "size": 1945,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/configs/retargeting/right/linkerhand_o7_right.yaml",
+      "size": 157,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/__init__.py",
+      "size": 83,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/external_assets.py",
+      "size": 3862,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/paths.py",
+      "size": 1382,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/vector_solver_primitives.py",
+      "size": 637,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__init__.py",
+      "size": 44,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/vector_solver_objective.py",
+      "size": 7742,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/vector_solver.py",
+      "size": 18967,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/hand_model.py",
+      "size": 5489,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/model_name_resolver.py",
+      "size": 9870,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/vector_solver_targets.py",
+      "size": 4867,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/config_loader.py",
+      "size": 12174,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/vector_solver_objective.cpython-311.pyc",
+      "size": 9304,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/vector_solver_targets.cpython-311.pyc",
+      "size": 6309,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/vector_solver.cpython-311.pyc",
+      "size": 26795,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/model_name_resolver.cpython-311.pyc",
+      "size": 12868,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/vector_solver_primitives.cpython-311.pyc",
+      "size": 1595,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/__init__.cpython-311.pyc",
+      "size": 246,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/config_loader.cpython-311.pyc",
+      "size": 23755,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/infrastructure/__pycache__/hand_model.cpython-311.pyc",
+      "size": 12136,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__init__.py",
+      "size": 215,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/hand_side.py",
+      "size": 505,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/config.py",
+      "size": 8900,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/models.py",
+      "size": 3974,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/preprocessing.py",
+      "size": 3092,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/models.cpython-311.pyc",
+      "size": 11325,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/hand_side.cpython-311.pyc",
+      "size": 1204,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/preprocessing.cpython-311.pyc",
+      "size": 4882,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/__init__.cpython-311.pyc",
+      "size": 522,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/domain/__pycache__/config.cpython-311.pyc",
+      "size": 17014,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/__pycache__/paths.cpython-311.pyc",
+      "size": 2384,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/__pycache__/__init__.cpython-311.pyc",
+      "size": 274,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/__pycache__/external_assets.cpython-311.pyc",
+      "size": 6961,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/runtime/__init__.py",
+      "size": 46,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/runtime/config_validation.py",
+      "size": 941,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/runtime/__pycache__/config_validation.cpython-311.pyc",
+      "size": 1795,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/runtime/__pycache__/__init__.cpython-311.pyc",
+      "size": 241,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/application/__init__.py",
+      "size": 78,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/application/engine.py",
+      "size": 2357,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/application/__pycache__/engine.cpython-311.pyc",
+      "size": 3865,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/vendor/somehand/src/somehand/application/__pycache__/__init__.cpython-311.pyc",
+      "size": 308,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/.pytest_cache/README.md",
+      "size": 295,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/.pytest_cache/CACHEDIR.TAG",
+      "size": 194,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/.pytest_cache/.gitignore",
+      "size": 37,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/.pytest_cache/v/cache/lastfailed",
+      "size": 1047,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/.pytest_cache/v/cache/nodeids",
+      "size": 22010,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/.pytest_cache/v/cache/stepwise",
+      "size": 2,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/calibration/o7_axis_mapping.json",
+      "size": 38952,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/calibration/hil_log_audit.json",
+      "size": 48484,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/calibration/o7_axis_mapping.csv",
+      "size": 8617,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/calibration/index2_plan.example.json",
+      "size": 550,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_o7/resource/pico_o7",
+      "size": 0,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/CMakeLists.txt",
+      "size": 592,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/package.xml",
+      "size": 785,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/msg/RmCanfdControlState.msg",
+      "size": 1120,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/msg/PicoTeleopState.msg",
+      "size": 449,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/pico_rm65_teleop_interfaces/msg/RmTeleopTarget.msg",
+      "size": 577,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/README.md",
+      "size": 4530,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/setup.cfg",
+      "size": 88,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/package.xml",
+      "size": 833,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/setup.py",
+      "size": 1202,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/launch/teleop_high_follow.launch.py",
+      "size": 8272,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/launch/__pycache__/teleop_high_follow.launch.cpython-310.pyc",
+      "size": 3027,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_sequence.py",
+      "size": 1402,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_rm_feedback_core.py",
+      "size": 3545,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_target_generator_core.py",
+      "size": 12813,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_receiver_core.py",
+      "size": 3302,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_protocol.py",
+      "size": 3476,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_canfd_static_safety.py",
+      "size": 1393,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_canfd_control_core.py",
+      "size": 2792,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_remote_ik_matrix.py",
+      "size": 936,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_o7_stream_hil.py",
+      "size": 18237,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_o7_single_session_hil.py",
+      "size": 10812,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_single_high_follow_profile.py",
+      "size": 3785,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_o7_auto_stream_hil.py",
+      "size": 17923,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/test_target_math.py",
+      "size": 7381,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_protocol.cpython-310-pytest-6.2.5.pyc",
+      "size": 8060,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_sequence.cpython-310-pytest-6.2.5.pyc",
+      "size": 5169,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_canfd_static_safety.cpython-310.pyc",
+      "size": 1555,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_single_high_follow_profile.cpython-310.pyc",
+      "size": 3841,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_target_math.cpython-310.pyc",
+      "size": 4848,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_remote_ik_matrix.cpython-310-pytest-6.2.5.pyc",
+      "size": 2439,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_target_generator_core.cpython-310.pyc",
+      "size": 9553,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_o7_single_session_hil.cpython-310-pytest-6.2.5.pyc",
+      "size": 23307,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_canfd_control_core.cpython-310.pyc",
+      "size": 3088,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_o7_stream_hil.cpython-310-pytest-6.2.5.pyc",
+      "size": 44590,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_sequence.cpython-310.pyc",
+      "size": 1537,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_protocol.cpython-310.pyc",
+      "size": 3323,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_rm_feedback_core.cpython-310.pyc",
+      "size": 3834,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_target_generator_core.cpython-310-pytest-6.2.5.pyc",
+      "size": 23582,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_target_math.cpython-310-pytest-6.2.5.pyc",
+      "size": 12569,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_canfd_control_core.cpython-310-pytest-6.2.5.pyc",
+      "size": 7626,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_o7_auto_stream_hil.cpython-310-pytest-6.2.5.pyc",
+      "size": 38019,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_receiver_core.cpython-310.pyc",
+      "size": 3138,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_canfd_static_safety.cpython-310-pytest-6.2.5.pyc",
+      "size": 2932,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_remote_ik_matrix.cpython-310.pyc",
+      "size": 1378,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_single_high_follow_profile.cpython-310-pytest-6.2.5.pyc",
+      "size": 8212,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_receiver_core.cpython-310-pytest-6.2.5.pyc",
+      "size": 7713,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/test/__pycache__/test_rm_feedback_core.cpython-310-pytest-6.2.5.pyc",
+      "size": 8992,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/config/high_follow.yaml",
+      "size": 3851,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/rm_api2_motion_adapter.py",
+      "size": 4991,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/receiver_core.py",
+      "size": 6729,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__init__.py",
+      "size": 0,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/o7_auto_stream_hil.py",
+      "size": 12051,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/pico_receiver_node.py",
+      "size": 17675,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/single_session_hil_monitor.py",
+      "size": 7765,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/protocol.py",
+      "size": 10098,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/hil_monitor_data.py",
+      "size": 10511,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/target_generator_node.py",
+      "size": 13554,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/target_generator_core.py",
+      "size": 30405,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/rm65_canfd_high_follow_node.py",
+      "size": 65660,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/rm_feedback_core.py",
+      "size": 7236,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/rm_api2_adapter.py",
+      "size": 17285,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/canfd_csv_logger.py",
+      "size": 3265,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/canfd_control_core.py",
+      "size": 4786,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/target_math.py",
+      "size": 15649,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/o7_single_session_hil.py",
+      "size": 11433,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/target_generator_node.cpython-310.pyc",
+      "size": 9738,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/protocol.cpython-310.pyc",
+      "size": 8345,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/rm_api2_adapter.cpython-310.pyc",
+      "size": 14572,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/pico_receiver_node.cpython-310.pyc",
+      "size": 11179,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/receiver_core.cpython-310.pyc",
+      "size": 5838,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/canfd_csv_logger.cpython-310.pyc",
+      "size": 3377,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/o7_auto_stream_hil.cpython-310.pyc",
+      "size": 10507,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/single_session_hil_monitor.cpython-310.pyc",
+      "size": 7489,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/rm_feedback_core.cpython-310.pyc",
+      "size": 7296,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/o7_single_session_hil.cpython-310.pyc",
+      "size": 10616,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/__init__.cpython-310.pyc",
+      "size": 128,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/target_generator_core.cpython-310.pyc",
+      "size": 17915,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/canfd_control_core.cpython-310.pyc",
+      "size": 5133,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/target_math.cpython-310.pyc",
+      "size": 13399,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/rm65_canfd_high_follow_node.cpython-310.pyc",
+      "size": 39619,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/rm_api2_motion_adapter.cpython-310.pyc",
+      "size": 5126,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/rm_teleop/__pycache__/hil_monitor_data.cpython-310.pyc",
+      "size": 11749,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/.pytest_cache/README.md",
+      "size": 295,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/.pytest_cache/CACHEDIR.TAG",
+      "size": 194,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/.pytest_cache/.gitignore",
+      "size": 37,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/.pytest_cache/v/cache/lastfailed",
+      "size": 2,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/.pytest_cache/v/cache/nodeids",
+      "size": 16002,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/.pytest_cache/v/cache/stepwise",
+      "size": 2,
+      "tracked": false,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "src/rm_teleop/resource/rm_teleop",
+      "size": 0,
+      "tracked": true,
+      "classification": "runtime/config/test/vendor"
+    },
+    {
+      "path": "tools/test_pico_o7_field_review.py",
+      "size": 3764,
+      "tracked": true,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "tools/setup_o7_solver_env.py",
+      "size": 2335,
+      "tracked": true,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "tools/test_o7_parameter_start.py",
+      "size": 5550,
+      "tracked": true,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "tools/o7_field.sh",
+      "size": 1234,
+      "tracked": true,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "tools/test_pico_o7_combined.py",
+      "size": 6806,
+      "tracked": true,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "tools/pico_o7_field_review.py",
+      "size": 7400,
+      "tracked": true,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "tools/__pycache__/test_o7_parameter_start.cpython-310-pytest-6.2.5.pyc",
+      "size": 9859,
+      "tracked": false,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "tools/__pycache__/pico_o7_field_review.cpython-310.pyc",
+      "size": 9942,
+      "tracked": false,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "tools/__pycache__/test_pico_o7_combined.cpython-310-pytest-6.2.5.pyc",
+      "size": 9522,
+      "tracked": false,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "tools/__pycache__/test_pico_o7_field_review.cpython-310-pytest-6.2.5.pyc",
+      "size": 4217,
+      "tracked": false,
+      "classification": "maintenance/test"
+    },
+    {
+      "path": "docs/WORKSPACE_CLEANUP_MANIFEST.json",
+      "size": 116985,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/O7_AUTO_STREAM_HIL.md",
+      "size": 13963,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/PICO_O7_MIGRATION_REPORT.md",
+      "size": 6012,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/RETAINED_HIL_SHA256.json",
+      "size": 2399,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/WORKSPACE_CLEANUP_INVENTORY.md",
+      "size": 39236,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/PICO_O7_COMBINED_FIELD_GUIDE.md",
+      "size": 11849,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/PICO_O7_TELEOP_HANDOFF.md",
+      "size": 29310,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/O7_STREAM_HIL.md",
+      "size": 12244,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/WORKSPACE_CLEANUP_REPORT.md",
+      "size": 9895,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/PICO_O7_WORKSPACE_HANDOFF.md",
+      "size": 10939,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/O7_SINGLE_SESSION_HIL.md",
+      "size": 13812,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/RETAINED_HIL_EVIDENCE.json",
+      "size": 8584,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/WORKSPACE_ARCHIVE_VERIFICATION.json",
+      "size": 43433,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/validation.json",
+      "size": 947,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/launch_args.log",
+      "size": 2578,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/colcon_test.log",
+      "size": 1796,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/integrity.json",
+      "size": 3061,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/README.md",
+      "size": 1647,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/offline_dry_run.log",
+      "size": 10116,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/build.log",
+      "size": 91,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/colcon_result.log",
+      "size": 52,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/combined_tests.log",
+      "size": 1198,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/hand_tests.log",
+      "size": 4083,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/device_config.json",
+      "size": 2516,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/offline_result.json",
+      "size": 108,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/launch_matrix.log",
+      "size": 757,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/offline_dry_run/summary.json",
+      "size": 14698,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/offline_dry_run/pico_raw_20261103_205724/device_targets.csv",
+      "size": 255920,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/offline_dry_run/pico_raw_20261103_205724/summary.json",
+      "size": 4258,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/offline_dry_run/pico_raw_20261103_210246/device_targets.csv",
+      "size": 185009,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/offline_dry_run/pico_raw_20261103_210246/summary.json",
+      "size": 4281,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/offline_dry_run/pico_raw_20261103_210154/device_targets.csv",
+      "size": 255908,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_preflight_20261104/offline_dry_run/pico_raw_20261103_210154/summary.json",
+      "size": 4274,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/validation.json",
+      "size": 1670,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/launch_args.log",
+      "size": 2738,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/replay_parity.json",
+      "size": 626,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/colcon_test.log",
+      "size": 4617,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/pytest.log",
+      "size": 340,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/pip_check.log",
+      "size": 30,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/colcon_test_retry.log",
+      "size": 1244,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/recovery_log_evidence.json",
+      "size": 5655,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/migration_manifest.json",
+      "size": 22935,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/build.log",
+      "size": 109,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/hand_colcon_result.log",
+      "size": 173,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/rm_colcon_result.log",
+      "size": 52,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/build_all.log",
+      "size": 1068,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/hand_colcon_result_retry.log",
+      "size": 51,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/copied_sources.json",
+      "size": 15585,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/solver_environment.json",
+      "size": 663,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/build_all_retry.log",
+      "size": 348,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/replay.log",
+      "size": 10138,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/arm_integrity.json",
+      "size": 1927,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/launch_matrix.log",
+      "size": 455,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/replay/summary.json",
+      "size": 14720,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/replay/pico_raw_20261103_205724/device_targets.csv",
+      "size": 255905,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/replay/pico_raw_20261103_205724/summary.json",
+      "size": 4265,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/replay/pico_raw_20261103_210246/device_targets.csv",
+      "size": 185012,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/replay/pico_raw_20261103_210246/summary.json",
+      "size": 4288,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/replay/pico_raw_20261103_210154/device_targets.csv",
+      "size": 255928,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/pico_o7_migration_20261104/replay/pico_raw_20261103_210154/summary.json",
+      "size": 4282,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/o7_parameter_start_20261104/launch_args.log",
+      "size": 2578,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/o7_parameter_start_20261104/arm_tests.log",
+      "size": 260,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/o7_parameter_start_20261104/integrity.json",
+      "size": 4028,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/o7_parameter_start_20261104/README.md",
+      "size": 1535,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/o7_parameter_start_20261104/parameter_tests.log",
+      "size": 2103,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/o7_parameter_start_20261104/build.log",
+      "size": 91,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "docs/o7_parameter_start_20261104/hand_tests.log",
+      "size": 4083,
+      "tracked": true,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_combined_10hz_20261111_172614/metadata.yaml",
+      "size": 2547,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_combined_10hz_20261111_172614/o7_combined_10hz_20261111_172614_0.db3",
+      "size": 73486336,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/pico_o7/o7_session.lock",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_165032/summary.json",
+      "size": 24501,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_165032/samples.csv",
+      "size": 21891848,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_165032/events.csv",
+      "size": 20083,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_165032/summary.csv",
+      "size": 2275,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_write_only_1hz_20261103_165032/arm_control/rm65_canfd_high_follow_20261103_165029.csv",
+      "size": 14245278,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/teleop_console.log",
+      "size": 223653,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/summary.json",
+      "size": 241149,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/samples.csv",
+      "size": 26000785,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/monitor_console.log",
+      "size": 198999,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/events.csv",
+      "size": 256884,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/summary.csv",
+      "size": 2941,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/o7_auto_10hz_20261103_172402/arm_control/rm65_canfd_high_follow_20261103_172406.csv",
+      "size": 19012734,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/pico_o7_tracking_loss_20261104/teleop_console.log",
+      "size": 1757766,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "concurrency_logs/pico_o7_tracking_loss_20261104/arm_control/rm65_canfd_high_follow_20261104_165430.csv",
+      "size": 44714270,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_184616.csv",
+      "size": 14969850,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_184220.csv",
+      "size": 16567537,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_211145.csv",
+      "size": 61828342,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_184807.csv",
+      "size": 70916115,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_182517.csv",
+      "size": 735318,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_182617.csv",
+      "size": 10687653,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_174311.csv",
+      "size": 14148855,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_142248.csv",
+      "size": 317045,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_183119.csv",
+      "size": 18762802,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_211029.csv",
+      "size": 16156997,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_184338.csv",
+      "size": 19732661,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_181002.csv",
+      "size": 37513023,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_142326.csv",
+      "size": 343144,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_175047.csv",
+      "size": 12138370,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261111_172328.csv",
+      "size": 314490,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_183929.csv",
+      "size": 16654437,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_142342.csv",
+      "size": 103697801,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_180402.csv",
+      "size": 16003540,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261111_172410.csv",
+      "size": 23261251,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_175949.csv",
+      "size": 26433514,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_183320.csv",
+      "size": 74493278,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261111_172612.csv",
+      "size": 18991815,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_175321.csv",
+      "size": 15137125,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_185332.csv",
+      "size": 29034453,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_173209.csv",
+      "size": 4541437,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_210906.csv",
+      "size": 18040382,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_175652.csv",
+      "size": 25318841,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_182909.csv",
+      "size": 12294721,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_174845.csv",
+      "size": 12477791,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "canfd_logs/rm65_canfd_high_follow_20261104_173250.csv",
+      "size": 33957502,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/COLCON_IGNORE",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_16-35-58/events.log",
+      "size": 19619,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_16-35-58/logger_all.log",
+      "size": 40379,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_16-35-58/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_16-35-58/rm_teleop/command.log",
+      "size": 572,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_16-35-58/rm_teleop/streams.log",
+      "size": 2479,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_16-35-58/rm_teleop/stdout.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_16-35-58/rm_teleop/stdout_stderr.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-19-42/events.log",
+      "size": 49676,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-19-42/logger_all.log",
+      "size": 59001,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-19-42/pico_rm65_teleop_interfaces/stderr.log",
+      "size": 610,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-19-42/pico_rm65_teleop_interfaces/command.log",
+      "size": 1366,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-19-42/pico_rm65_teleop_interfaces/streams.log",
+      "size": 4723,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-19-42/pico_rm65_teleop_interfaces/stdout.log",
+      "size": 2367,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-19-42/pico_rm65_teleop_interfaces/stdout_stderr.log",
+      "size": 2977,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-16-45/events.log",
+      "size": 9619,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-16-45/logger_all.log",
+      "size": 40402,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-16-45/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-16-45/rm_teleop/command.log",
+      "size": 1702,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-16-45/rm_teleop/streams.log",
+      "size": 2880,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-16-45/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-16-45/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/list_2026-11-04_17-15-39/logger_all.log",
+      "size": 42676,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/events.log",
+      "size": 32377,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/logger_all.log",
+      "size": 61478,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/pico_o7/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/pico_o7/command.log",
+      "size": 556,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/pico_o7/streams.log",
+      "size": 3666,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/pico_o7/stdout.log",
+      "size": 2723,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/pico_o7/stdout_stderr.log",
+      "size": 2723,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/rm_teleop/command.log",
+      "size": 1684,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/rm_teleop/streams.log",
+      "size": 3591,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/rm_teleop/stdout.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-24-51/rm_teleop/stdout_stderr.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_33003_1793786212483.log",
+      "size": 6475,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_32277_1793785847569.log",
+      "size": 3499,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_37685_1793788769459.log",
+      "size": 635155,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_30547_1793784770483.log",
+      "size": 1567864,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_32999_1793786212501.log",
+      "size": 786,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_36549_1793788149495.log",
+      "size": 660,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_30339_1793784729487.log",
+      "size": 958,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_33390_1793786389227.log",
+      "size": 4038,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_33800_1793786642465.log",
+      "size": 3310,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_39398_1793789612517.log",
+      "size": 798,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_39402_1793789612492.log",
+      "size": 7720,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38022_1793788940127.log",
+      "size": 240858,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_37257_1793788400227.log",
+      "size": 11226,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_32675_1793786001902.log",
+      "size": 3841,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_31525_1793785390945.log",
+      "size": 2703,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_33796_1793786642487.log",
+      "size": 684,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_36921_1793788278995.log",
+      "size": 4606,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_36553_1793788149468.log",
+      "size": 3102,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_33798_1793786642517.log",
+      "size": 545835,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38586_1793789176087.log",
+      "size": 693,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_31521_1793785390964.log",
+      "size": 880,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_31972_1793785725444.log",
+      "size": 2136,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_32671_1793786001918.log",
+      "size": 796,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_35855_1793787917357.log",
+      "size": 2137,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_36079_1793787977382.log",
+      "size": 236809,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38590_1793789176065.log",
+      "size": 4316,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38915_1793789287779.log",
+      "size": 1743505,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_36919_1793788279049.log",
+      "size": 626265,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_34545_1793787002773.log",
+      "size": 1445083,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38249_1793789018336.log",
+      "size": 4423,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_39400_1793789612550.log",
+      "size": 448128,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_32273_1793785847582.log",
+      "size": 880,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_36917_1793788279005.log",
+      "size": 798,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38917_1793789287720.log",
+      "size": 10126,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_31523_1793785391005.log",
+      "size": 434003,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_30337_1793784729543.log",
+      "size": 23389,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_32673_1793786001954.log",
+      "size": 488433,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_34547_1793787002701.log",
+      "size": 11312,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_36077_1793787977351.log",
+      "size": 696,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_34543_1793787002720.log",
+      "size": 762,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_35853_1793787917415.log",
+      "size": 4728,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_36081_1793787977327.log",
+      "size": 2350,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_33388_1793786389277.log",
+      "size": 1189287,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38245_1793789018354.log",
+      "size": 678,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_33386_1793786389245.log",
+      "size": 696,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38588_1793789176124.log",
+      "size": 495696,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_36551_1793788149520.log",
+      "size": 260664,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_30335_1793784729505.log",
+      "size": 684,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_30549_1793784770431.log",
+      "size": 5944,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_37687_1793788769404.log",
+      "size": 4046,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_31970_1793785725497.log",
+      "size": 354100,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_31968_1793785725464.log",
+      "size": 660,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_37253_1793788400248.log",
+      "size": 1257,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38247_1793789018393.log",
+      "size": 794308,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38024_1793788940075.log",
+      "size": 4150,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_32275_1793785847624.log",
+      "size": 392568,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_35851_1793787917372.log",
+      "size": 786,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_37255_1793788400277.log",
+      "size": 2451025,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38020_1793788940098.log",
+      "size": 693,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_30545_1793784770448.log",
+      "size": 916,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_37683_1793788769415.log",
+      "size": 693,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_33001_1793786212538.log",
+      "size": 886956,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/python3_38913_1793789287740.log",
+      "size": 1133,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-17-56-52-255440-ai-Legion-32998/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-48-07-494102-ai-Legion-38912/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-17-53-21-671925-ai-Legion-32670/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-31-18-758792-ai-Legion-36916/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-17-32-09-259577-ai-Legion-30334/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-46-15-835822-ai-Legion-38585/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-17-48-45-216560-ai-Legion-31967/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-43-38-106875-ai-Legion-38244/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-17-43-10-719323-ai-Legion-31520/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-10-02-475095-ai-Legion-34542/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-25-17-124410-ai-Legion-35849/launch.log",
+      "size": 1099,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-17-50-47-336706-ai-Legion-32271/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-29-09-239892-ai-Legion-36548/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-33-19-993894-ai-Legion-37252/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-26-17-099109-ai-Legion-36076/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-17-59-48-996918-ai-Legion-33385/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-04-02-234476-ai-Legion-33795/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-39-29-168612-ai-Legion-37682/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-53-32-265897-ai-Legion-39397/launch.log",
+      "size": 3763,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-17-32-50-201406-ai-Legion-30544/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7/2026-11-04-18-42-19-846785-ai-Legion-38019/launch.log",
+      "size": 837,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-52-31/events.log",
+      "size": 9891,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-52-31/logger_all.log",
+      "size": 48142,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-52-31/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-52-31/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-52-31/rm_teleop/streams.log",
+      "size": 2178,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-52-31/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-52-31/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-14-25/events.log",
+      "size": 31588,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-14-25/logger_all.log",
+      "size": 52849,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-14-25/pico_o7/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-14-25/pico_o7/command.log",
+      "size": 984,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-14-25/pico_o7/streams.log",
+      "size": 12173,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-14-25/pico_o7/stdout.log",
+      "size": 10405,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-14-25/pico_o7/stdout_stderr.log",
+      "size": 10405,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test-result_2026-11-03_17-12-49/logger_all.log",
+      "size": 1005,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-09-18/events.log",
+      "size": 9809,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-09-18/logger_all.log",
+      "size": 50174,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-09-18/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-09-18/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-09-18/rm_teleop/streams.log",
+      "size": 2178,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-09-18/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-09-18/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/events.log",
+      "size": 115175,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/logger_all.log",
+      "size": 46498,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/pico_rm65_teleop_interfaces/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/pico_rm65_teleop_interfaces/command.log",
+      "size": 2866,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/pico_rm65_teleop_interfaces/streams.log",
+      "size": 47019,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/pico_rm65_teleop_interfaces/stdout.log",
+      "size": 41489,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/pico_rm65_teleop_interfaces/stdout_stderr.log",
+      "size": 41489,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/rm_teleop/command.log",
+      "size": 1224,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/rm_teleop/streams.log",
+      "size": 9633,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/rm_teleop/stdout.log",
+      "size": 7716,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-07-22_17-15-58/rm_teleop/stdout_stderr.log",
+      "size": 7716,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/events.log",
+      "size": 118548,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/logger_all.log",
+      "size": 84581,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_o7/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_o7/command.log",
+      "size": 2046,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_o7/streams.log",
+      "size": 3095,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_o7/stdout.log",
+      "size": 859,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_o7/stdout_stderr.log",
+      "size": 859,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_rm65_teleop_interfaces/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_rm65_teleop_interfaces/command.log",
+      "size": 1170,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_rm65_teleop_interfaces/streams.log",
+      "size": 28169,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_rm65_teleop_interfaces/stdout.log",
+      "size": 25309,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/pico_rm65_teleop_interfaces/stdout_stderr.log",
+      "size": 25309,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/rm_teleop/streams.log",
+      "size": 2198,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-38-49/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_15-17-14/events.log",
+      "size": 10286,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_15-17-14/logger_all.log",
+      "size": 33905,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_15-17-14/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_15-17-14/rm_teleop/command.log",
+      "size": 572,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_15-17-14/rm_teleop/streams.log",
+      "size": 2299,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_15-17-14/rm_teleop/stdout.log",
+      "size": 1520,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_15-17-14/rm_teleop/stdout_stderr.log",
+      "size": 1520,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test-result_2026-11-03_15-17-15/logger_all.log",
+      "size": 1005,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-10-32/events.log",
+      "size": 10547,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-10-32/logger_all.log",
+      "size": 38013,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-10-32/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-10-32/rm_teleop/command.log",
+      "size": 572,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-10-32/rm_teleop/streams.log",
+      "size": 2478,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-10-32/rm_teleop/stdout.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-10-32/rm_teleop/stdout_stderr.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/list_2026-11-03_17-38-27/logger_all.log",
+      "size": 42032,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/events.log",
+      "size": 109203,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/logger_all.log",
+      "size": 82323,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_o7/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_o7/command.log",
+      "size": 2046,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_o7/streams.log",
+      "size": 3095,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_o7/stdout.log",
+      "size": 859,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_o7/stdout_stderr.log",
+      "size": 859,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_rm65_teleop_interfaces/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_rm65_teleop_interfaces/command.log",
+      "size": 1170,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_rm65_teleop_interfaces/streams.log",
+      "size": 27761,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_rm65_teleop_interfaces/stdout.log",
+      "size": 25042,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/pico_rm65_teleop_interfaces/stdout_stderr.log",
+      "size": 25042,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/rm_teleop/streams.log",
+      "size": 2198,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_17-22-08/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-34-42/events.log",
+      "size": 9891,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-34-42/logger_all.log",
+      "size": 46298,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-34-42/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-34-42/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-34-42/rm_teleop/streams.log",
+      "size": 2178,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-34-42/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-04_16-34-42/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/events.log",
+      "size": 86958,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/logger_all.log",
+      "size": 47524,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/pico_rm65_teleop_interfaces/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/pico_rm65_teleop_interfaces/command.log",
+      "size": 1654,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/pico_rm65_teleop_interfaces/streams.log",
+      "size": 42991,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/pico_rm65_teleop_interfaces/stdout.log",
+      "size": 39051,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/pico_rm65_teleop_interfaces/stdout_stderr.log",
+      "size": 39051,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/rm_teleop/command.log",
+      "size": 1224,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/rm_teleop/streams.log",
+      "size": 2866,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/rm_teleop/stdout.log",
+      "size": 1426,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-09-18_15-41-08/rm_teleop/stdout_stderr.log",
+      "size": 1426,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-26-51/events.log",
+      "size": 10358,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-26-51/logger_all.log",
+      "size": 57782,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-26-51/pico_o7/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-26-51/pico_o7/command.log",
+      "size": 556,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-26-51/pico_o7/streams.log",
+      "size": 1875,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-26-51/pico_o7/stdout.log",
+      "size": 1157,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-04_17-26-51/pico_o7/stdout_stderr.log",
+      "size": 1157,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-56-32/events.log",
+      "size": 11117,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-56-32/logger_all.log",
+      "size": 27807,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-56-32/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-56-32/rm_teleop/command.log",
+      "size": 572,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-56-32/rm_teleop/streams.log",
+      "size": 2478,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-56-32/rm_teleop/stdout.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-56-32/rm_teleop/stdout_stderr.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/events.log",
+      "size": 78054,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/logger_all.log",
+      "size": 84370,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_o7/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_o7/command.log",
+      "size": 2046,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_o7/streams.log",
+      "size": 3076,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_o7/stdout.log",
+      "size": 859,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_o7/stdout_stderr.log",
+      "size": 859,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_rm65_teleop_interfaces/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_rm65_teleop_interfaces/command.log",
+      "size": 1170,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_rm65_teleop_interfaces/streams.log",
+      "size": 32817,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_rm65_teleop_interfaces/stdout.log",
+      "size": 29919,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/pico_rm65_teleop_interfaces/stdout_stderr.log",
+      "size": 29919,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/rm_teleop/streams.log",
+      "size": 2178,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_16-37-47/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/workspace_cleanup_validation/2026-11-03-17-56-35-748743-ai-Legion-130/launch.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-13-49/events.log",
+      "size": 28151,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-13-49/logger_all.log",
+      "size": 43985,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-13-49/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-13-49/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-13-49/rm_teleop/streams.log",
+      "size": 2198,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-13-49/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-13-49/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-35-36/events.log",
+      "size": 18878,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-35-36/logger_all.log",
+      "size": 46596,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-35-36/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-35-36/rm_teleop/command.log",
+      "size": 1702,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-35-36/rm_teleop/streams.log",
+      "size": 2900,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-35-36/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-35-36/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test-result_2026-11-04_16-36-28/logger_all.log",
+      "size": 1005,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7_preflight/2026-11-04-16-34-24-903145-ai-Legion-18/launch.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7_preflight/2026-11-04-16-30-15-887718-ai-Legion-20/launch.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test-result_2026-11-03_17-56-35/logger_all.log",
+      "size": 1005,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test-result_2026-11-04_17-26-54/logger_all.log",
+      "size": 1167,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test-result_2026-11-03_16-14-50/logger_all.log",
+      "size": 1005,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-54-45/events.log",
+      "size": 18832,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-54-45/logger_all.log",
+      "size": 33778,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-54-45/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-54-45/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-54-45/rm_teleop/streams.log",
+      "size": 2179,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-54-45/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_17-54-45/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-08-55/events.log",
+      "size": 19814,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-08-55/logger_all.log",
+      "size": 40798,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-08-55/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-08-55/rm_teleop/command.log",
+      "size": 1718,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-08-55/rm_teleop/streams.log",
+      "size": 3667,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-08-55/rm_teleop/stdout.log",
+      "size": 1699,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_15-08-55/rm_teleop/stdout_stderr.log",
+      "size": 1699,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test-result_2026-11-03_16-10-33/logger_all.log",
+      "size": 1005,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-12-19/events.log",
+      "size": 19540,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-12-19/logger_all.log",
+      "size": 44255,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-12-19/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-12-19/rm_teleop/command.log",
+      "size": 572,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-12-19/rm_teleop/streams.log",
+      "size": 2479,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-12-19/rm_teleop/stdout.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_17-12-19/rm_teleop/stdout_stderr.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/o7_parameter_start/2026-11-04-16-52-28-742643-ai-Legion-19/launch.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-14-49/events.log",
+      "size": 10577,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-14-49/logger_all.log",
+      "size": 38013,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-14-49/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-14-49/rm_teleop/command.log",
+      "size": 572,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-14-49/rm_teleop/streams.log",
+      "size": 2478,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-14-49/rm_teleop/stdout.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-14-49/rm_teleop/stdout_stderr.log",
+      "size": 1681,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/events.log",
+      "size": 79471,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/logger_all.log",
+      "size": 84502,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_o7/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_o7/command.log",
+      "size": 2046,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_o7/streams.log",
+      "size": 3076,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_o7/stdout.log",
+      "size": 859,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_o7/stdout_stderr.log",
+      "size": 859,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_rm65_teleop_interfaces/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_rm65_teleop_interfaces/command.log",
+      "size": 1170,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_rm65_teleop_interfaces/streams.log",
+      "size": 27016,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_rm65_teleop_interfaces/stdout.log",
+      "size": 24396,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/pico_rm65_teleop_interfaces/stdout_stderr.log",
+      "size": 24396,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/rm_teleop/streams.log",
+      "size": 2178,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-11_17-10-57/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test-result_2026-11-03_16-37-39/logger_all.log",
+      "size": 1005,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-08-08/events.log",
+      "size": 19037,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-08-08/logger_all.log",
+      "size": 43985,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-08-08/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-08-08/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-08-08/rm_teleop/streams.log",
+      "size": 2198,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-08-08/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-08-08/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-47-44/events.log",
+      "size": 19006,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-47-44/logger_all.log",
+      "size": 48121,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-47-44/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-47-44/rm_teleop/command.log",
+      "size": 1000,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-47-44/rm_teleop/streams.log",
+      "size": 2198,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-47-44/rm_teleop/stdout.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/build_2026-11-03_16-47-44/rm_teleop/stdout_stderr.log",
+      "size": 998,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-37-38/events.log",
+      "size": 10417,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-37-38/logger_all.log",
+      "size": 40053,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-37-38/rm_teleop/stderr.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-37-38/rm_teleop/command.log",
+      "size": 572,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-37-38/rm_teleop/streams.log",
+      "size": 2389,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-37-38/rm_teleop/stdout.log",
+      "size": 1601,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test_2026-11-03_16-37-38/rm_teleop/stdout_stderr.log",
+      "size": 1601,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7_validation/2026-11-04-17-17-21-854073-ai-Legion-22/launch.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7_validation/2026-11-04-17-28-58-203784-ai-Legion-18/launch.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/pico_o7_validation/2026-11-04-17-17-21-603687-ai-Legion-20/launch.log",
+      "size": 0,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    },
+    {
+      "path": "log/test-result_2026-11-04_17-25-22/logger_all.log",
+      "size": 2172,
+      "tracked": false,
+      "classification": "evidence/history/generated"
+    }
+  ]
+}

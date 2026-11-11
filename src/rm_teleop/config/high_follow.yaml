@@ -40,7 +40,11 @@ target_generator_node:
     # 启动文件可以覆盖这三个参数。
     position_scale: 0.75
     max_translation_speed_mps: 0.08
-    max_rotation_speed_deg_s: 12.0
+    max_rotation_speed_deg_s: 20.0
+    # Base 固定坐标系旋转向量 Rx/Ry/Rz 的分量限速（度/秒）。
+    max_rotation_rx_speed_deg_s: 70.0
+    max_rotation_ry_speed_deg_s: 8.0
+    max_rotation_rz_speed_deg_s: 8.0
 
     # 第二轮输入稳定：轻量滤波 + STILL/MOVING/SETTLING 状态机。
     # 停手后锁存最终目标，完成限速追赶后才进入 STILL，避免丢失未完成动作。
@@ -89,7 +93,7 @@ rm65_canfd_high_follow_node:
     # 1表示Remote IK目标按算法工作坐标系解释；算法工作坐标设为Base单位帧。
     ik_tool_or_work: 1
     ik_error_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
-    ik_dq_weight: [1.0, 1.0, 1.0, 1.0, 1.0, 1.0]
+    ik_dq_weight: [0.1, 0.1, 0.1, 0.1, 0.1, 1.0]
 
     j3_hard_min_deg: 10.0
     j3_activation_min_deg: 15.0

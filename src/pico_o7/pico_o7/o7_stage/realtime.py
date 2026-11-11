@@ -1,4 +1,5 @@
 """Latest-value hand pipeline. All solver/native calls run outside ROS callbacks."""
+from collections import deque
 import json
 import os
 from pathlib import Path
@@ -12,7 +13,7 @@ from .write_timing import call_position_write
 
 from pico_o7.paths import share_dir, solver_python as default_solver_python
 ROOT=share_dir()
-RECOVERABLE_CONTROL_REASONS=frozenset(('control_not_ACTIVE_sending','CANFD_not_continuously_sending'))
+RECOVERABLE_CONTROL_REASONS=frozenset(('existing API2 session not connected',))
 
 class LatestHand:
     """Admission, invalidation, rate limiting, and one-time consumption, SDK independent."""
@@ -23,25 +24,52 @@ class LatestHand:
         self.started=clock();self.inflight=False;self.reason='default_disabled'
         self.counts={k:0 for k in ('input','valid_input','solved','invalid','raw_overwritten','target_overwritten','pre_enable_dropped','stale_dropped','obsolete_result_dropped','identical_dropped','cancelled_before_call','writes','calls_returned','call_exceptions')}
         self.return_codes={}
+        self.modbus_initialized=False;self.init_count=0;self.init_result=None;self.init_reason=None
+        self.recovery=False;self.write_window=deque()
+        self.recovery_attempts=deque();self.next_init_at=0.;self.fault_latched=False
+        self.operator_stopped=False
+        self.recovery_limit=3;self.recovery_window_sec=60.
         self.last_code=None;self.last_duration_ms=None;self.last_solve_ms=None
     def clear(self,reason,disable=False):
         with self.lock:
             self.epoch+=1;self.raw=None;self.pending=None;self.last_received=None;self.reason=reason
             if disable:self.enabled=False;self.startup_pending=False;self.resume_pending=False
-    def reject_control(self,reason):
-        """Pause ordinary ARM enable/tracking interruptions; never clear a fault."""
+    def latch(self,reason):
+        with self.lock:
+            if self.fault_latched:return
+            self.clear(reason,disable=True)
+            self.fault_latched=True;self.modbus_initialized=False
+
+    def queue_recovery(self,reason):
         with self.lock:
             self.clear(reason,disable=True)
-            if reason in RECOVERABLE_CONTROL_REASONS and not self.closed:
+            self.modbus_initialized=False;self.recovery=True
+            if self.fault_latched or self.closed or self.operator_stopped:return
+            now=self.clock()
+            while self.recovery_attempts and now-self.recovery_attempts[0]>=self.recovery_window_sec:
+                self.recovery_attempts.popleft()
+            if len(self.recovery_attempts)>=self.recovery_limit:
+                self.latch('modbus_recovery_limit_latched');return
+            self.startup_pending=True;self.resume_pending=True
+            self.next_init_at=max(self.next_init_at,now+min(8.,2.**len(self.recovery_attempts)))
+
+    def reject_control(self,reason):
+        """Pause a lost shared SDK session; never clear an O7 fault."""
+        with self.lock:
+            self.clear(reason,disable=True)
+            self.modbus_initialized=False
+            if reason in RECOVERABLE_CONTROL_REASONS and not (self.closed or self.fault_latched or self.operator_stopped):
                 self.startup_pending=True;self.resume_pending=True
+            elif reason not in RECOVERABLE_CONTROL_REASONS:self.fault_latched=True
     def request_startup(self):
         # Only the launch-selected controller requests this once. No service gate.
         with self.lock:
-            if self.closed or self.enabled or self.inflight:raise RuntimeError('invalid startup state')
+            if self.closed or self.enabled or self.inflight or self.fault_latched:raise RuntimeError('invalid startup state / fault latched')
+            self.operator_stopped=False;self.modbus_initialized=False
             self.startup_pending=True;self.resume_pending=False;self.reason='startup_waiting_for_safe_session'
     def enable(self):
         with self.lock:
-            if self.closed:return False,'node closing'
+            if self.closed or self.fault_latched:return False,'node closing / fault latched'
             if self.inflight:return False,'native write still in flight; wait for finish'
             self.clear('waiting_for_NEW_frame')
             self.enabled=True;self.startup_pending=False;self.resume_pending=False;self.accept_after=self.clock()
@@ -117,16 +145,24 @@ class LatestHand:
     def finish(self,code,duration_ms,error=None):
         with self.lock:
             self.inflight=False;self.last_code=code;self.last_duration_ms=duration_ms
-            # Raw SDK code is diagnostic ONLY: no success inference, gate, or retry.
+            # Acknowledgement failure invalidates the session; never retry this target.
             key=str(code);self.return_codes[key]=self.return_codes.get(key,0)+1
             self.counts['calls_returned'if error is None else'call_exceptions']+=1
-            if error is not None:self.clear('native_exception_requires_restart',disable=True)
-            elif duration_ms>self.mapper.config['max_call_ms']:self.clear('slow_call_breaker_requires_restart',disable=True)
+            self.write_window.append((self.clock(),code == 0 and error is None))
+            if error is not None or code != 0 or duration_ms>self.mapper.config['max_call_ms']:
+                self.queue_recovery('modbus_communication_failure')
             return 'call_returned_physical_result_unverified'if error is None else'call_exception'
     def status(self):
         with self.lock:
             elapsed=max(.001,self.clock()-self.started)
-            return dict(enabled=self.enabled,startup_pending=self.startup_pending,resume_pending=self.resume_pending,epoch=self.epoch,reason=self.reason,inflight=self.inflight,
+            while self.write_window and self.clock()-self.write_window[0][0]>5:self.write_window.popleft()
+            return dict(fault_latched=self.fault_latched,recovery_attempts_in_window=len(self.recovery_attempts),
+                        recovery_limit=self.recovery_limit,recovery_window_sec=self.recovery_window_sec,
+                        next_init_delay_sec=max(0.,self.next_init_at-self.clock()),modbus_initialized=self.modbus_initialized,init_count=self.init_count,
+                        init_reason=self.init_reason,init_result=self.init_result,recovering=self.recovery,
+                        recent_write_hz=len(self.write_window)/5,
+                        recent_acknowledged_hz=sum(ok for _,ok in self.write_window)/5,
+                        recent_window_sec=5,enabled=self.enabled,startup_pending=self.startup_pending,resume_pending=self.resume_pending,epoch=self.epoch,reason=self.reason,inflight=self.inflight,
                         pending=self.pending is not None,last_target=self.last_target,last_code=self.last_code,
                         last_duration_ms=self.last_duration_ms,last_solve_ms=self.last_solve_ms,
                         input_hz=self.counts['input']/elapsed,write_hz=self.counts['writes']/elapsed,
@@ -134,7 +170,8 @@ class LatestHand:
                         raw_return_code_counts=dict(self.return_codes),physical_write_result='requires_field_observation')
 
 class HandController:
-    def __init__(self,mapper,adapter_getter,guard,emit,*,start_from_parameter=False,solver_python=None):
+    def __init__(self,mapper,adapter_getter,guard,emit,*,start_from_parameter=False,solver_python=None,initializer=None):
+        self.initializer=initializer;self.initialized_adapter=None;self.initialized_handle=None
         self.solver_python=str(solver_python or default_solver_python())
         self.state=LatestHand(mapper);self.adapter_getter=adapter_getter;self.guard=guard;self.emit=emit
         if start_from_parameter:self.state.request_startup()
@@ -147,7 +184,7 @@ class HandController:
     def schedule_latency_once(self,plan,request_id,guard):
         """Known small target, original writer slot, PICO submissions kept disabled."""
         with self.state.lock:
-            if self.stop.is_set()or self.state.closed:return False,'node closing / solver unavailable'
+            if self.stop.is_set()or self.state.closed or self.state.fault_latched:return False,'node closing / solver unavailable / fault latched'
             if self.state.enabled or self.state.startup_pending:return False,'parameter-selected following must not share a fixed-target comparison'
             if self.state.inflight or self.diagnostic is not None:return False,'O7 worker busy'
             if self.diagnostic_used:return False,'fixed-target attempt consumed; no automatic retry'
@@ -218,16 +255,54 @@ class HandController:
             if diagnostic is not None:
                 self._run_latency_once(diagnostic)
                 continue
+            adapter=self.adapter_getter()
+            handle=getattr(adapter,'handle',None)
+            handle_token=(id(getattr(adapter,'arm',None)),id(handle),getattr(handle,'id',None))
+            with self.state.lock:
+                if not (self.state.fault_latched or self.state.operator_stopped or self.state.closed) and self.initialized_adapter is not None and (adapter is not self.initialized_adapter or handle_token != self.initialized_handle):
+                    self.state.reject_control('existing API2 session not connected')
+                    self.initialized_adapter=None
+                if self.guard() == 'node_closing':
+                    self.state.clear('node_closing',disable=True)
+                    self.state.closed=True
+                    break
+                needs_init=(self.state.startup_pending and not self.state.modbus_initialized
+                            and not self.state.fault_latched and not self.state.closed
+                            and self.state.clock()>=self.state.next_init_at)
+                if needs_init and self.state.recovery:
+                    now=self.state.clock()
+                    while self.state.recovery_attempts and now-self.state.recovery_attempts[0]>=self.state.recovery_window_sec:
+                        self.state.recovery_attempts.popleft()
+                    if len(self.state.recovery_attempts)>=self.state.recovery_limit:
+                        self.state.latch('modbus_recovery_limit_latched');needs_init=False
+            if needs_init:
+                reason='communication_recovery' if self.state.recovery else 'session_start_or_resume'
+                started_at=time.perf_counter()
+                # The node callback returns None while the shared SDK is unavailable.
+                try:
+                    result=self.initializer(adapter,reason) if self.initializer else dict(success=False,error='initializer unavailable')
+                except Exception as exc:result=dict(success=False,error=repr(exc),duration_ms=(time.perf_counter()-started_at)*1000)
+                if result is not None:
+                    result.setdefault('duration_ms',(time.perf_counter()-started_at)*1000)
+                    result.setdefault('return_code',None);result.setdefault('config',None)
+                    with self.state.lock:
+                        self.state.init_count+=1;self.state.init_result=result;self.state.init_reason=reason
+                        self.state.modbus_initialized=bool(result.get('success')) and self.state.startup_pending
+                        if self.state.recovery:self.state.recovery_attempts.append(self.state.clock())
+                        self.state.next_init_at=self.state.clock()+1.
+                        self.state.clear('waiting_for_NEW_frame_after_init')
+                        if not result.get('success'):self.state.queue_recovery('modbus_init_failed')
+                        else:self.initialized_adapter=adapter;self.initialized_handle=handle_token
+                    self.event('O7_MODBUS_INIT_SUCCESS' if result.get('success') else 'O7_MODBUS_INIT_FAILED',reason=reason,**result)
             started=False;resumed=False
             with self.state.lock:
-                if self.state.startup_pending:
+                if self.state.startup_pending and self.state.modbus_initialized:
                     resumed=self.state.resume_pending
                     reason=self.guard()
-                    if reason:
-                        if resumed and reason not in RECOVERABLE_CONTROL_REASONS:
-                            self.state.clear(reason,disable=True)
-                        else:self.state.reason=('resume_wait:' if resumed else 'startup_wait:')+reason
-                    else:started,_=self.state.enable()
+                    if not reason:
+                        started,_=self.state.enable();self.state.recovery=False
+                    elif reason not in RECOVERABLE_CONTROL_REASONS:self.state.latch(reason)
+                    else:self.state.reason='start_wait:'+reason
             if started:self.event('O7_HAND_RESUME' if resumed else 'O7_HAND_PARAMETER_START',status=self.state.status())
             # Poll even with an empty mailbox; every resumption invalidates cached
             # solver work and requires new tracking received after the safe gate.
@@ -244,7 +319,7 @@ class HandController:
             if not self.state.authorize_call(claimed,self.guard):
                 self.event('O7_HAND_WRITE_CANCELLED',seq=claimed['seq'],reason=self.state.reason)
                 continue
-            timing=call_position_write(self.adapter_getter(),claimed['target_positions'])
+            timing=call_position_write(adapter,claimed['target_positions'])
             category=self.state.finish(timing['return_code'],timing['duration_ms'],timing['error'])
             self.event('O7_HAND_WRITE_FINISH',**claimed,**timing,category=category,status=self.state.status())
     def shutdown(self):

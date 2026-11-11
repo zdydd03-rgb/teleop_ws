@@ -1,7 +1,7 @@
 {
   "schema": 1,
   "description": "Provisional linear mapping using effective model limits, NOT measured hardware calibration; device 255=open,0=closed.",
-  "write_hz": 4.0,
+  "write_hz": 10.0,
   "max_age_sec": 0.25,
   "max_call_ms": 750.0,
   "initial_hold": [
@@ -85,5 +85,5 @@
       "direction_evidence": "provisional; yaw/roll sign MUST be observed on site"
     }
   ],
-  "return_code_policy": "raw log only; never determines write/motion success or admission"
+  "return_code_policy": "raw code retained; nonzero pauses O7 for bounded reinitialization; zero is SDK acknowledgement, not proof of motion"
 }

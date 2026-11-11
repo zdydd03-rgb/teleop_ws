@@ -1,0 +1,10 @@
+{
+  "runtime_changes_vs_v1": [
+    "src/pico_o7/pico_o7/shared_session_node.py",
+    "src/pico_o7/pico_o7/o7_stage/realtime.py"
+  ],
+  "other_runtime_files_unchanged": 90,
+  "python_ast_files": 84,
+  "syntax_errors": 0,
+  "real_device_communication": false
+}

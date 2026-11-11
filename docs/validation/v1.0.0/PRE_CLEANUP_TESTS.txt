@@ -1,0 +1,159 @@
+........................................................................ [ 28%]
+........................................................................ [ 57%]
+........................................................................ [ 85%]
+...............FF.F.FF.F.......FF...                                     [100%]
+=================================== FAILURES ===================================
+______________ ParameterStartTests.test_combined_waits_for_active ______________
+
+self = <test_o7_parameter_start.ParameterStartTests testMethod=test_combined_waits_for_active>
+
+    def test_combined_waits_for_active(self):
+        self.reason[0]='control_not_ACTIVE_sending'
+        c=self.controller();time.sleep(.03)
+        self.assertFalse(c.state.enabled);self.assertTrue(c.state.startup_pending)
+>       self.reason[0]='';self.wait(lambda:c.state.enabled)
+
+tools/test_o7_parameter_start.py:64: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/test_o7_parameter_start.py:35: in wait
+    self.assertTrue(predicate())
+E   AssertionError: False is not true
+_ ParameterStartTests.test_node_master_parameter_and_removed_control_services __
+
+self = <test_o7_parameter_start.ParameterStartTests testMethod=test_node_master_parameter_and_removed_control_services>
+
+    def test_node_master_parameter_and_removed_control_services(self):
+        tree=ast.parse((CANDIDATE/'shared_session_node.py').read_text())
+        names={n.name for n in ast.walk(tree) if isinstance(n,ast.FunctionDef)}
+>       self.assertNotIn('_hand_enable',names);self.assertNotIn('_hand_disable',names)
+E       AssertionError: '_hand_enable' unexpectedly found in {'main', '_initialize_hand', '_hand_enable', '_hand_status', '_read_all', '_latency_rejection', '_read_parameters', '_read_one', '_emit_hil_event', 'on_timer', '_declare_parameters', '__init__', '_index_once', '_hand_disable', '_hand_input', '_hand_report', '_validate_parameters', '_index_rejection', '_dry', '_read_rejection', '_latency_once', 'destroy_node', '_hand_rejection', '_read', '_publish_control_state', '_hand_adapter'}
+
+tools/test_o7_parameter_start.py:98: AssertionError
+_ ParameterStartTests.test_parameter_true_waits_for_connection_then_starts_without_service _
+
+self = <test_o7_parameter_start.ParameterStartTests testMethod=test_parameter_true_waits_for_connection_then_starts_without_service>
+
+    def test_parameter_true_waits_for_connection_then_starts_without_service(self):
+        self.reason[0]='existing API2 session not connected'
+        c=self.controller()
+>       self.wait(lambda:c.state.reason.startswith('startup_wait:'))
+
+tools/test_o7_parameter_start.py:52: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/test_o7_parameter_start.py:35: in wait
+    self.assertTrue(predicate())
+E   AssertionError: False is not true
+_ ParameterStartTests.test_return_one_kept_and_following_continues_on_new_targets _
+
+self = <test_o7_parameter_start.ParameterStartTests testMethod=test_return_one_kept_and_following_continues_on_new_targets>
+
+    def test_return_one_kept_and_following_continues_on_new_targets(self):
+>       c=self.controller();self.wait(lambda:c.state.enabled)
+
+tools/test_o7_parameter_start.py:75: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/test_o7_parameter_start.py:35: in wait
+    self.assertTrue(predicate())
+E   AssertionError: False is not true
+_ ParameterStartTests.test_safety_stop_requires_restart_not_service_or_auto_retry _
+
+self = <test_o7_parameter_start.ParameterStartTests testMethod=test_safety_stop_requires_restart_not_service_or_auto_retry>
+
+    def test_safety_stop_requires_restart_not_service_or_auto_retry(self):
+>       c=self.controller();self.wait(lambda:c.state.enabled)
+
+tools/test_o7_parameter_start.py:83: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/test_o7_parameter_start.py:35: in wait
+    self.assertTrue(predicate())
+E   AssertionError: False is not true
+_______ ParameterStartTests.test_startup_discards_pre_readiness_solution _______
+
+self = <test_o7_parameter_start.ParameterStartTests testMethod=test_startup_discards_pre_readiness_solution>
+
+    def test_startup_discards_pre_readiness_solution(self):
+        self.reason[0]='control_not_ACTIVE_sending'
+        c=self.controller();self.offer(c,.5)
+>       self.reason[0]='';self.wait(lambda:c.state.enabled)
+
+tools/test_o7_parameter_start.py:69: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/test_o7_parameter_start.py:35: in wait
+    self.assertTrue(predicate())
+E   AssertionError: False is not true
+_ CombinedWorker.test_blocked_write_returns_then_stops_without_overlap_or_retry _
+
+self = <test_pico_o7_combined.CombinedWorker testMethod=test_blocked_write_returns_then_stops_without_overlap_or_retry>
+
+    def test_blocked_write_returns_then_stops_without_overlap_or_retry(self):
+        reason = ['']; entered = threading.Event(); release = threading.Event(); calls = []
+        def write(target):
+            calls.append((list(target), threading.current_thread().name))
+            entered.set(); release.wait(1); return 1
+        events = []
+        controller = self.controller(lambda: reason[0], events.append, write)
+        now = time.monotonic()
+        q = {n: (lo+hi)/2 for n, (lo, hi) in controller.state.mapper.bounds.items()}
+        with controller.state.lock:
+            controller.state.last_received = now
+            controller.state.pending = (controller.state.epoch, now, dict(valid=True, q_by_name=q, seq=1))
+        thread = threading.Thread(target=controller.write_loop, name='mock_o7_worker')
+        thread.start()
+        try:
+>           self.assertTrue(entered.wait(1))
+E           AssertionError: False is not true
+
+tools/test_pico_o7_combined.py:138: AssertionError
+_ CombinedWorker.test_empty_mailbox_tracking_interruption_pauses_and_resumes_without_cached_write _
+
+self = <test_pico_o7_combined.CombinedWorker testMethod=test_empty_mailbox_tracking_interruption_pauses_and_resumes_without_cached_write>
+
+    def test_empty_mailbox_tracking_interruption_pauses_and_resumes_without_cached_write(self):
+        reason = ['control_not_ACTIVE_sending']
+        controller = self.controller(lambda: reason[0])
+        thread = threading.Thread(target=controller.write_loop)
+        thread.start()
+        try:
+>           self.wait_for(lambda: not controller.state.enabled)
+
+tools/test_pico_o7_combined.py:112: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+tools/test_pico_o7_combined.py:104: in wait_for
+    self.assertTrue(predicate())
+E   AssertionError: False is not true
+=============================== warnings summary ===============================
+test_pico_o7_combined.py::CombinedWorker::test_blocked_write_returns_then_stops_without_overlap_or_retry
+  Warning: Exception in thread mock_o7_worker
+  
+  Traceback (most recent call last):
+    File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+      self.run()
+    File "/usr/lib/python3.10/threading.py", line 953, in run
+      self._target(*self._args, **self._kwargs)
+    File "/home/ai/teleop_ws/src/pico_o7/pico_o7/o7_stage/realtime.py", line 262, in write_loop
+      if not (self.state.fault_latched or self.state.operator_stopped or self.state.closed) and self.initialized_adapter is not None and (adapter is not self.initialized_adapter or handle_token != self.initialized_handle):
+  AttributeError: 'HandController' object has no attribute 'initialized_adapter'
+
+test_pico_o7_combined.py::CombinedWorker::test_empty_mailbox_tracking_interruption_pauses_and_resumes_without_cached_write
+  Warning: Exception in thread Thread-54 (write_loop)
+  
+  Traceback (most recent call last):
+    File "/usr/lib/python3.10/threading.py", line 1016, in _bootstrap_inner
+      self.run()
+    File "/usr/lib/python3.10/threading.py", line 953, in run
+      self._target(*self._args, **self._kwargs)
+    File "/home/ai/teleop_ws/src/pico_o7/pico_o7/o7_stage/realtime.py", line 262, in write_loop
+      if not (self.state.fault_latched or self.state.operator_stopped or self.state.closed) and self.initialized_adapter is not None and (adapter is not self.initialized_adapter or handle_token != self.initialized_handle):
+  AttributeError: 'HandController' object has no attribute 'initialized_adapter'
+
+-- Docs: https://docs.pytest.org/en/stable/warnings.html
+=========================== short test summary info ============================
+FAILED src/pico_o7/test_o7_parameter_start.py::ParameterStartTests::test_combined_waits_for_active
+FAILED src/pico_o7/test_o7_parameter_start.py::ParameterStartTests::test_node_master_parameter_and_removed_control_services
+FAILED src/pico_o7/test_o7_parameter_start.py::ParameterStartTests::test_parameter_true_waits_for_connection_then_starts_without_service
+FAILED src/pico_o7/test_o7_parameter_start.py::ParameterStartTests::test_return_one_kept_and_following_continues_on_new_targets
+FAILED src/pico_o7/test_o7_parameter_start.py::ParameterStartTests::test_safety_stop_requires_restart_not_service_or_auto_retry
+FAILED src/pico_o7/test_o7_parameter_start.py::ParameterStartTests::test_startup_discards_pre_readiness_solution
+FAILED src/pico_o7/test_pico_o7_combined.py::CombinedWorker::test_blocked_write_returns_then_stops_without_overlap_or_retry
+FAILED src/pico_o7/test_pico_o7_combined.py::CombinedWorker::test_empty_mailbox_tracking_interruption_pauses_and_resumes_without_cached_write
+8 failed, 244 passed, 2 warnings in 15.94s

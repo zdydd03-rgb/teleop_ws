@@ -82,6 +82,18 @@ class RmApi2MotionAdapter(RmApi2ReadOnlyAdapter):
                   "modbus_duration_ms": (ended - started) * 1000,
                   "return_code": code, "modbus_return_code": code})
 
+    def initialize_o7_modbus(self):
+        """Existing handle only. Caller must own the inactive control window."""
+        arm = self._require_arm()
+        started = time.perf_counter()
+        code = int(arm.rm_set_modbus_mode(1, 115200, 1))
+        config = arm.rm_get_tool_rs485_mode() if code == 0 else None
+        okay = (code == 0 and isinstance(config, dict) and config.get('return_code') == 0
+                and all(config.get(k) == v for k, v in
+                        (('mode', 1), ('baudrate', 115200), ('timeout', 1))))
+        return dict(success=okay, return_code=code, config=config,
+                    duration_ms=(time.perf_counter() - started) * 1000)
+
     def write_o7_hil_positions(self, positions) -> int:
         if (len(positions) != 7
                 or any(type(v) is not int or not 0 <= v <= 255 for v in positions)):

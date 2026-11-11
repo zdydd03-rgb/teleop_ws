@@ -92,27 +92,22 @@ class RealtimeTests(unittest.TestCase):
         self.state.clear('operator_disabled',disable=True)
         self.assertFalse(self.state.authorize_call(claimed))
         self.assertEqual(self.state.last_target,[255]*7);self.assertEqual(self.state.counts['writes'],0)
-    def test_return_codes_never_decide_enable_or_success_and_no_retry(self):
+    def test_return_codes_disable_failed_session_without_retry(self):
         for code in (0,1,-1,-2,-3,-4,999):
             self.setUp();self.offer(self.q(0));first=self.state.claim()
             self.assertTrue(self.state.authorize_call(first));self.state.finish(code,2.)
-            self.assertTrue(self.state.enabled)
-            self.assertEqual(self.state.return_codes,{str(code):1})
-            self.assertIsNone(self.state.claim()) # No automatic retry with no new frame.
-            self.now[0]+=.51;self.offer(self.q(0))
-            self.assertIsNone(self.state.claim()) # Same target not resent on fresh equal frames.
-            self.assertNotIn('sdk_confirmed',self.state.counts)
-            self.now[0]+=.51;self.offer(self.q(.7))
-            self.assertIsNotNone(self.state.claim()) # New target admitted regardless of prior code.
+            self.assertEqual(self.state.enabled,code == 0)
+            self.assertIsNone(self.state.pending)
+
     def test_slow_call_only_duration_based(self):
         self.offer();self.state.claim();self.state.finish(0,751.)
-        self.assertFalse(self.state.enabled);self.assertIn('slow_call',self.state.reason)
+        self.assertFalse(self.state.enabled);self.assertTrue(self.state.recovery)
     def test_latest_overwrites_and_low_frequency(self):
         for i in range(10):self.state.receive(dict(received_monotonic=self.now[0],valid=True,payload=self.p))
         self.assertEqual(self.state.counts['raw_overwritten'],9)
         self.offer(self.q(.5));self.offer(self.q(.7))
         self.assertEqual(self.state.counts['target_overwritten'],1)
-        self.state.claim();self.state.finish(1,1.)
+        self.state.claim();self.state.finish(0,1.)
         self.now[0]+=.1;self.offer();self.assertIsNone(self.state.claim())
         self.now[0]+=.41;self.offer();self.assertIsNotNone(self.state.claim())
     def test_original_receiver_path_retains_21_points_without_extra_socket(self):

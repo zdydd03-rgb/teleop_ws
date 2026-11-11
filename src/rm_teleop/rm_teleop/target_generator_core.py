@@ -68,6 +68,7 @@ class TargetGeneratorConfig:
     position_scale: float = 0.25
     max_translation_speed_mps: float = 0.025
     max_rotation_speed_rad_s: float = math.radians(8.0)
+    max_rotation_axis_speeds_rad_s: Vector3 | None = None
 
     # Input stabilization. Motion is detected from the filtered PICO pose over
     # a sliding window. SETTLING completes the latched endpoint before STILL.
@@ -109,6 +110,14 @@ class TargetGeneratorConfig:
         for name, value in non_negative_values.items():
             if not math.isfinite(value) or value < 0.0:
                 raise ValueError(f"{name} must be finite and non-negative")
+
+        if self.max_rotation_axis_speeds_rad_s is not None and (
+            len(self.max_rotation_axis_speeds_rad_s) != 3 or not all(
+                math.isfinite(value) and value >= 0.0
+                for value in self.max_rotation_axis_speeds_rad_s
+            )
+        ):
+            raise ValueError("max_rotation_axis_speeds_rad_s must contain 3 finite non-negative values")
 
         if self.motion_start_translation_m < self.motion_stop_translation_m:
             raise ValueError(
@@ -303,6 +312,10 @@ class TargetGeneratorCore:
                 ),
                 max_rotation_angle_rad=(
                     self.config.max_rotation_speed_rad_s * nominal_dt
+                ),
+                max_rotation_angles_rad=(
+                    tuple(value * nominal_dt for value in self.config.max_rotation_axis_speeds_rad_s)
+                    if self.config.max_rotation_axis_speeds_rad_s is not None else None
                 ),
             )
             self._limited_target = limited_target

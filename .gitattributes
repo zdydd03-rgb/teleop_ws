@@ -1,0 +1,3 @@
+
+# Preserve verbatim historical pytest output, including its whitespace.
+docs/validation/v1.0.0/PRE_CLEANUP_TESTS.txt -whitespace
